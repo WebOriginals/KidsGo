@@ -1,0 +1,155 @@
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating-body {
+  position: relative;
+  width: 130px;
+  height: 21px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    @if ($link-img == '') {
+      background-image: url("./../img/ic/stars.svg");
+    } @else {
+      background-image: url($link-img + "/img/ic/stars.svg");
+    }
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+}
+
+.rating__active {
+  position: absolute;
+  width: 130px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  &:before{
+    content: "";
+    @if ($link-img == '') {
+      background-image: url("./../img/ic/stars-ellow.svg");
+    } @else {
+      background-image: url($link-img + "/img/ic/stars-ellow.svg");
+    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: top left;
+    left: 0;
+  }
+}
+
+.rating__items {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.form__item__input {
+  flex: 0 0 20%;
+  height: 100%;
+  opacity: 0;
+  line-height: 3;
+}
+
+.rating__value {
+
+}
+
+
+
+
+
+
+
+.simple-rating{
+  position: relative;
+  display: inline-block;
+
+  &:before{
+    content:"";
+    @if ($link-img == '') {
+      background-image: url("./../img/ic/star-1.svg");
+    } @else {
+      background-image: url($link-img + "./../img/ic/stars-1.svg");
+    }
+    display: block;
+    width: 116px;
+    height: 21px;
+
+  }
+}
+
+.simple-rating__items{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+
+
+}
+
+.form__item__input{
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+
+  &:checked,
+  &:checked ~ .form__item__label:before{
+    opacity: 1;
+  }
+}
+
+.form__item__label{
+
+  width: 23px;
+  height: 100%;
+  cursor: pointer;
+  transform: translateX(-1px);
+
+
+  &:before{
+    content:"";
+    @if ($link-img == '') {
+      background-image: url("./../img/ic/star-ellow-1.svg");
+    } @else {
+      background-image: url($link-img + "./../img/ic/star-ellow-1.svg");
+    }
+    display: block;
+    height: 100%;
+    opacity: 0;
+    width: 89%;
+
+  }
+
+  &:hover:before,
+  &:hover ~ .form__item__label:before,
+  &:checked ~ .form__item__label:hover:before {
+    opacity: 1;
+  }
+}

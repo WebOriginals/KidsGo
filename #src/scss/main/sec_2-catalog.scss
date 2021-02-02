@@ -1,0 +1,141 @@
+.sec_2-catalog {
+  padding: 90px 0 50px;
+  @include mq('desktop') {
+    padding: 130px 0 60px;
+  }
+}
+
+.body-catalog {
+  @extend %flex;
+  width: 100%;
+  @include mq('desktop1350') {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.catalog-item {
+    padding: 0 5px;
+    margin-bottom: 15px;
+    width: 100%;
+
+
+  &:nth-child(1) .body__catalog-item{
+    background: radial-gradient(40% 50%, #e4eaf3, #c0d6ff);
+  }
+  &:nth-child(2) .body__catalog-item{
+    background: radial-gradient(40% 50%, #e4eaf3, #FFF0E5);
+  }
+  &:nth-child(3) .body__catalog-item{
+    background: radial-gradient(40% 50%, #e4eaf3, #FFF173);
+  }
+  &:nth-child(4) .body__catalog-item{
+    background: radial-gradient(40% 50%, #e4eaf3, #FF9D2B);
+  }
+
+  .body__catalog-item{
+    box-shadow:0px 5px 4px 0px rgba(0,0,0,0.07);
+    -webkit-box-shadow:0px 5px 4px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow:0px 5px 4px 0px rgba(0,0,0,0.07);
+    border-radius: 20px;
+    position: relative;
+    color: $color_1b;
+    @extend %flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px;
+
+
+    &:hover{
+      @include mq('tablet-wide') {
+        transform: skew(-3deg, 3deg) translateY(-11px);
+        box-shadow:3px 8px 7px 0px rgba(0,0,0,0.1);
+        -webkit-box-shadow:3px 8px 7px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow:3px 8px 7px 0px rgba(0,0,0,0.1);
+      }
+    }
+    @include mq('phablet') {
+      padding: 16px 50px 16px 30px;
+    }
+  }
+
+  .catalog-item__point {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: $color_2w;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.07) inset;
+    -webkit-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.07) inset;
+    -moz-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.07) inset;
+    @include mq('tablet-990') {
+      top: 30px;
+      right: 30px;
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  .catalog-item__img {
+    width: 40%;
+
+    img {
+      width: 100%;
+      @include mq('tablet') {
+        width: auto;
+        height: 70px;
+      }
+      @include mq('tablet-990') {
+        height: 130px;
+      }
+      @include mq('tablet-wide') {
+        height: 150px;
+      }
+      @include mq('desktop-wide') {
+        height: 200px;
+      }
+    }
+  }
+
+  .catalog-item__name {
+    @include adaptiv-font(36, 24);
+    font-weight: bold;
+    width: 60%;
+    align-self: center;
+    text-align: right;
+    @include maq('phone') {
+      font-size: 20px;
+    }
+  }
+
+  .catalog-item__sale{
+    position: absolute;
+    right: -15px;
+    top: 25px;
+    width: 32px;
+
+   img{
+     width: 100%;
+   }
+    @include mq('tablet-990') {
+      width: 50px;
+      right: -18px;
+      top: 47px;
+    }
+
+    @include mq('desktop-wide') {
+      width: 96px;
+      right: -63px;
+      top: 39px;
+    }
+  }
+  @include mq('phablet') {
+    padding: 0 15px;
+  }
+  @include mq('tablet') {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}

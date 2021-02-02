@@ -1,0 +1,374 @@
+.sec_1-slider{
+  padding: 10px 0 50px;
+
+  @include mq('tablet') {
+    padding: 40px 0 80px;
+  }
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.body-slider-card{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper-slider-card{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+
+  .body-slider-large{
+    width: 100%;
+    position: relative;
+
+    .popular-products__sale{
+      left: auto;
+      right: 50px;
+      z-index: 8;
+    }
+
+    .slider-large-slide{
+
+      .slider-large-slide-img{
+        width: 100%;
+
+        @include mq('tablet-wide') {
+          width: 75%;
+          margin: auto;
+          display: block;
+        }
+        @include mq('desktop') {
+          width: 100%;
+        }
+      }
+    }
+
+    .slider-large-pagination{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 30px;
+
+      .swiper-pagination-bullet{
+        align-self: center;
+      }
+    }
+
+    @include mq('tablet') {
+      width: 100%;
+    }
+    @include mq('desktop') {
+      width: 70%;
+    }
+
+  }
+
+  .body-slider-little{
+
+    @include maq('tablet') {
+      display: none;
+    }
+
+    width: 100%;
+
+    @include mq('desktop'){
+      width: 30%;
+    }
+
+    .slider-little-container{
+      height: 80px;
+
+      @include mq('desktop'){
+        width: 90px;
+        height: 470px;
+      }
+    }
+
+    .slider-little-slide{
+
+      img{
+        width: 80px;
+      }
+    }
+  }
+
+  @include mq('tablet') {
+    width: 46%;
+    padding-right: 30px;
+  }
+
+  @include mq('tablet-wide') {
+    width: 56%;
+  }
+
+  @include mq('desktop') {
+    width: 60%;
+  }
+}
+
+.wrapper-description{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  //flex-direction: column;
+
+  @include maq('tablet') {
+    margin-top: 30px;
+  }
+  @include mq('tablet') {
+    width: 54%;
+  }
+  @include mq('tablet-wide') {
+    width: 44%;
+  }
+  @include mq('desktop') {
+    width: 36%;
+  }
+}
+
+.description__description{
+  @include adaptiv-font(14, 12);
+  color: $color_3b;
+  font-style: italic;
+  @include adaptiv-margin-bottom(10,5);
+  width: 100%;
+}
+
+.description__title{
+  font-weight: bold;
+  @include adaptiv-font(30 , 20);
+  width: 100%;
+}
+
+.description__model{
+  width: 100%;
+  @include adaptiv-font(30 , 20);
+  @include adaptiv-margin-bottom(20,20);
+}
+
+.description__priceNew{
+  font-weight: 800;
+  @include adaptiv-font(36 , 24);
+  display: inline-flex;
+  @include adaptiv-margin-bottom(20,20);
+  width: fit-content;
+  line-height: 1;
+}
+
+.description__priceOld{
+  display: inline-flex;
+  font-weight: 800;
+  @include adaptiv-font(22 , 14);
+  text-decoration: line-through;
+  margin-left: 20px;
+  width: fit-content;
+  color: $color_4p;
+  @include adaptiv-margin-bottom(20,20);
+  align-self: flex-end;
+}
+
+.description__color{
+  width: 100%;
+  @include adaptiv-margin-bottom(30,20);
+
+  .description__header{
+    margin-bottom: 10px;
+
+    .description__colorTitle{
+      font-weight: bold;
+      @include adaptiv-font(16 , 16);
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .description__colorItem{
+      display: inline-block;
+      font-weight: bold;
+      @include adaptiv-font(16 , 16);
+      color: #858585;
+      margin-right: 15px;
+    }
+  }
+
+  .description__colorImgs{
+    margin-bottom: 10px;
+    overflow-x: auto;
+
+    .description__colorImgs-scroll{
+      width: fit-content;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .description__imgs-item{
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 10px;
+      border: 1px solid #A0A0A0;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      &.active{
+        border: 1px solid $color_3b !important;
+      }
+    }
+  }
+}
+
+.description__size{
+  width: 100%;
+  @include adaptiv-margin-bottom(34,20);
+
+  .description__header{
+    margin-bottom: 10px;
+
+
+    .description__sizeTitle{
+      @include adaptiv-font(16 , 16);
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 40px;
+    }
+    .description__sizeAsk{
+      display: inline-block;
+      a{
+        @include adaptiv-font(14 , 14);
+        color: #FFA8C2;
+        text-decoration: underline;
+
+        &:hover{
+          color: $color_4p;
+        }
+      }
+    }
+  }
+
+  .description__size-items{
+    width: 100%;
+
+    .description__size-item{
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 8px;
+      border: 1px solid $color_2w;
+      cursor: pointer;
+      margin-bottom: 5px;
+
+      span{
+        align-self: center;
+        @include adaptiv-font(20 , 16);
+        font-weight: 600;
+      }
+
+      &.active,&:hover{
+        border: 1px solid $color_3b;
+        border-radius: 50%;
+
+        span{
+          color: $color_3b;
+        }
+      }
+      &.desable{
+        cursor: default;
+        border: none;
+        span{
+          color: #22222285;
+        }
+      }
+    }
+  }
+}
+
+.description__btns{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  .wrapper-brnBlue{
+    margin-bottom: 10px;
+
+
+    @include maq('phablet') {
+      width: 100%;
+    }
+    @include mq('phablet') {
+      margin-right: 20px;
+    }
+    @include mq('tablet') {
+      margin-right: 5px;
+    }
+    @include mq('tablet-wide') {
+      margin-right: 18px;
+    }
+
+  }
+  .wrapper-brnPink{
+
+    @include maq('tablet') {
+      .button_pink {
+        width: 193px;
+      }
+    }
+    @include maq('phablet') {
+      width: 100%;
+      .button_pink{
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+@include maq('tablet') {
+  .description__description{
+    order: 1;
+  }
+  .description__title{
+    order: 4;
+  }
+  .description__model{
+    order: 5;
+  }
+  .description__priceNew{
+    order: 2;
+  }
+  .description__priceOld{
+    order: 3;
+  }
+  .description__rating{
+    order: 6;
+  }
+  .description__color{
+    order: 7;
+  }
+  .description__size{
+    order: 8;
+  }
+  .description__btns{
+    order: 9;
+  }
+}
+
+.description__rating{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include adaptiv-margin-bottom(30,20);
+
+  .rating-text{
+    @include adaptiv-font(14 , 14);
+    align-self: center;
+    color: $color_4p;
+    display: block;
+    margin-left: 15px;
+    text-decoration: underline;
+  }
+  .rating{
+    width: 130px;
+  }
+}

@@ -1,0 +1,182 @@
+//-----------ОСНОВНЫЕ ЦВЕТА------------------
+$color_1b: #222;
+$color_2w: #fff;
+$color_3b: #015AFE;
+$color_4p: #F81157;
+$color_5lb: rgba(1, 90, 254, 0.2);
+$link-img: '';
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: $color_1b;
+  font-weight: 400;
+  min-height: 100vh;
+  line-height: 1.2;
+  background: $color_2w;
+}
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1185px;
+  }
+}
+
+//-----------Кнопки------------------
+
+.button_blue {
+  display: block;
+  position: relative;
+  color: $color_2w;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: 1s;
+  width: 100%;
+  background: $color_3b;
+  border-radius: 20px;
+  border: 2px solid $color_3b;
+  @include adaptiv-font(17, 15);
+  font-weight: bold;
+
+  &:hover:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $color_4p;
+    border-radius: 20px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skew(5deg, -5deg);
+    transition: 2s;
+  }
+
+  @include mq('2K') {
+    font-size: 18px;
+  }
+}
+
+.button_pink {
+  display: block;
+  position: relative;
+  color: $color_4p;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: 1s;
+  width: 100%;
+  background: $color_2w;
+  border-radius: 20px;
+  border: 2px solid $color_4p;
+  @include adaptiv-font(18, 16);
+  font-weight: bold;
+
+
+  &:hover {
+    content: '';
+    display: block;
+    background: $color_4p;
+    color: $color_2w;
+  }
+
+  @include mq('desktop') {
+    width: fit-content;
+  }
+}
+
+
+//------------Заголовки и подзоголовки-----------------
+
+.offer {
+  @include adaptiv-font(64, 30);
+  font-weight: 800;
+
+  i {
+    position: relative;
+    font-style: normal;
+
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 160%;
+      height: 6px;
+      background: $color_4p;
+      border-radius: 20px;
+      @include mq('desktop') {
+        left: auto;
+        right: 0;
+        bottom: 10px;
+      }
+    }
+  }
+
+  span {
+    color: $color_3b;
+  }
+}
+
+.title-block {
+  @include adaptiv-font(36, 24);
+  font-weight: bold;
+  position: relative;
+  padding-left: 15px;
+}
+
+//*=================Миксины====================
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//=============================================
+
+
+//======БЛОКИ ПОКАЗАТЬ И СКРЫТЫ НА МОБИЛЕ======
+.MOBILE {
+  @media (min-width: 990px) {
+    display: none;
+  }
+}
+
+.DESCKTOP {
+  display: none;
+  @media (min-width: 991px) {
+    display: flex;
+
+  }
+}
+
+//*=============================================
+
+
+//*===============ВСПООГАЮЩИЕ КЛАССЫ ==================
+.NO-OUTLINE {
+  outline: none;
+}
+
+.square {
+  li {
+    padding-left: 33px;
+    @if ($link-img == '') {
+      background-image: url("");
+    } @else {
+      background-image: url($link-img + "");
+    }
+    background-position: left 5px;
+    background-repeat: no-repeat;
+  }
+}
+
+//*=============================================

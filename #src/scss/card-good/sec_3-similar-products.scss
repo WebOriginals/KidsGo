@@ -1,0 +1,38 @@
+.sec_3-similar-products{
+  padding: 50px 0 ;
+  @include mq('tablet') {
+    padding: 80px 0 80px;
+  }
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.similar-products__title{
+  @include adaptiv-margin-bottom(60,40);
+}
+
+.body-slider-similar-products{
+
+}
+
+.similar-products-slide{
+
+  .popular-products__img{
+
+    img{
+      max-width: 100%;
+    }
+  }
+  .mm{
+    @include mq('tablet-wide') {
+      display: none;
+    }
+  }
+  .dd{
+
+    @include maq('tablet-wide') {
+      display: none;
+    }
+  }
+}

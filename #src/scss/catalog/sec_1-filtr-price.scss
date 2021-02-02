@@ -1,0 +1,51 @@
+.range {
+  position: relative;
+  width: 264px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $color_3b;
+}
+
+.min-range-item,
+.max-range-item {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  top: -4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: $color_4p;
+}
+
+
+
+.max-range-item {
+  left: 250px;
+}
+
+.range-fill {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $color_4p;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 264px;
+  font-size: 14px;
+  color: #6f6e6e;
+  padding-top: 25px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}

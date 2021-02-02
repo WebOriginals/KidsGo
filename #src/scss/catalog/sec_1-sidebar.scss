@@ -1,0 +1,347 @@
+.sec_1-sidebar {
+
+}
+
+.body-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+
+  @include mq('desktop') {
+    position: relative;
+  }
+  @include maq('desktop') {
+   overflow: hidden;
+  }
+}
+
+.wrapper-googs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+
+  .popular-products__items {
+    width: 100%;
+
+    @media only screen and (min-width: 370px) and(max-width: 766px){
+      width: 50%;
+
+      .popular-products__img{
+
+        img{
+          width: 135px;
+        }
+      }
+
+      .popular-products__btn{
+        padding: 9px 15px;
+      }
+    }
+    @include mq('tablet') {
+      width: 50%;
+    }
+    @include mq('desktop') {
+      width: 33%;
+    }
+  }
+
+  .sorting-form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 45px;
+    @include maq('desktop') {
+      justify-content: flex-start;
+    }
+  }
+
+  .sorting-form__title {
+    @include adaptiv-font(20, 18);
+    font-weight: bold;
+    align-self: center;
+    @include maq('desktop') {
+      display: none;
+    }
+  }
+
+  @include mq('tablet-wide') {
+    width: 72%;
+  }
+  @include mq('desktop') {
+    padding-left: 25px;
+    width: 79%;
+  }
+  @include mq('desktop1350') {
+    padding-left: 25px;
+  }
+  @include mq('2K') {
+    padding-left: 27px;
+  }
+}
+
+.wrapper-sidebar {
+  position: relative;
+
+  .sidebar-form {
+    margin-bottom: 30px;
+  }
+
+  .steps {
+    @include adaptiv-margin-bottom(30, 20);
+  }
+
+  .sidebar-form__title {
+    @include adaptiv-font(19, 16);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .all-checkbox {
+    max-height: 230px;
+    overflow-y: auto;
+
+    ::-webkit-scrollbar-button {
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 0
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #e7e7e7;
+      border-radius: 50px
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: $color_5lb
+    }
+
+    ::-webkit-resizer {
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 0
+    }
+
+    ::-webkit-scrollbar {
+      width: 0
+    }
+
+    &::-webkit-scrollbar-button {
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 0
+    }
+
+    &::-webkit-scrollbar-track {
+      //background-color: #e7e7e7;
+      border-radius: 50px
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: $color_5lb
+    }
+
+    &::-webkit-resizer {
+      background-repeat: no-repeat;
+      width: 7px;
+      height: 0
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px !important
+    }
+
+    .label-checkbox {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      padding: 5px 0 0 36px;
+      margin-right: 15px;
+      @include adaptiv-font(16, 14);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .input-checkbox[type=checkbox] {
+      display: none;
+    }
+
+    .label-checkbox:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 1px;
+      border: 1px solid rgba(1, 90, 254, 0.5);
+    }
+
+    .input-checkbox[type=checkbox]:checked + .label-checkbox:after {
+      content: "";
+      @if ($link-img == '') {
+        background-image: url("./../../img/ic/check.svg");
+      } @else {
+        background-image: url($link-img + "/img/ic/check.svg");
+      }
+      background-position: 4px 0px;
+      background-repeat: no-repeat;
+      top: 0px;
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 27px;
+      height: 25px;
+    }
+
+    .input-checkbox[type=checkbox]:checked + .label-checkbox {
+      color: $color_4p;
+    }
+  }
+
+  .size-sidebar {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow: auto;
+    max-height: 100%;
+
+    .label-checkbox {
+      width: 33.33%;
+      margin-right: 0;
+    }
+  }
+
+
+
+  @include mq('tablet-wide') {
+    flex-wrap: wrap;
+    width: 28%;
+    display: flex;
+  }
+
+  @include mq('desktop') {
+    padding-right: 5px;
+    width: 21%;
+  }
+
+  @include maq('tablet-wide') {
+    background: $color_2w;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -100%;
+    margin: 0;
+    padding: 50px 15px 40px;
+    overflow-y: auto;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    z-index: 1002;
+  }
+}
+
+.settings-open{
+  bottom: 0px !important;
+}
+
+.product-type-search {
+  display: flex;
+  width: 100%;
+  margin-bottom: 16px;
+
+  .product-type-search__ic {
+    flex: 0 0 30px;
+  }
+
+  .product-type-search__input {
+    padding: 5px 10px;
+    flex: 1 0 auto;
+    margin-right: 10px;
+    border: 1px solid $color_5lb;
+    border-radius: 10px;
+  }
+}
+
+.wrarpper-btn-go {
+  margin-bottom: 15px;
+
+  .button_pink {
+    display: block;
+    margin: auto;
+    padding: 8px 15px;
+  }
+}
+
+.wrarpper-btn-reset {
+
+  .btn-reset {
+    display: block;
+    text-align: center;
+    @include adaptiv-font(18, 14);
+    font-weight: 600;
+    color: rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+  }
+}
+
+.btn-settings {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+.btn-settings.active {
+  opacity: 0;
+}
+
+.btn-close-sitings{
+  position: absolute;
+  display: block;
+  right: -25px;
+  top: 15px;
+  z-index: 1003;
+
+
+
+  @include mq('tablet-wide') {
+    display: none;
+  }
+}
+.btn-close-sitings-open{
+  animation: close-btn 0.7s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes close-btn {
+  0%   {right: -25px;}
+  25%  {right: -10px;}
+  50%  {right: 0px;}
+  75%  {right: 10px;}
+  100% {
+    right: 15px;
+    animation-play-state:paused;
+  }
+}
+
+.wr-btn-more{
+  position: absolute;
+  bottom: -57px;
+  right: 23px;
+  @include maq('desktop') {
+    display: none;
+  }
+}

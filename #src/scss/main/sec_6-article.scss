@@ -1,0 +1,127 @@
+.sec_6-article{
+  padding: 50px 0;
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.article__titlee{
+  @include adaptiv-margin-bottom(60,40);
+}
+
+.body-article{
+
+  &.mobile{
+    display: flex;
+    width: 100% ;
+    flex-wrap: wrap;
+
+    @include mq('tablet') {
+      display: none ;
+    }
+  }
+  &.decrtop{
+    display: none;
+    @include mq('tablet') {
+      display: flex;
+    }
+  }
+  position: relative;
+  @include mq('desktop') {
+    padding: 0 60px;
+  }
+  @include mq('desktop1350') {
+    padding: 0 ;
+  }
+}
+
+.article-slide,
+.article-item{
+  border: 1px solid $color_1b;
+  border-radius: 20px;
+  display: block;
+  overflow: hidden;
+}
+
+.wrapper-article-slide{
+
+}
+
+.content-padding{
+  padding: 0 15px 15px 15px;
+  @include mq('desktop') {
+    padding: 0 25px 15px 25px;
+  }
+}
+
+.article-slide__img{
+  width: 100%;
+  height: 313px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include mq('desktop1350') {
+    height: 366px;
+  }
+}
+
+.article-slide__date{
+  @include adaptiv-font(14, 12);
+  color: $color_1b;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.article-slide__name{
+  @include adaptiv-font(18, 16);
+  color: $color_1b;
+  font-weight: bold;
+  margin: 10px 0 15px;
+  @include mq('desktop1350') {
+    margin: 15px 0 15px;
+  }
+}
+.article-slide__more{
+  @include adaptiv-font(14, 12);
+  font-weight: bold;
+  color: $color_4p;
+}
+
+.article-pagination{
+  @extend %flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+
+
+  @include mq('tablet-wide') {
+    display: none;
+  }
+}
+
+.article__btn{
+  width: 200px;
+  margin: 20px auto 0;
+  @include mq('tablet') {
+    width: fit-content;
+    margin: 50px auto 0 0;
+  }
+}
+
+.article-item{
+  &:not(:last-child){
+    margin-bottom: 15px;
+  }
+  @include mq('phone-wide') {
+    width: 50%;
+    padding: 0 7.5px;
+    border: none;
+    .wrapper-article-slide{
+      border: 1px solid $color_1b;
+      border-radius: 20px;
+      display: block;
+      overflow: hidden;
+    }
+  }
+}
+

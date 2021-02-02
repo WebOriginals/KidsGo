@@ -1,0 +1,166 @@
+.sec_3-popular-products{
+  padding: 50px 0;
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.popular-products__title{
+  @include adaptiv-margin-bottom(60,40);
+}
+
+.body-popular-products{
+  @extend %flex;
+  width: 100%;
+  @include mq('desktop1350') {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.popular-products__items{
+  padding: 0 5px;
+  margin-bottom: 15px;
+  width: 100%;
+
+  @include mq('phablet') {
+    padding: 0 12px;
+  }
+  @include mq('phablet') {
+    margin-bottom: 30px;
+    width: 50%;
+  }
+  @include mq('tablet-990') {
+    width: 33.33%;
+  }
+  @include mq('desktop') {
+    width: 25%;
+  }
+}
+
+.wrapper-products__items{
+  border: 1px solid $color_3b;
+  border-radius: 20px;
+  padding: 15px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include mq('tablet') {
+    padding: 30px;
+  }
+  @include mq('desktop') {
+    padding: 25px;
+  }
+  @include mq('3K') {
+    padding: 23px;
+  }
+}
+
+.popular-products__sale{
+  position: absolute;
+  top: 15px;
+  left: -25px;
+}
+.popular-products__favorites{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  cursor: pointer;
+
+  img{
+    max-width: 100%;
+  }
+  .ic-favorites-active{
+    display: none;
+  }
+  @include maq('desktop') {
+    width: 35px;
+  }
+}
+.popular-products__img{
+  @include adaptiv-margin-bottom(15,15);
+
+  img{
+    margin: auto;
+    width: 180px;
+    display: block;
+    @media only screen and (min-width: 480px) and (max-width: 760px){
+      width: 110px;
+    }
+  }
+}
+
+.popular-products__subtitle{
+  @include adaptiv-font(14,12);
+  font-style: italic;
+  @include adaptiv-margin-bottom(8,8);
+  color: $color_1b;
+}
+
+.popular-products__name{
+  @include adaptiv-font(18,16);
+  font-weight: bold;
+  @include adaptiv-margin-bottom(15,10);
+  color: $color_1b;
+}
+
+.popular-products__size{
+  @extend %flex;
+  width: 100%;
+  cursor: pointer;
+  @include adaptiv-margin-bottom(15,10);
+
+
+  .popular-products-size__item{
+    @include adaptiv-font(18,16);
+    font-weight: 600;
+
+    &:hover{
+      color: $color_3b;
+    }
+    &:not(:nth-child(5)){
+      margin-right: 15px;
+    }
+    &-active{
+      color: $color_3b;
+    }
+    @include mq('tablet') {
+      &:not(:nth-child(5)){
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.popular-products__price{
+  @include adaptiv-font(20,18);
+  font-weight: 800;
+  @include adaptiv-margin-bottom(15,15);
+  color: $color_1b;
+
+  span{
+    @include adaptiv-font(14,12);
+    font-weight: 800;
+    color: #878787;
+    text-decoration: line-through;
+    margin-left: 20px;
+  }
+}
+.popular-products__btn{
+  margin-top: auto;
+}
+
+.invis{
+  display: none;
+}
+.vis{
+  display: block !important;
+}
+
+
+
+

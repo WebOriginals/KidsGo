@@ -1,0 +1,53 @@
+.sec_5-siza-boots{
+  padding: 50px 0;
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.siza-boots__title{
+  @include adaptiv-margin-bottom(60,40);
+}
+
+.body-siza-boots{
+  display: flex;
+  width: 100%;
+  @include maq('tablet') {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.siza-boots__img{
+  flex: 1 1 65px;
+  @include maq('tablet') {
+    text-align: center;
+  }
+}
+
+.siza-boots__text{
+  flex: 1 1 auto;
+  align-self: center;
+  @include adaptiv-font(18, 16);
+  font-style: italic;
+
+  @include maq('tablet') {
+    margin: 20px 0 ;
+  }
+  @include mq('tablet') {
+    margin:  0 2%;
+  }
+  @include mq('desktop') {
+    margin: 0 15% 0 5%;
+  }
+}
+
+.wrapper-siza-boots-btn{
+  flex: 0 0 200px;
+  align-self: center;
+  margin-right: 5%;
+  @include maq('tablet') {
+    margin-right: auto ;
+    flex: 0 0 auto;
+  }
+}

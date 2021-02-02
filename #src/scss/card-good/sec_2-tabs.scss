@@ -1,0 +1,215 @@
+.sec_2-tabs{
+  padding: 50px 0 ;
+  @include mq('tablet') {
+    padding: 80px 0 80px;
+  }
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.body-tabs-mobile{
+  @include mq('tablet') {
+    display: none;
+  }
+}
+
+.body-tabs-desctop{
+
+  @include maq('tablet') {
+    display: none;
+  }
+}
+
+.body-tabs{
+
+  .tabs-items {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tabs-items__link{
+    @include adaptiv-font(18, 18);
+    font-weight: 800;
+    color: $color_1b;
+
+    &.active{
+      color:$color_3b;
+      text-decoration: underline;
+    }
+  }
+}
+
+.tab-content{
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  @include mq('tablet') {
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
+}
+
+.wrapper-tab-conten{
+
+
+  td:nth-child(1){
+    @include adaptiv-font(18, 16);
+    font-weight: 800;
+    padding: 5px 30px 10px 0;
+    @include mq('tablet') {
+      padding: 10px 50px 20px 0;
+    }
+    @include mq('desktop') {
+      padding: 10px 80px 20px 0;
+    }
+  }
+
+  td:nth-child(2){
+    @include adaptiv-font(18, 18);
+    padding: 5px 0 10px 0;
+    @include mq('tablet') {
+      padding: 10px 50px 20px 0;
+    }
+  }
+}
+
+.about-product-conten{
+  display: flex;
+  width: 100%;
+
+  .wrimg-conten{
+    flex: 0 0 55px;
+    margin-right: 35px;
+    margin-bottom: 15px;
+  }
+
+  p{
+    flex: 1 1 auto;
+    @include adaptiv-font(18, 18);
+    font-style: italic;
+
+    span{
+      color: $color_4p;
+    }
+  }
+
+  @include maq('tablet') {
+    flex-wrap: wrap;
+  }
+}
+
+.delivery-and-payment-items{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+
+  .wric{
+    margin-right: 10px;
+  }
+
+  .wrtext{
+    align-self: center;
+    @include adaptiv-font(18, 16);
+
+    a{
+      border-bottom: 2px dashed $color_3b;
+      font-weight: 800;
+    }
+
+    p{
+      margin-bottom: 0;
+    }
+    span{
+      font-weight: 800;
+    }
+  }
+}
+
+.point-shop{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.itemshop{
+  display: flex;
+  width: 100%;
+  @include adaptiv-margin-bottom(30,15);
+
+  .itemshop__ic{
+    flex: 0 0 59px;
+    align-self: center;
+
+    img{
+      max-width: 100%;
+    }
+  }
+  .itemshop__text{
+    padding-left: 15px;
+    flex: 1 1 auto;
+  }
+  .titile-b{
+    @include adaptiv-font(18, 16);
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .phone-shop{
+    color: $color_1b;
+    @include adaptiv-font(16, 14);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .tame-work{
+    @include adaptiv-font(16, 14);
+  }
+
+  //@include mq('tablet') {
+  //  width: 50%;
+  //}
+  //@include mq('desktop1350') {
+  //  width: 33%;
+  //}
+  //@include mq('2K') {
+  //  width: 25%;
+  //}
+}
+
+.delivery{
+ margin-bottom: 40px;
+}
+
+.delivery__title{
+  @include adaptiv-font(26, 20);
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.available-body{
+  width: 100%;
+  display: none;
+}
+.available-body-active{
+  display: block;
+}
+
+.available{
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 22px;
+  @if ($link-img == '') {
+    background-image: url("../img/ic/arrow-blue.svg");
+  } @else {
+    background-image: url($link-img + "");
+  }
+  background-position: right 3px;
+  background-repeat: no-repeat;
+
+  span{
+    @include adaptiv-font(18, 16);
+    font-weight: 800;
+    color: $color_3b;
+  }
+}

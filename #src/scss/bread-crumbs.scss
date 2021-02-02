@@ -1,0 +1,19 @@
+.bread-crumbs {
+  padding: 30px 0 10px;
+}
+.bread-crumbs__list{
+  display: flex;
+  width: 100%;
+  li{
+    margin-right: 5px;
+    a{
+      color: $color_1b;
+      @include adaptiv-font(14, 12);
+      font-style: italic;
+
+      &:hover{
+        color: $color_3b;
+      }
+    }
+  }
+}

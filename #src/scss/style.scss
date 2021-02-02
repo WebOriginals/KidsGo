@@ -1,0 +1,41 @@
+//ОСНОВНЫЕ СТИЛИ
+@import "mixins.scss";
+@import "reset_style.scss";
+@import "origin_style.scss";
+
+
+
+//ИНДИВИДУАЛЬНЫЕ
+@import "header.scss";
+@import "menu.scss";
+@import "title.scss";
+@import "bread-crumbs.scss";
+@import "pagination.scss";
+@import "star.scss";
+
+//Главная
+@import "main/sec_1-first-screen.scss";
+@import "main/sec_2-catalog";
+@import "main/sec_3-popular-products.scss";
+@import "main/sec_4-new-collection.scss";
+@import "main/sec_5-siza-boots.scss";
+@import "main/sec_6-article.scss";
+@import "main/sec_7-brends.scss";
+
+
+//Карточка товара
+@import "card-good/sec_1-slider.scss";
+@import "card-good/sec_2-tabs.scss";
+@import "card-good/sec_3-similar-products.scss";
+@import "card-good/sec_4-reviews.scss";
+
+
+//Каталог
+@import "catalog/sec_1-sidebar.scss";
+@import "catalog/sec_1-filtr-price.scss";
+@import "catalog/sec_1-inp-filtr.scss";
+
+
+
+@import "footer.scss";
+//@import "modal.scss";

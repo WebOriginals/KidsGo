@@ -1,0 +1,50 @@
+.sec-pagination{
+  padding: 40px 0;
+}
+
+.pagination-list{
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  @include mq('desktop') {
+    transform: translateX(280px);
+  }
+
+  li{
+    display: flex;
+    width: 34px;
+    height: 34px;
+    flex-wrap: wrap;
+    justify-items: center;
+    border-radius: 50%;
+    border: 1px solid $color_2w;
+
+    a{
+      align-self: center;
+      color:  $color_1b;
+      @include adaptiv-font(19, 16);
+      font-weight: 600;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &.points{
+
+      span{
+        align-self: flex-end;
+      }
+    }
+
+    &:hover:not(:nth-child(5)){
+      border: 1px solid $color_3b;
+
+      a{
+        color: $color_3b;
+        font-weight: bold;
+      }
+    }
+  }
+}

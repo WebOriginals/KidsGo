@@ -1,0 +1,168 @@
+.sec-header {
+  position: relative;
+  padding: 10px 20px;
+  @include mq('tablet-990') {
+    padding: 15px 40px ;
+  }
+  @include mq('desktop') {
+    padding: 30px 40px ;
+  }
+}
+
+
+.body-header {
+  @extend %flex;
+  justify-content: space-between;
+}
+
+.wrapper-phone {
+  display: none;
+  @include mq('tablet-wide') {
+    display: block;
+    align-self: center;
+  }
+
+  a {
+
+    text-decoration: none;
+    font-weight: 500;
+    @include adaptiv-font(20, 16);
+
+    &:hover {
+
+    }
+  }
+
+}
+
+.wraper-logo {
+  width: 90px;
+  align-self: center;
+
+  @include mq('tablet-wide') {
+    width: 160px;
+    margin: 0 auto 0 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.wrapper-callback {
+  display: none;
+  @include mq('tablet-wide') {
+    display: block;
+    align-self: center;
+    margin: auto;
+  }
+
+  a {
+    display: block;
+    padding: 0 0 3px 0;
+
+    @include adaptiv-font(16, 16);
+
+
+    &:hover {
+
+    }
+  }
+}
+
+.wrapper-soc {
+  align-self: center;
+  @include mq('tablet-wide') {
+    margin: auto;
+  }
+
+  a {
+    @media(max-width: 991px) {
+      &:not(:last-child) {
+        display: none;
+      }
+    }
+
+    @media(min-width: 991px) {
+      &:last-child {
+        display: none;
+      }
+
+    }
+
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+
+  }
+}
+
+.body-header__bottom{
+
+  display: none;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background: $color_2w;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(65px);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+
+  .wrapper-search-header{
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+
+  }
+
+  .wrapper-search-header__input{
+    flex: 1 1 auto;
+    align-self: center;
+    margin-right: 15px;
+  }
+
+  .search-header__input{
+    background: $color_2w;
+    padding: 5px 15px;
+    width: 100%;
+
+    @include adaptiv-font(30, 20);
+
+    &::placeholder{
+      @include adaptiv-font(30, 20);
+      font-weight: bold;
+      color: rgba(1, 90, 254, 0.3);
+    }
+  }
+
+  .wrapper-search-header__go{
+    flex: 0 0 22px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    align-self: center;
+  }
+
+  .wrapper-search-header__close{
+    align-self: center;
+    flex: 0 0 22px;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+
+  @include maq('desktop') {
+    padding: 0 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transform: translateY(75px);
+  }
+}
+
+.body-header__bottom-open{
+  display: block;
+}

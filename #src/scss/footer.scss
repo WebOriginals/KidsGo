@@ -1,0 +1,266 @@
+.footer {
+  background: #C8D9F8;
+  padding: 30px 0;
+  @include mq('desktop') {
+    padding: 60px 0;
+  }
+}
+
+.body-footer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-top,
+.footer-middle,
+.footer-bottom {
+  @include maq('tablet') {
+    flex-wrap: wrap;
+  }
+  display: flex;
+  width: 100%;
+}
+
+.footer-top {
+  margin-bottom: 80px;
+  justify-content: space-between;
+
+
+
+  .footer-top__menu {
+    width: 45%;
+    display: flex;
+
+
+    .content-mobile{
+      display: block;
+      margin-bottom: 50px;
+      width: 100%;
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+    .content-desctop{
+      width: 100%;
+      display: flex;
+      @include maq('tablet') {
+        display: none;
+      }
+    }
+    ul.footer-top-menu_item {
+      width: 33.33%;
+
+      li {
+        &.title {
+          @include adaptiv-font(20, 18);
+          font-weight: 800;
+          margin-bottom: 20px;
+        }
+
+        @include adaptiv-font(16, 14);
+        margin-bottom: 15px;
+      }
+    }
+    @include maq('tablet') {
+      width: 100%;
+    }
+    @include mq('tablet') {
+      width: 63%;
+    }
+  }
+
+  .footer-top__soc {
+    width: 23%;
+
+    @include maq('tablet') {
+      width: 100%;
+    }
+    @include mq('tablet') {
+      width: 33%;
+    }
+
+    .wrapper-soc-menu__title {
+      @include adaptiv-font(20, 18);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    a {
+      margin-right: 15px;
+
+    }
+    .soc-link{
+      svg{
+        z-index: 999;
+        path{
+          z-index: 999;
+        }
+      }
+    }
+  }
+
+  .footer-top__ifo {
+    width: 20%;
+    padding-left: 3%;
+
+
+    .footer-logo {
+      width: 100px;
+      margin-bottom: 20px;
+      display: block;
+
+      @include mq('desktop1350') {
+        width: 120px;
+      }
+      @include mq('2K') {
+        width: 160px;
+      }
+    }
+
+    @include maq('tablet') {
+      margin-bottom: 50px;
+    }
+    @include mq('tablet') {
+      flex-wrap: wrap;
+      width: 28%;
+    }
+    @include mq('desktop') {
+      width: 23%;
+    }
+  }
+
+  @include maq('tablet') {
+    margin-bottom: 50px;
+  }
+}
+
+.footer-middle {
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  .footer-middle__text {
+    width: 36%;
+    align-self: center;
+    @include adaptiv-font(20, 18);
+    font-weight: 800;
+
+    @include maq('tablet') {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    @include mq('tablet') {
+      width: 45%;
+    }
+  }
+
+  .footer-middle__form {
+    width: 45%;
+    align-self: center;
+
+
+    .footer-form__input{
+      background: $color_2w;
+      border: 1px solid $color_3b;
+      padding: 13px 15px;
+      border-radius: 10px;
+      flex: 1 1 auto;
+      &::placeholder{
+        @include adaptiv-font(18, 16);
+        color: #2222226e;
+      }
+    }
+    .footer-form__btn{
+      width: fit-content;
+      margin-left: 30px;
+      @include maq('tablet') {
+       display: none;
+      }
+      &-mobile{
+        margin-top: 15px;
+        @include mq('tablet') {
+          display: none;
+        }
+      }
+    }
+    .wr-bt-inp{
+      display: flex;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @include maq('tablet') {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    @include mq('tablet') {
+      width: 51%;
+    }
+  }
+
+  @include maq('tablet') {
+    margin-bottom: 50px;
+  }
+
+}
+
+.footer-bottom {
+
+  .footer-top__ifo {
+    width: 100%;
+
+    @include maq('tablet') {
+      margin-bottom: 50px;
+    }
+    @include mq('tablet') {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .footer-bottom__ip {
+    width: 33.33%;
+    align-self: center;
+    @include adaptiv-font(16, 14);
+
+    @include maq('tablet') {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-bottom__politica {
+    width: 33.33%;
+    align-self: center;
+    text-align: center;
+    a{
+      @include adaptiv-font(16, 14);
+      color: $color_1b;
+    }
+
+    @include maq('tablet') {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  }
+
+  .footer-bottom__labsales {
+    width: 33.33%;
+    align-self: center;
+    text-align: right;
+
+    @include maq('tablet') {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  @include mq('tablet') {
+    flex-wrap: wrap;
+  }
+}
+
+

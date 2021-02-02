@@ -1,0 +1,130 @@
+.elephant-modal-dialog {
+  @media (min-width: 1200px) {
+     max-width: 1170px;
+  }
+  @media (min-width: 1600px) {
+    max-width: 1550px;
+  }
+
+}
+
+.elephant-modal-body{
+  margin: 0 !important;
+  padding: 0 !important;
+  @include mq('desktop') {
+    width: 70%;
+  }
+}
+
+.elephant-modal-content {
+  padding: 50px 35px;
+  background: #F4F4F4;
+  border-radius: 0;
+  border: 1px solid $color3;
+  box-shadow: 0px 4px 50px 22px rgba(245, 223, 77, 0.15);
+  background: $color1;
+  @include mq('desktop') {
+    padding: 70px;
+    @if( $link-img == ''){
+      background-image: url("../img/modal.png");
+    } @else {
+      background-image: url( $link-img + "/img/modal.png");
+    }
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 47%;
+    border: 3px solid $color3;
+  }
+
+}
+
+.CloseElephant {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 1;
+  &:active,
+  &:focus,
+  &:hover{
+    outline: none;
+    border: none;
+  }
+}
+
+.elephant-modal-body__title {
+
+  margin-bottom: 35px;
+}
+
+.formElephant {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.bodyFr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include mq('desktop') {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.wrformElephant {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .inputElephant {
+    padding: 10px 20px 10px 0;
+    background: $color1;
+    color: $color2;
+    @include adaptiv-font(16, 16);
+    font-weight: 400;
+    width: 100%;
+    border-bottom: 1px solid $color2;
+    &::placeholder{
+      color: $color2;
+    }
+  }
+
+  @include mq('desktop') {
+    width: 50%;
+    padding: 0 15px;
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.polit {
+  margin: 10px 0 35px;
+  width: 100%;
+  @include mq('tablet-wide') {
+    margin: 20px 0 40px;
+  }
+  @include adaptiv-font(12, 12);
+  font-weight: 300;
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: $color2;
+    &:hover{
+      color: $color3;
+    }
+  }
+}
+.wrformElephantBtn{
+  @include maq('tablet-wide') {
+    width: 100%;
+    .form-btn{
+      width: 100%;
+    }
+  }
+}
