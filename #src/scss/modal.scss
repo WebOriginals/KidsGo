@@ -20,9 +20,9 @@
   padding: 50px 35px;
   background: #F4F4F4;
   border-radius: 0;
-  border: 1px solid $color3;
+  //border: 1px solid $color3;
   box-shadow: 0px 4px 50px 22px rgba(245, 223, 77, 0.15);
-  background: $color1;
+  //background: $color1;
   @include mq('desktop') {
     padding: 70px;
     @if( $link-img == ''){
@@ -33,7 +33,7 @@
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 47%;
-    border: 3px solid $color3;
+    //border: 3px solid $color3;
   }
 
 }
@@ -82,14 +82,14 @@
 
   .inputElephant {
     padding: 10px 20px 10px 0;
-    background: $color1;
-    color: $color2;
+    //background: $color1;
+    //color: $color2;
     @include adaptiv-font(16, 16);
     font-weight: 400;
     width: 100%;
-    border-bottom: 1px solid $color2;
+   // border-bottom: 1px solid $color2;
     &::placeholder{
-      color: $color2;
+     // color: $color2;
     }
   }
 
@@ -114,9 +114,9 @@
   a {
     text-decoration: underline;
     cursor: pointer;
-    color: $color2;
+    //color: $color2;
     &:hover{
-      color: $color3;
+     // color: $color3;
     }
   }
 }

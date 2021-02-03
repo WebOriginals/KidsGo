@@ -16,6 +16,9 @@
 @@include('brends-slider.js')
 @@include('first-screen-slider.js')
 @@include('good-slider.js')
+@@include('quantity.js')
+
+
 
 
 @@include('filter-slider-price.js')
