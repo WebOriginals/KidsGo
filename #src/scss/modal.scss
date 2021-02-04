@@ -14,6 +14,9 @@
   @include mq('desktop') {
     width: 70%;
   }
+  @include mq('desktop') {
+    width: 100%;
+  }
 }
 
 .kidsgo-modal-content {
@@ -171,15 +174,26 @@
     font-weight: bold;
     padding: 9px 35px;
     border-radius: 21px;
+    cursor: pointer;
   }
 
   .form-btn-yes{
     border: 2px solid $color_4p;
     color: $color_4p;
+
+    &:hover{
+      background: $color_4p;
+      color: $color_2w;
+    }
   }
   .form-btn-no{
     border: 2px solid $color_3b;
     color: $color_3b;
+
+    &:hover{
+      background: $color_3b;
+      color: $color_2w;
+    }
   }
 }
 

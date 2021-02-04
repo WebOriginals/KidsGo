@@ -2614,6 +2614,10 @@ body {
   margin-right: 15px;
 }
 
+.basket-card-item__del {
+  cursor: pointer;
+}
+
 .basket-card-item__favorites .popular-products__favorites {
   position: relative;
   width: 23px;
@@ -3115,6 +3119,7 @@ body {
   font-weight: bold;
   padding: 9px 35px;
   border-radius: 21px;
+  cursor: pointer;
 }
 
 .kidsgo-modal-del .form-btn-yes {
@@ -3122,9 +3127,19 @@ body {
   color: #F81157;
 }
 
+.kidsgo-modal-del .form-btn-yes:hover {
+  background: #F81157;
+  color: #fff;
+}
+
 .kidsgo-modal-del .form-btn-no {
   border: 2px solid #015AFE;
   color: #015AFE;
+}
+
+.kidsgo-modal-del .form-btn-no:hover {
+  background: #015AFE;
+  color: #fff;
 }
 
 .kidsgo-modal-number .kidsgo-modal-content {
@@ -3907,6 +3922,10 @@ body {
 
   .kidsgo-modal-body {
     width: 70%;
+  }
+
+  .kidsgo-modal-body {
+    width: 100%;
   }
 
   .kidsgo-modal-content {
