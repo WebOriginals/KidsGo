@@ -1,0 +1,145 @@
+.orderRegistration-card {
+
+}
+
+.body-orderRegistration-card {
+  display: grid;
+
+  @include mq('tablet') {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  @include mq('desktop') {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+.orderRegistration-card__left {
+  @include adaptiv-margin-bottom(150,80);
+}
+
+.body-mod {
+  display: grid;
+  @include mq('desktop') {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 30px;
+  }
+}
+
+.wrapper-field__title{
+  @include adaptiv-font(16, 14);
+  font-weight: bold;
+  @include adaptiv-margin-bottom(20, 20);
+}
+
+.orderRegistration-card-left__item {
+  margin-bottom: 50px;
+
+  .all-checkbox{
+
+    .label-checkbox{
+      @include adaptiv-font(16, 14);
+      font-weight:600;
+    }
+  }
+}
+
+.orderRegistration-card-left__title {
+  @include adaptiv-font(20, 18);
+  font-weight: bold;
+  text-transform: uppercase;
+  @include adaptiv-margin-bottom(40, 20);
+
+}
+
+.wrapper-field {
+  position: relative;
+}
+
+.wrapper-field-input {
+  border: 1px solid $color_3b;
+  border-radius: 23px;
+  padding: 13px 20px;
+  @include adaptiv-font(16, 14);
+  font-weight: 600;
+  width: 100%;
+
+
+  &:not(:last-child) {
+    @include adaptiv-margin-bottom(20, 10);
+  }
+
+  &::placeholder {
+    @include adaptiv-font(16, 14);
+    font-weight: 600;
+    color: $color_1b;
+  }
+
+}
+
+.fio {
+  background: $color_2w;
+  color: $color_3b;
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  @include adaptiv-font(10, 8);
+}
+
+.wrapper-field-btn {
+  margin-top: 30px;
+
+  .wrapper-field-btn__enter {
+    @include adaptiv-font(16, 14);
+    font-weight: bold;
+    margin-right: 50px;
+    display: inline;
+    color: $color_3b;
+    cursor: pointer;
+
+    &:hover {
+      color: $color_4p;
+    }
+  }
+
+  .wrapper-field-btn__register {
+    @include adaptiv-font(16, 14);
+    font-weight: bold;
+    display: inline;
+    color: $color_4p;
+    cursor: pointer;
+
+    &:hover {
+      color: $color_3b;
+    }
+  }
+}
+
+.p-grey {
+  @include adaptiv-font(12, 12);
+  color: $color_6g;
+  @include maq('desktop') {
+    margin-top: 20px;
+  }
+}
+
+.orderRegistration-card-left__btn{
+
+  @include mq('desktop') {
+    width: 250px;
+  }
+  @include mq('desktop-wide') {
+    width: 300px;
+  }
+}
+
+.orderRegistration-card__right {
+
+}
+
+
+
+
+
+
+

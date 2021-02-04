@@ -1,0 +1,73 @@
+secrion.orderRegistration-card
+    .container
+        .body-orderRegistration-card
+            form.orderRegistration-card__left.mod
+                .orderRegistration-card-left__item
+                    .orderRegistration-card-left__title  Контактная информация
+                    .body-mod
+                        .wr-inp
+                            .wrapper-field
+                                .fio ФИО
+                                input(placeholder="Иванова Ирина Ивановна").wrapper-field-input
+                                input(placeholder="Телефон*").wrapper-field-input
+                                input(placeholder="E-mail*").wrapper-field-input
+                            .wrapper-field-btn
+                                .wrapper-field-btn__enter Войти
+                                .wrapper-field-btn__register Зарегистрироваться
+
+                        p.p-grey Обратите внимание, что только зарегистрированные пользователи могут пользоваться преимуществами программы лояльности, получать скидки и бонусные начисления, а также просматривать информацию по заказу
+
+
+                .orderRegistration-card-left__item
+                    .orderRegistration-card-left__title  Доставка
+                    .body-mod
+                        .wrapper-field
+                            .fio Город
+                            input(placeholder="Город*").wrapper-field-input
+
+                            .wrapper-field__title Тип доставки:
+                            .categories-sidebar.all-checkbox
+                                input#categories_1(type="radio" name="categories" value="СДЭК в пункт выдачи (от 3-х дней - от 300р)").input-checkbox
+                                label(for="categories_1").label-checkbox СДЭК в пункт выдачи (от 3-х дней - от 300р)
+
+                                input#categories_2(type="radio" name="categories" value="СДЭК, курьером до двери (от 3-х дней - от 300р)").input-checkbox
+                                label(for="categories_2").label-checkbox СДЭК, курьером до двери (от 3-х дней - от 300р)
+
+                                input#categories_3(type="radio" name="categories" value="Почтой России (от 1 дня - от 199р)").input-checkbox
+                                label(for="categories_3").label-checkbox Почтой России (от 1 дня - от 199р)
+
+                                input#categories_4(type="radio" name="categories" value="Самовывоз из ПВЗ (бесплатно)").input-checkbox
+                                label(for="categories_4").label-checkbox Самовывоз из ПВЗ (бесплатно)
+
+                                input#categories_5(type="radio" name="categories" value="Самовывоз из магазина (бесплатно)").input-checkbox
+                                label(for="categories_5").label-checkbox Самовывоз из магазина (бесплатно)
+
+
+
+
+
+
+                .orderRegistration-card-left__item
+                    .orderRegistration-card-left__title  Оплата
+                    .body-mod
+                        .wrapper-field
+                            .wrapper-field__title Выберите способ оплаты
+                            .categories-sidebar.all-checkbox
+                                input#categories_10(type="radio" name="categories1" value="Оплата при получении").input-checkbox
+                                label(for="categories_10").label-checkbox Оплата при получении
+
+                                input#categories_20(type="radio" name="categories1" value="Оплата картой онлайн").input-checkbox
+                                label(for="categories_20").label-checkbox Оплата картой онлайн
+
+
+
+
+
+
+
+
+
+                .orderRegistration-card-left__btn.button_blue Оформить заказ
+
+            .orderRegistration-card__right
+

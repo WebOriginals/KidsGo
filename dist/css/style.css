@@ -2106,107 +2106,6 @@ body {
   margin-bottom: 20px;
 }
 
-.wrapper-sidebar .all-checkbox {
-  max-height: 230px;
-  overflow-y: auto;
-}
-
-.wrapper-sidebar .all-checkbox ::-webkit-scrollbar-button {
-  background-repeat: no-repeat;
-  width: 5px;
-  height: 0;
-}
-
-.wrapper-sidebar .all-checkbox ::-webkit-scrollbar-track {
-  background-color: #e7e7e7;
-  border-radius: 50px;
-}
-
-.wrapper-sidebar .all-checkbox ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: rgba(1, 90, 254, 0.2);
-}
-
-.wrapper-sidebar .all-checkbox ::-webkit-resizer {
-  background-repeat: no-repeat;
-  width: 5px;
-  height: 0;
-}
-
-.wrapper-sidebar .all-checkbox ::-webkit-scrollbar {
-  width: 0;
-}
-
-.wrapper-sidebar .all-checkbox::-webkit-scrollbar-button {
-  background-repeat: no-repeat;
-  width: 5px;
-  height: 0;
-}
-
-.wrapper-sidebar .all-checkbox::-webkit-scrollbar-track {
-  border-radius: 50px;
-}
-
-.wrapper-sidebar .all-checkbox::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: rgba(1, 90, 254, 0.2);
-}
-
-.wrapper-sidebar .all-checkbox::-webkit-resizer {
-  background-repeat: no-repeat;
-  width: 7px;
-  height: 0;
-}
-
-.wrapper-sidebar .all-checkbox::-webkit-scrollbar {
-  width: 5px !important;
-}
-
-.wrapper-sidebar .all-checkbox .label-checkbox {
-  display: block;
-  cursor: pointer;
-  position: relative;
-  padding: 5px 0 0 36px;
-  margin-right: 15px;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.wrapper-sidebar .all-checkbox .input-checkbox[type=checkbox] {
-  display: none;
-}
-
-.wrapper-sidebar .all-checkbox .label-checkbox:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  position: absolute;
-  left: 0;
-  top: 5px;
-  bottom: 1px;
-  border: 1px solid rgba(1, 90, 254, 0.5);
-}
-
-.wrapper-sidebar .all-checkbox .input-checkbox[type=checkbox]:checked + .label-checkbox:after {
-  content: "";
-  background-image: url("./../../img/ic/check.svg");
-  background-position: 4px 0px;
-  background-repeat: no-repeat;
-  top: 0px;
-  left: 0;
-  position: absolute;
-  display: block;
-  width: 27px;
-  height: 25px;
-}
-
-.wrapper-sidebar .all-checkbox .input-checkbox[type=checkbox]:checked + .label-checkbox {
-  color: #F81157;
-}
-
 .wrapper-sidebar .size-sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2222,6 +2121,110 @@ body {
 .wrapper-sidebar .size-sidebar .label-checkbox {
   width: 33.33%;
   margin-right: 0;
+}
+
+.all-checkbox {
+  max-height: 230px;
+  overflow-y: auto;
+}
+
+.all-checkbox ::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0;
+}
+
+.all-checkbox ::-webkit-scrollbar-track {
+  background-color: #e7e7e7;
+  border-radius: 50px;
+}
+
+.all-checkbox ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(1, 90, 254, 0.2);
+}
+
+.all-checkbox ::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0;
+}
+
+.all-checkbox ::-webkit-scrollbar {
+  width: 0;
+}
+
+.all-checkbox::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0;
+}
+
+.all-checkbox::-webkit-scrollbar-track {
+  border-radius: 50px;
+}
+
+.all-checkbox::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(1, 90, 254, 0.2);
+}
+
+.all-checkbox::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0;
+}
+
+.all-checkbox::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+.all-checkbox .label-checkbox {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0 0 36px;
+  margin-right: 15px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.all-checkbox .input-checkbox[type=checkbox],
+.all-checkbox .input-checkbox[type=radio] {
+  display: none;
+}
+
+.all-checkbox .label-checkbox:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 1px;
+  border: 1px solid rgba(1, 90, 254, 0.5);
+}
+
+.all-checkbox .input-checkbox[type=checkbox]:checked + .label-checkbox:after,
+.all-checkbox .input-checkbox[type=radio]:checked + .label-checkbox:after {
+  content: "";
+  background-image: url("./../../img/ic/check.svg");
+  background-position: 4px 0px;
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 25px;
+}
+
+.all-checkbox .input-checkbox[type=checkbox]:checked + .label-checkbox,
+.all-checkbox .input-checkbox[type=radio]:checked + .label-checkbox {
+  color: #F81157;
 }
 
 .settings-open {
@@ -2816,6 +2819,130 @@ body {
   margin: auto;
 }
 
+.body-orderRegistration-card {
+  display: grid;
+}
+
+.orderRegistration-card__left {
+  margin-bottom: calc(80px + 70 * ((100vw - 320px) / 1600));
+}
+
+.body-mod {
+  display: grid;
+}
+
+.wrapper-field__title {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  margin-bottom: calc(20px + 0 * ((100vw - 320px) / 1600));
+}
+
+.orderRegistration-card-left__item {
+  margin-bottom: 50px;
+}
+
+.orderRegistration-card-left__item .all-checkbox .label-checkbox {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+}
+
+.orderRegistration-card-left__title {
+  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: calc(20px + 20 * ((100vw - 320px) / 1600));
+}
+
+.wrapper-field {
+  position: relative;
+}
+
+.wrapper-field-input {
+  border: 1px solid #015AFE;
+  border-radius: 23px;
+  padding: 13px 20px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  width: 100%;
+}
+
+.wrapper-field-input:not(:last-child) {
+  margin-bottom: calc(10px + 10 * ((100vw - 320px) / 1600));
+}
+
+.wrapper-field-input::-webkit-input-placeholder {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  color: #222;
+}
+
+.wrapper-field-input::-moz-placeholder {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  color: #222;
+}
+
+.wrapper-field-input:-ms-input-placeholder {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  color: #222;
+}
+
+.wrapper-field-input::-ms-input-placeholder {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  color: #222;
+}
+
+.wrapper-field-input::placeholder {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  color: #222;
+}
+
+.fio {
+  background: #fff;
+  color: #015AFE;
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  font-size: calc(8px + 2 * ((100vw - 320px) / 1600));
+}
+
+.wrapper-field-btn {
+  margin-top: 30px;
+}
+
+.wrapper-field-btn .wrapper-field-btn__enter {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  margin-right: 50px;
+  display: inline;
+  color: #015AFE;
+  cursor: pointer;
+}
+
+.wrapper-field-btn .wrapper-field-btn__enter:hover {
+  color: #F81157;
+}
+
+.wrapper-field-btn .wrapper-field-btn__register {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  display: inline;
+  color: #F81157;
+  cursor: pointer;
+}
+
+.wrapper-field-btn .wrapper-field-btn__register:hover {
+  color: #015AFE;
+}
+
+.p-grey {
+  font-size: calc(12px + 0 * ((100vw - 320px) / 1600));
+  color: #C8C8C8;
+}
+
 .footer {
   background: #C8D9F8;
   padding: 30px 0;
@@ -3395,6 +3522,11 @@ body {
     top: 15px;
   }
 
+  .body-orderRegistration-card {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+
   .footer-top .footer-top__menu .content-mobile {
     display: none;
   }
@@ -3916,6 +4048,19 @@ body {
     padding-left: 15px;
   }
 
+  .body-orderRegistration-card {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .body-mod {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 30px;
+  }
+
+  .orderRegistration-card-left__btn {
+    width: 250px;
+  }
+
   .footer {
     padding: 60px 0;
   }
@@ -4062,6 +4207,10 @@ body {
     width: 96px;
     right: -63px;
     top: 39px;
+  }
+
+  .orderRegistration-card-left__btn {
+    width: 300px;
   }
 }
 
@@ -4308,6 +4457,10 @@ body {
 
   .basket-card-item__quantity {
     background-image: url("./../../img/ic/arrow-numb.svg");
+  }
+
+  .p-grey {
+    margin-top: 20px;
   }
 }
 
