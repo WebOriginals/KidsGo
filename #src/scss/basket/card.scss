@@ -285,7 +285,7 @@
 
     @include maq('tablet') {
       margin-top: 40px;
-      order: 2;
+      order: 3;
     }
 
     @include mq('tablet') {
@@ -395,4 +395,11 @@
     float: left;
     top: 15px;
   }
+}
+
+.promobtn{
+  @include maq('tablet') {
+    order: 2;
+  }
+  margin: auto;
 }
