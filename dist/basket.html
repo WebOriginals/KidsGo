@@ -202,10 +202,10 @@
                   <div class="basket-card-item__ic-subtext">В избранном</div>
                 </div>
                 <div class="basket-card-item__del">
-                  <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
+                  <div class="basket-card-item__ic" data-toggle="modal" data-target="#basket-del"><img src="img/ic/delete.svg"></div>
                   <div class="basket-card-item__ic-subtext">Удалить</div>
                 </div>
-                <div class="basket-card-item__quantity">
+                <div class="basket-card-item__quantity" data-toggle="modal" data-target="#numder-modal">
                   <div class="basket-card-item__quantity-itm">1 шт.</div>
                 </div>
               </div>
@@ -243,10 +243,10 @@
                   <div class="basket-card-item__ic-subtext">В избранном</div>
                 </div>
                 <div class="basket-card-item__del">
-                  <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
+                  <div class="basket-card-item__ic" data-toggle="modal" data-target="#basket-del"><img src="img/ic/delete.svg"></div>
                   <div class="basket-card-item__ic-subtext">Удалить</div>
                 </div>
-                <div class="basket-card-item__quantity">
+                <div class="basket-card-item__quantity" data-toggle="modal" data-target="#numder-modal">
                   <div class="basket-card-item__quantity-itm">1 шт.</div>
                 </div>
               </div>
@@ -283,11 +283,11 @@
                   <div class="popular-products__favorites"><img class="ic-favorites" src="img/ic/favorites.svg"><img class="ic-favorites-active" src="img/ic/favorites-active.svg"></div>
                   <div class="basket-card-item__ic-subtext">В избранном</div>
                 </div>
-                <div class="basket-card-item__del">
+                <div class="basket-card-item__del" data-toggle="modal" data-target="#basket-del">
                   <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
                   <div class="basket-card-item__ic-subtext">Удалить</div>
                 </div>
-                <div class="basket-card-item__quantity">
+                <div class="basket-card-item__quantity" data-toggle="modal" data-target="#numder-modal">
                   <div class="basket-card-item__quantity-itm">1 шт.</div>
                 </div>
               </div>
@@ -324,11 +324,11 @@
                   <div class="popular-products__favorites"><img class="ic-favorites" src="img/ic/favorites.svg"><img class="ic-favorites-active" src="img/ic/favorites-active.svg"></div>
                   <div class="basket-card-item__ic-subtext">В избранном</div>
                 </div>
-                <div class="basket-card-item__del">
+                <div class="basket-card-item__del" data-toggle="modal" data-target="#basket-del">
                   <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
                   <div class="basket-card-item__ic-subtext">Удалить</div>
                 </div>
-                <div class="basket-card-item__quantity">
+                <div class="basket-card-item__quantity" data-toggle="modal" data-target="#numder-modal">
                   <div class="basket-card-item__quantity-itm">1 шт.</div>
                 </div>
               </div>
@@ -466,7 +466,79 @@
         </div>
       </div>
     </section>
-    <!--include block/modal-->
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#kidsgo-modal">Запустить модальное окно</button>
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#basket-del">del</button>
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#numder-modal">колличество товара</button>
+    <div class="modal kidsgo-modal fade" id="kidsgo-modal">
+      <div class="modal-dialog kidsgo-modal-dialog">
+        <div class="modal-content kidsgo-modal-content">
+          <button class="close Closekidsgo" type="button" data-dismiss="modal" aria-label="Close"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L24.5 24.5" stroke="#F5DF4D" stroke-width="3"/>
+<path d="M24.5 2L2 24.5" stroke="#F5DF4D" stroke-width="3"/>
+</svg>
+          </button>
+          <div class="modal-body kidsgo-modal-body">
+            <div class="kidsgo-modal-body__title title-block">Получить консультацию</div>
+            <form class="formkidsgo">
+              <div class="bodyFr">
+                <div class="wrformkidsgo">
+                  <input class="inputkidsgo" placeholder="Имя*">
+                </div>
+                <div class="wrformkidsgo">
+                  <input class="inputkidsgo" placeholder="Телефон*">
+                </div>
+                <div class="wrformkidsgo">
+                  <input class="inputkidsgo" placeholder="Е-mail">
+                </div>
+                <div class="wrformkidsgo">
+                  <input class="inputkidsgo" placeholder="Ваш комментарий">
+                </div>
+              </div>
+              <div class="polit">
+                <p> Нажав на кнопку, я даю согласие на <a>обработку персональных данных</a></p>
+              </div>
+              <div class="wrformkidsgoBtn">
+                <div class="form-btn button btn-modal">отправить</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal kidsgo-modal-del basket-modal fade" id="basket-del">
+      <div class="modal-dialog kidsgo-modal-dialog">
+        <div class="modal-content kidsgo-modal-content">
+          <div class="modal-body kidsgo-modal-body">
+            <div class="kidsgo-modal-body__title-del">Точно удалить?</div>
+            <form class="formkidsgo">
+              <div class="wrformkidsgoBtn-del">
+                <div class="form-btn-yes del-btn"> ДА</div>
+                <div class="form-btn-no del-btn">Нет</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal kidsgo-modal-number basket-modal fade" id="numder-modal">
+      <div class="modal-dialog kidsgo-modal-dialog">
+        <div class="modal-content kidsgo-modal-content">
+          <button class="close Closekidsgo" type="button" data-dismiss="modal" aria-label="Close"><img src="img/ic/close.svg"></button>
+          <div class="modal-body kidsgo-modal-body">
+            <div class="kidsgo-modal-body__title-number">Выберите количество</div>
+            <form class="formkidsgo">
+              <ul class="wrformkidsgoList-number">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

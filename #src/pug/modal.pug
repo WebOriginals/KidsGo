@@ -1,30 +1,59 @@
-button.btn.btn-primary(type="button" data-toggle="modal" data-target="#elephant-modal") Запустить модальное окно
-button.btn.btn-primary(type="button" data-toggle="modal" data-target="#elephant-modal") Запустить модальное окно
-button.btn.btn-primary(type="button" data-toggle="modal" data-target="#elephant-modal") Запустить модальное окно
+button.btn.btn-primary(type="button" data-toggle="modal" data-target="#kidsgo-modal") Запустить модальное окно
+button.btn.btn-primary(type="button" data-toggle="modal" data-target="#basket-del") del
+button.btn.btn-primary(type="button" data-toggle="modal" data-target="#numder-modal") колличество товара
 
-.modal.elephant-modal.fade#elephant-modal
-    .modal-dialog.elephant-modal-dialog
-        .modal-content.elephant-modal-content
-            button.close.CloseElephant(type="button" data-dismiss="modal" aria-label="Close")
+.modal.kidsgo-modal.fade#kidsgo-modal
+    .modal-dialog.kidsgo-modal-dialog
+        .modal-content.kidsgo-modal-content
+            button.close.Closekidsgo(type="button" data-dismiss="modal" aria-label="Close")
                 <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 2L24.5 24.5" stroke="#F5DF4D" stroke-width="3"/>
                 <path d="M24.5 2L2 24.5" stroke="#F5DF4D" stroke-width="3"/>
                 </svg>
-            .modal-body.elephant-modal-body
-                .elephant-modal-body__title.title-block Получить консультацию
-                form.formElephant
+            .modal-body.kidsgo-modal-body
+                .kidsgo-modal-body__title.title-block Получить консультацию
+                form.formkidsgo
                     .bodyFr
-                        .wrformElephant
-                            input.inputElephant(placeholder="Имя*")
-                        .wrformElephant
-                            input.inputElephant(placeholder="Телефон*")
-                        .wrformElephant
-                            input.inputElephant(placeholder="Е-mail")
-                        .wrformElephant
-                            input.inputElephant(placeholder="Ваш комментарий")
+                        .wrformkidsgo
+                            input.inputkidsgo(placeholder="Имя*")
+                        .wrformkidsgo
+                            input.inputkidsgo(placeholder="Телефон*")
+                        .wrformkidsgo
+                            input.inputkidsgo(placeholder="Е-mail")
+                        .wrformkidsgo
+                            input.inputkidsgo(placeholder="Ваш комментарий")
                     .polit
                         p  Нажав на кнопку, я даю согласие на <a>обработку персональных данных</a>
-                    .wrformElephantBtn
+                    .wrformkidsgoBtn
                         .form-btn.button.btn-modal отправить
+
+
+.modal.kidsgo-modal-del.basket-modal.fade#basket-del
+    .modal-dialog.kidsgo-modal-dialog
+        .modal-content.kidsgo-modal-content
+            .modal-body.kidsgo-modal-body
+                .kidsgo-modal-body__title-del Точно удалить?
+                form.formkidsgo
+                    .wrformkidsgoBtn-del
+                        .form-btn-yes.del-btn  ДА
+                        .form-btn-no.del-btn Нет
+
+
+
+.modal.kidsgo-modal-number.basket-modal.fade#numder-modal
+    .modal-dialog.kidsgo-modal-dialog
+        .modal-content.kidsgo-modal-content
+            button.close.Closekidsgo(type="button" data-dismiss="modal" aria-label="Close")
+                img(src="img/ic/close.svg")
+            .modal-body.kidsgo-modal-body
+                .kidsgo-modal-body__title-number Выберите количество
+                form.formkidsgo
+                    ul.wrformkidsgoList-number
+                        li 1
+                        li 2
+                        li 3
+                        li 4
+                        li 5
+
 
 

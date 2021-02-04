@@ -173,7 +173,7 @@
 }
 
 .basket-card-item__quantity{
-  @include maq('tablet-wide') {
+  @include maq('desktop') {
     @if ($link-img == '') {
       background-image: url("./../../img/ic/arrow-numb.svg");
     } @else {

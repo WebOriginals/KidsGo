@@ -1,4 +1,4 @@
-.elephant-modal-dialog {
+.kidsgo-modal-dialog {
   @media (min-width: 1200px) {
      max-width: 1170px;
   }
@@ -8,7 +8,7 @@
 
 }
 
-.elephant-modal-body{
+.kidsgo-modal-body{
   margin: 0 !important;
   padding: 0 !important;
   @include mq('desktop') {
@@ -16,12 +16,12 @@
   }
 }
 
-.elephant-modal-content {
+.kidsgo-modal-content {
   padding: 50px 35px;
   background: #F4F4F4;
   border-radius: 0;
   //border: 1px solid $color3;
-  box-shadow: 0px 4px 50px 22px rgba(245, 223, 77, 0.15);
+  //box-shadow: 0px 4px 50px 22px rgba(245, 223, 77, 0.15);
   //background: $color1;
   @include mq('desktop') {
     padding: 70px;
@@ -38,11 +38,12 @@
 
 }
 
-.CloseElephant {
+.Closekidsgo {
   position: absolute;
   top: 15px;
   right: 15px;
   opacity: 1;
+  z-index: 9;
   &:active,
   &:focus,
   &:hover{
@@ -51,12 +52,12 @@
   }
 }
 
-.elephant-modal-body__title {
+.kidsgo-modal-body__title {
 
   margin-bottom: 35px;
 }
 
-.formElephant {
+.formkidsgo {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -73,14 +74,14 @@
   }
 }
 
-.wrformElephant {
+.wrformkidsgo {
   width: 100%;
 
   &:not(:last-child) {
     margin-bottom: 30px;
   }
 
-  .inputElephant {
+  .inputkidsgo {
     padding: 10px 20px 10px 0;
     //background: $color1;
     //color: $color2;
@@ -120,11 +121,98 @@
     }
   }
 }
-.wrformElephantBtn{
+.wrformkidsgoBtn{
   @include maq('tablet-wide') {
     width: 100%;
     .form-btn{
       width: 100%;
+    }
+  }
+}
+
+
+
+
+//модалка корзины
+.basket-modal{
+  .kidsgo-modal-content{
+    border-radius: 21px;
+    padding: 25px;
+    @include mq('phone-midle') {
+      width: 82%;
+      margin: auto;
+    }
+    @include mq('tablet') {
+      width: 300px;
+    }
+  }
+}
+
+//модалка удаления товара
+.kidsgo-modal-del{
+
+
+  .kidsgo-modal-body__title-del{
+    @include adaptiv-font(18, 16);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .wrformkidsgoBtn-del{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .del-btn{
+    @include adaptiv-font(18, 18);
+    font-weight: bold;
+    padding: 9px 35px;
+    border-radius: 21px;
+  }
+
+  .form-btn-yes{
+    border: 2px solid $color_4p;
+    color: $color_4p;
+  }
+  .form-btn-no{
+    border: 2px solid $color_3b;
+    color: $color_3b;
+  }
+}
+
+//модалка кол-во товара
+.kidsgo-modal-number{
+
+  .kidsgo-modal-content{
+    padding: 17px 17px 17px 0;
+  }
+
+  .kidsgo-modal-body__title-number{
+    @include adaptiv-font(18, 16);
+    font-weight: bold;
+    padding-left: 17px;
+  }
+
+  .formkidsgo{
+    max-height: 100px;
+    overflow-y: auto;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .wrformkidsgoList-number{
+    width: 100%;
+    li{
+      padding: 10px 14px;
+      border-bottom: 1px solid $color_6g;
+      @include adaptiv-font(16, 14);
+      font-weight: bold;
+    }
+    &:hover{
+
     }
   }
 }
