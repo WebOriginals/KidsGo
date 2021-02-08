@@ -17,6 +17,7 @@
 @@include('first-screen-slider.js')
 @@include('good-slider.js')
 @@include('quantity.js')
+@@include('textarea.js')
 
 
 

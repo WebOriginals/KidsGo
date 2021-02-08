@@ -11,3 +11,7 @@ $(".popular-products__favorites").click(function () {
 
 
 
+
+
+
+

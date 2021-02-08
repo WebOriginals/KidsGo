@@ -89,6 +89,10 @@ $(".popular-products__favorites").click(function () {
 
 
 
+
+
+
+
 ( function( $ ){
 
     // Настройки
@@ -104,6 +108,7 @@ $(".popular-products__favorites").click(function () {
         class_items : 'list__itams',
         class_selector : 'js_size_selector',
         class_disabel : 'list__itams-disabel',
+
     };
 
     var hendler = {
@@ -151,6 +156,17 @@ $(".popular-products__favorites").click(function () {
                 $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
 
                     $( value ).text( $( this ).text() ); // Берем текст из item и сохраняем в видимое выбраное значение
+                    if(window.screen.width<=1023) {
+                        $(value).text(value.text().substring(0, 27)); //ограничиваем кол-во символов на строке
+                        if ($(value).text().length >= 27) { // считаем сколько символов и если больше или равно 27 добавлять ...
+                            $(value).append("...");
+                        }
+                    } else {
+                        $(value).text(value.text().substring(0, 50)); //ограничиваем кол-во символов на строке
+                        if ($(value).text().length >= 50) { // считаем сколько символов и если больше или равно 27 добавлять ...
+                            $(value).append("...");
+                        }
+                    }
                     $( input ).val( $( this ).data( 'value' ) || $( this ).text() ); // Берем дата параметр или текст из item и сохраняем в наш input
 
                     close_select();
@@ -174,6 +190,9 @@ $(".popular-products__favorites").click(function () {
     $( document ).ready( function(){ hendler.construct(); });
 
 })( jQuery );
+
+
+
 $(".search-header").click(function () {
     $(this).toggleClass("active");
     if (this.classList.contains("active") === true) {
@@ -445,6 +464,13 @@ function countFunc(count) {
 }
 var counts = document.querySelectorAll('.card-info__quantity');
 counts.forEach(countFunc);
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keyup', function(){
+    if(this.scrollTop > 0){
+        this.style.height = this.scrollHeight + "px";
+    }
+});
 
 
 

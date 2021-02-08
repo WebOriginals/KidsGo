@@ -1,7 +1,7 @@
 secrion.orderRegistration-card
     .container
-        .body-orderRegistration-card
-            form.orderRegistration-card__left.mod
+        form.body-orderRegistration-card
+            .orderRegistration-card__left.mod
                 .orderRegistration-card-left__item
                     .orderRegistration-card-left__title  Контактная информация
                     .body-mod
@@ -27,7 +27,7 @@ secrion.orderRegistration-card
 
                             .wrapper-field__title Тип доставки:
                             .categories-sidebar.all-checkbox
-                                input#categories_1(type="radio" name="categories" value="СДЭК в пункт выдачи (от 3-х дней - от 300р)").input-checkbox
+                                input#categories_1(type="radio" name="categories" value="СДЭК в пункт выдачи (от 3-х дней - от 300р)" checked).input-checkbox
                                 label(for="categories_1").label-checkbox СДЭК в пункт выдачи (от 3-х дней - от 300р)
 
                                 input#categories_2(type="radio" name="categories" value="СДЭК, курьером до двери (от 3-х дней - от 300р)").input-checkbox
@@ -45,6 +45,35 @@ secrion.orderRegistration-card
 
 
 
+                            .wrapper-field__title.wrapper-field__title-mar *Выберите пункт выдачи:
+                            .body-select-js
+                                .wrapper-size
+                                    .wrapper-input
+                                        input(type="hidden" value="")
+                                        .choice-of-size.select-value Выбрать
+                                    .ii-product__selectors-wrp.js_size_selector
+                                        .wrapper-list
+                                            .wrapper-scrol
+                                                .list
+                                                    .list__itams(data-value="1") ул. 40 лет Победы, 184 корп. 3, пом. 1102
+                                                    .list__itams(data-value="2") ул. Чекистов 22/1
+                                                    .list__itams(data-value="3") ул. 40 лет Победы, 184 корп. 3, пом. 1102
+                                                    .list__itams(data-value="4") ул. 40 лет Победы, 184 корп. 3, пом. 1102 ул. 40 лет Победы, 184 корп. 3, пом. 1102
+                                                    .list__itams(data-value="5") Вариант 5
+                                                    .list__itams(data-value="6") Вариант 6
+                                                    .list__itams(data-value="7") Вариант 7
+                                                    .list__itams(data-value="8") Вариант 8
+
+
+
+
+
+                    .body-inputs
+                        input.wrapper-field-input.street(placeholder="Улица*")
+                        input.wrapper-field-input.small1(placeholder="Дом*")
+                        input.wrapper-field-input.small2(placeholder="Квартира*")
+                        input.wrapper-field-input.small3(placeholder="Этаж")
+                        textarea.wrapper-field-input.long(placeholder="Комментарий к заказу" rows="1")
 
 
                 .orderRegistration-card-left__item
@@ -53,10 +82,10 @@ secrion.orderRegistration-card
                         .wrapper-field
                             .wrapper-field__title Выберите способ оплаты
                             .categories-sidebar.all-checkbox
-                                input#categories_10(type="radio" name="categories1" value="Оплата при получении").input-checkbox
+                                input#categories_10(type="radio" name="categories1" value="Оплата при получении" ).input-checkbox
                                 label(for="categories_10").label-checkbox Оплата при получении
 
-                                input#categories_20(type="radio" name="categories1" value="Оплата картой онлайн").input-checkbox
+                                input#categories_20(type="radio" name="categories1" value="Оплата картой онлайн" checked).input-checkbox
                                 label(for="categories_20").label-checkbox Оплата картой онлайн
 
 
@@ -67,7 +96,78 @@ secrion.orderRegistration-card
 
 
 
-                .orderRegistration-card-left__btn.button_blue Оформить заказ
+                .orderRegistration-card-left__btn.button_blue.desctop Оформить заказ
 
             .orderRegistration-card__right
+                .card-right-element
+                    .orderRegistration-card-right__title Состав заказа
+                    .order-card-right__item
+                        .order-card-right-item__img
+                            img(src="img/boots7.png")
+                        .order-card-right-item__functionality
+                            .basket-card-item__description Kapika, Росиия
+                            .basket-card-item__title Сапоги для мальчиков.
+                            .basket-card-item__model Модель: 590к-2
+                            .basket-card-item__color-size цвет черный, размер 33
+                            .basket-card-item__priceNew 2 410 ₽
+                            .basket-card-item__priceOld 2 410 ₽
+                            .card-right-item-bottom
+                                .card-info__quantity
+                                    .card-info__minus
+                                    input.card-info__number(value=1)
+                                    .card-info__plus
+                                .basket-card-item__del(data-toggle="modal" data-target="#basket-del")
+                                    .basket-card-item__ic
+                                        img(src="img/ic/delete.svg")
+                    .order-card-right__item
+                        .order-card-right-item__img
+                            img(src="img/boots5.png")
+                        .order-card-right-item__functionality
+                            .basket-card-item__description Kapika, Росиия
+                            .basket-card-item__title Сапоги для мальчиков.
+                            .basket-card-item__model Модель: 590к-2
+                            .basket-card-item__color-size цвет черный, размер 33
+                            .basket-card-item__priceNew 2 410 ₽
+                            .basket-card-item__priceOld 2 410 ₽
+                            .card-right-item-bottom
+                                .card-info__quantity
+                                    .card-info__minus
+                                    input.card-info__number(value=1)
+                                    .card-info__plus
+                                .basket-card-item__del(data-toggle="modal" data-target="#basket-del")
+                                    .basket-card-item__ic
+                                        img(src="img/ic/delete.svg")
+                    .order-card-right__item
+                        .order-card-right-item__img
+                            img(src="img/boots3.png")
+                        .order-card-right-item__functionality
+                            .basket-card-item__description Kapika, Росиия
+                            .basket-card-item__title Сапоги для мальчиков.
+                            .basket-card-item__model Модель: 590к-2
+                            .basket-card-item__color-size цвет черный, размер 33
+                            .basket-card-item__priceNew 2 410 ₽
+                            .basket-card-item__priceOld 2 410 ₽
+                            .card-right-item-bottom
+                                .card-info__quantity
+                                    .card-info__minus
+                                    input.card-info__number(value=1)
+                                    .card-info__plus
+                                .basket-card-item__del(data-toggle="modal" data-target="#basket-del")
+                                    .basket-card-item__ic
+                                        img(src="img/ic/delete.svg")
+                    .order-card-right__result
+                        .line-result
+                            .line-result__left Товаров на сумму
+                            .line-result__right 10 500р
+                        .line-result
+                            .line-result__left Ваша скидка
+                            .line-result__right.line-result__right-red -4 000р
+                        .line-result.line-result-bold
+                            .line-result__left Итого
+                            .line-result__right 4 000р
+
+
+                    .orderRegistration-card-left__btn.button_blue.mobil Оформить заказ
+
+
 

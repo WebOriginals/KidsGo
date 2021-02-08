@@ -167,8 +167,8 @@
     </section>
     <secrion class="orderRegistration-card">
       <div class="container">
-        <div class="body-orderRegistration-card">
-          <form class="orderRegistration-card__left mod">
+        <form class="body-orderRegistration-card">
+          <div class="orderRegistration-card__left mod">
             <div class="orderRegistration-card-left__item">
               <div class="orderRegistration-card-left__title"> Контактная информация</div>
               <div class="body-mod">
@@ -195,7 +195,7 @@
                   <input class="wrapper-field-input" placeholder="Город*">
                   <div class="wrapper-field__title">Тип доставки:</div>
                   <div class="categories-sidebar all-checkbox">
-                    <input class="input-checkbox" id="categories_1" type="radio" name="categories" value="СДЭК в пункт выдачи (от 3-х дней - от 300р)">
+                    <input class="input-checkbox" id="categories_1" type="radio" name="categories" value="СДЭК в пункт выдачи (от 3-х дней - от 300р)" checked>
                     <label class="label-checkbox" for="categories_1">СДЭК в пункт выдачи (от 3-х дней - от 300р)</label>
                     <input class="input-checkbox" id="categories_2" type="radio" name="categories" value="СДЭК, курьером до двери (от 3-х дней - от 300р)">
                     <label class="label-checkbox" for="categories_2">СДЭК, курьером до двери (от 3-х дней - от 300р)</label>
@@ -206,7 +206,39 @@
                     <input class="input-checkbox" id="categories_5" type="radio" name="categories" value="Самовывоз из магазина (бесплатно)">
                     <label class="label-checkbox" for="categories_5">Самовывоз из магазина (бесплатно)</label>
                   </div>
+                  <div class="wrapper-field__title wrapper-field__title-mar">*Выберите пункт выдачи:</div>
+                  <div class="body-select-js">
+                    <div class="wrapper-size">
+                      <div class="wrapper-input">
+                        <input type="hidden" value="">
+                        <div class="choice-of-size select-value">Выбрать</div>
+                      </div>
+                      <div class="ii-product__selectors-wrp js_size_selector">
+                        <div class="wrapper-list">
+                          <div class="wrapper-scrol">
+                            <div class="list">
+                              <div class="list__itams" data-value="1">ул. 40 лет Победы, 184 корп. 3, пом. 1102</div>
+                              <div class="list__itams" data-value="2">ул. Чекистов 22/1</div>
+                              <div class="list__itams" data-value="3">ул. 40 лет Победы, 184 корп. 3, пом. 1102</div>
+                              <div class="list__itams" data-value="4">ул. 40 лет Победы, 184 корп. 3, пом. 1102 ул. 40 лет Победы, 184 корп. 3, пом. 1102</div>
+                              <div class="list__itams" data-value="5">Вариант 5</div>
+                              <div class="list__itams" data-value="6">Вариант 6</div>
+                              <div class="list__itams" data-value="7">Вариант 7</div>
+                              <div class="list__itams" data-value="8">Вариант 8</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="body-inputs">
+                <input class="wrapper-field-input street" placeholder="Улица*">
+                <input class="wrapper-field-input small1" placeholder="Дом*">
+                <input class="wrapper-field-input small2" placeholder="Квартира*">
+                <input class="wrapper-field-input small3" placeholder="Этаж">
+                <textarea class="wrapper-field-input long" placeholder="Комментарий к заказу" rows="1"></textarea>
               </div>
             </div>
             <div class="orderRegistration-card-left__item">
@@ -217,16 +249,98 @@
                   <div class="categories-sidebar all-checkbox">
                     <input class="input-checkbox" id="categories_10" type="radio" name="categories1" value="Оплата при получении">
                     <label class="label-checkbox" for="categories_10">Оплата при получении</label>
-                    <input class="input-checkbox" id="categories_20" type="radio" name="categories1" value="Оплата картой онлайн">
+                    <input class="input-checkbox" id="categories_20" type="radio" name="categories1" value="Оплата картой онлайн" checked>
                     <label class="label-checkbox" for="categories_20">Оплата картой онлайн</label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="orderRegistration-card-left__btn button_blue">Оформить заказ</div>
-          </form>
-          <div class="orderRegistration-card__right"></div>
-        </div>
+            <div class="orderRegistration-card-left__btn button_blue desctop">Оформить заказ</div>
+          </div>
+          <div class="orderRegistration-card__right">
+            <div class="card-right-element">
+              <div class="orderRegistration-card-right__title">Состав заказа</div>
+              <div class="order-card-right__item">
+                <div class="order-card-right-item__img"><img src="img/boots7.png"></div>
+                <div class="order-card-right-item__functionality">
+                  <div class="basket-card-item__description">Kapika, Росиия</div>
+                  <div class="basket-card-item__title">Сапоги для мальчиков.</div>
+                  <div class="basket-card-item__model">Модель: 590к-2</div>
+                  <div class="basket-card-item__color-size">цвет черный, размер 33</div>
+                  <div class="basket-card-item__priceNew">2 410 ₽</div>
+                  <div class="basket-card-item__priceOld">2 410 ₽</div>
+                  <div class="card-right-item-bottom">
+                    <div class="card-info__quantity">
+                      <div class="card-info__minus"></div>
+                      <input class="card-info__number" value="1">
+                      <div class="card-info__plus"></div>
+                    </div>
+                    <div class="basket-card-item__del" data-toggle="modal" data-target="#basket-del">
+                      <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-card-right__item">
+                <div class="order-card-right-item__img"><img src="img/boots5.png"></div>
+                <div class="order-card-right-item__functionality">
+                  <div class="basket-card-item__description">Kapika, Росиия</div>
+                  <div class="basket-card-item__title">Сапоги для мальчиков.</div>
+                  <div class="basket-card-item__model">Модель: 590к-2</div>
+                  <div class="basket-card-item__color-size">цвет черный, размер 33</div>
+                  <div class="basket-card-item__priceNew">2 410 ₽</div>
+                  <div class="basket-card-item__priceOld">2 410 ₽</div>
+                  <div class="card-right-item-bottom">
+                    <div class="card-info__quantity">
+                      <div class="card-info__minus"></div>
+                      <input class="card-info__number" value="1">
+                      <div class="card-info__plus"></div>
+                    </div>
+                    <div class="basket-card-item__del" data-toggle="modal" data-target="#basket-del">
+                      <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-card-right__item">
+                <div class="order-card-right-item__img"><img src="img/boots3.png"></div>
+                <div class="order-card-right-item__functionality">
+                  <div class="basket-card-item__description">Kapika, Росиия</div>
+                  <div class="basket-card-item__title">Сапоги для мальчиков.</div>
+                  <div class="basket-card-item__model">Модель: 590к-2</div>
+                  <div class="basket-card-item__color-size">цвет черный, размер 33</div>
+                  <div class="basket-card-item__priceNew">2 410 ₽</div>
+                  <div class="basket-card-item__priceOld">2 410 ₽</div>
+                  <div class="card-right-item-bottom">
+                    <div class="card-info__quantity">
+                      <div class="card-info__minus"></div>
+                      <input class="card-info__number" value="1">
+                      <div class="card-info__plus"></div>
+                    </div>
+                    <div class="basket-card-item__del" data-toggle="modal" data-target="#basket-del">
+                      <div class="basket-card-item__ic"><img src="img/ic/delete.svg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-card-right__result">
+                <div class="line-result">
+                  <div class="line-result__left">Товаров на сумму</div>
+                  <div class="line-result__right">10 500р</div>
+                </div>
+                <div class="line-result">
+                  <div class="line-result__left">Ваша скидка</div>
+                  <div class="line-result__right line-result__right-red">-4 000р</div>
+                </div>
+                <div class="line-result line-result-bold">
+                  <div class="line-result__left">Итого</div>
+                  <div class="line-result__right">4 000р</div>
+                </div>
+              </div>
+              <div class="orderRegistration-card-left__btn button_blue mobil">Оформить заказ</div>
+            </div>
+          </div>
+        </form>
       </div>
     </secrion>
     <section class="footer">
