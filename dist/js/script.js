@@ -48,6 +48,10 @@ var bLazy = new Blazy({
         }, 200);
     }
 });
+parameters = {
+    duration: 1500,
+}
+
 $(".cmn-toggle-switch__htx").click(function () {
     $(this).toggleClass("active");
     if (this.classList.contains("active") === true) {
@@ -66,10 +70,13 @@ $(".cmn-toggle-switch__htx").click(function () {
 
 if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
     $(".second-menu").click(function () {
+
         var elem = this;
         var block = $(elem).closest('.link-menu');
         var items = $(block).find('.second-menu');
+        var ul = $(block).find('ul');
         $(block).toggleClass("open");
+        $(ul).slideToggle(parameters);
 
     });
 }
@@ -94,7 +101,9 @@ $(".popular-products__favorites").click(function () {
 
 
 ( function( $ ){
-
+    parameters = {
+        duration: 2000,
+    }
     // Настройки
 
     var settings = {
@@ -220,10 +229,13 @@ $(".btn-close-sitings").click(function () {
 });
 if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
     $(".available").click(function () {
+        parameters = {
+            duration: 2000,
+        }
         var elem = this;
         var block = $(elem).closest('.point-shop');
         var items = $(block).find('.available-body');
-        $(items).toggleClass("available-body-active");
+        $(items).slideToggle(parameters);
         $(elem).toggleClass("open");
     });
 }
@@ -464,6 +476,12 @@ function countFunc(count) {
 }
 var counts = document.querySelectorAll('.card-info__quantity');
 counts.forEach(countFunc);
+$(".payment-method").click(function () {
+    var elem = this;
+    var block = $(elem).next('.body-payment-method');
+    $(block).slideToggle(parameters);
+    $(elem).toggleClass("open");
+});
 var textarea = document.querySelector('textarea');
 
 textarea.addEventListener('keyup', function(){
@@ -471,7 +489,6 @@ textarea.addEventListener('keyup', function(){
         this.style.height = this.scrollHeight + "px";
     }
 });
-
 
 
 

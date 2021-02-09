@@ -1,0 +1,223 @@
+section.my-order
+    .container
+        .body-my-order
+            ul.my-order__nav
+                li
+                    a(href="#").active Мои заказы
+                li
+                    a(href="#") Личные данные
+                li
+                    a(href="#") Выйти
+
+
+            .my-order__all
+                .my-order__item
+                    .btn-repeat(style="background-image: url('img/ic/repeat.svg')")
+                        a(href="#") Повторить заказ
+                    .my-order__row
+                        .title-status Заказ	№51 (Ожидает оплаты)
+                        .date-nomber-result   от	15.11.2018, 1	товар	на сумму	9 120 руб.
+                    .my-order__row
+                        .title-payment-delivery Оплата
+                        .my-order__text Счет №51/1 от 15.11.2018,	Оплата наличными в пункте выдаче товара
+                        .my-order__text Сумма к оплате по счету: 9 120 руб.
+                        .payment-method Изменить способ оплаты
+                        .body-payment-method
+                            input#payment-method__1(type="radio" name="payment-method" value="Оплата наличными" checked).input-radio
+                            label(for="payment-method__1").label-payment-method
+                                .label-payment-method__ic
+                                    img(src="img/ic/wallet.svg")
+                                p Оплата при получении
+
+                            input#payment-method__2(type="radio" name="payment-method" value="Безналичная оплата" ).input-radio
+                            label(for="payment-method__2").label-payment-method
+                                .label-payment-method__ic
+                                    img(src="img/ic/credit-card.svg")
+                                p Оплата при получении
+
+
+                    .my-order__row
+                        .title-payment-delivery Доставка
+                        .my-order__text Отгрузка	№51/2, стоимость доставки 0 руб.
+                        .my-order__text Статус отгрузки: Ожидает обработки
+
+                    .my-order__btns
+                        .btn-more.button_pink Подробнее о заказе
+                        .btn-cancel Отменить заказ
+                .my-order__item
+                    .btn-repeat(style="background-image: url('img/ic/repeat.svg')")
+                        a(href="#") Повторить заказ
+                    .my-order__row
+                        .title-status Заказ	№51 (Оплачен)
+                        .date-nomber-result   от	15.11.2018, 1	товар	на сумму	9 120 руб.
+                    .my-order__row
+                        .title-payment-delivery Оплата
+                        .my-order__text Счет №51/1 от 15.11.2018,	Оплата наличными в пункте выдаче товара
+                        .my-order__text Сумма к оплате по счету: 9 120 руб.
+
+                    .my-order__row
+                        .title-payment-delivery Доставка
+                        .my-order__text Отгрузка	№51/2, стоимость доставки 0 руб.
+                        .my-order__text Статус отгрузки: Ожидает обработки
+
+                    .my-order__btns
+                        .btn-more.button_pink Подробнее о заказе
+                        .btn-cancel Отменить заказ
+
+
+
+
+
+
+                .my-order__item.more-mod
+
+                    .my-order__row
+                        .title-status.check Заказ	№51 от	15.11.2018, 1	товар	на сумму	9 120 руб.
+
+                    .wrapper-space-between
+                        .my-order__row
+                            .title-payment-delivery Информация о заказе
+                            .body-inform
+                                .info-wrapper
+                                    .info-wrapper__title Ф.И.О.:
+                                    .info-wrapper__text Бебурешвили А.А.
+                                .info-wrapper
+                                    .info-wrapper__title Текущий статус, от  15.11.2018:
+                                    .info-wrapper__text Принят
+                                .info-wrapper
+                                    .info-wrapper__title Сумма:
+                                    .info-wrapper__text 7 665 руб.
+                                .info-wrapper
+                                    .info-wrapper__title Телефон:
+                                    .info-wrapper__text 8(929)1010011
+                                .info-wrapper
+                                    .info-wrapper__title E-mail:
+                                    .info-wrapper__text beburaa@mail.ru
+                                .info-wrapper
+                                    .info-wrapper__title Город доставки:
+                                    .info-wrapper__text Краснодар
+
+                        .my-order__row
+                            .title-payment-delivery Оплата
+                            .my-order__text Счет №51/1 от 15.11.2018,	Оплата наличными в пункте выдаче товара
+                            .my-order__text Сумма к оплате по счету: 9 120 руб.
+                            .payment-statys-number  Статус: <span class="pink">Ожидает оплату</span>
+                            .payment-method Изменить способ оплаты
+                            .body-payment-method
+                                input#payment-method__10(type="radio" name="payment-method" value="Оплата наличными" checked).input-radio
+                                label(for="payment-method__10").label-payment-method
+                                    .label-payment-method__ic
+                                        img(src="img/ic/wallet.svg")
+                                    p Оплата при получении
+
+                                input#payment-method__20(type="radio" name="payment-method" value="Безналичная оплата" ).input-radio
+                                label(for="payment-method__20").label-payment-method
+                                    .label-payment-method__ic
+                                        img(src="img/ic/credit-card.svg")
+                                    p Оплата при получении
+
+
+                        .my-order__row
+                            .title-payment-delivery Доставка
+                            .my-order__text Отгрузка	№51/2, стоимость доставки 0 руб.
+                            .payment-statys-number Статус: <span class="blue">Отправлено</span>
+                            .my-order__text Статус отгрузки: Ожидает обработки
+                            .payment-statys-number Номер отслеживания: <span class="pink">1854789654</span>
+
+                        .my-order__row
+                            .title-payment-delivery Состав заказа
+                            .card-good-order__item
+                                .card-good-order__img
+                                    img(src="img/boots3.png")
+                                .card-good-order__descriptin
+                                    .card-good-order__text
+                                        .card-good-order__description Kapika, Росиия
+                                        .card-good-order__title Сапоги для мальчиков.
+                                        .card-good-order__model Модель: 590к-2
+                                        .card-good-order__color-size цвет черный, размер 33
+
+                                    .card-good-order__price-colvo
+                                        .wrapper-price
+                                            .card-good-order__price-old 2 410 ₽
+                                            .card-good-order__price-new 2 410 ₽
+                                        .card-good-order__colvo 1шт.
+
+
+
+                            .card-good-order__item
+                                .card-good-order__img
+                                    img(src="img/boots1.png")
+                                .card-good-order__descriptin
+                                    .card-good-order__text
+                                        .card-good-order__description Kapika, Росиия
+                                        .card-good-order__title Сапоги для мальчиков.
+                                        .card-good-order__model Модель: 590к-2
+                                        .card-good-order__color-size цвет черный, размер 33
+
+                                    .card-good-order__price-colvo
+                                        .wrapper-price
+                                            .card-good-order__price-old 2 410 ₽
+                                            .card-good-order__price-new 2 410 ₽
+                                        .card-good-order__colvo 1шт.
+
+
+
+                            .card-good-order__item
+                                .card-good-order__img
+                                    img(src="img/boots6.png")
+                                .card-good-order__descriptin
+                                    .card-good-order__text
+                                        .card-good-order__description Kapika, Росиия
+                                        .card-good-order__title Сапоги для мальчиков.
+                                        .card-good-order__model Модель: 590к-2
+                                        .card-good-order__color-size цвет черный, размер 33
+
+                                    .card-good-order__price-colvo
+                                        .wrapper-price
+                                            .card-good-order__price-old 2 410 ₽
+                                            .card-good-order__price-new 2 410 ₽
+                                        .card-good-order__colvo 1шт.
+
+
+
+                            .card-good-order__item
+                                .card-good-order__img
+                                    img(src="img/boots5.png")
+                                .card-good-order__descriptin
+                                    .card-good-order__text
+                                        .card-good-order__description Kapika, Росиия
+                                        .card-good-order__title Сапоги для мальчиков.
+                                        .card-good-order__model Модель: 590к-2
+                                        .card-good-order__color-size цвет черный, размер 33
+
+                                    .card-good-order__price-colvo
+                                        .wrapper-price
+                                            .card-good-order__price-old 2 410 ₽
+                                            .card-good-order__price-new 2 410 ₽
+                                        .card-good-order__colvo 1шт.
+
+
+
+
+
+                        .my-order__row
+                            .table-order
+                                .table-order__row
+                                    .table-order__title Товаров на сумму
+                                    .table-order__text 10 500р
+                                .table-order__row
+                                    .table-order__title Ваша скидка
+                                    .table-order__text.pink -4 000р
+                                .table-order__row
+                                    .table-order__title Промокод
+                                    .table-order__text.pink  avocado
+                                .table-order__row
+                                    .table-order__title Стоимость доставки
+                                    .table-order__text 199р
+
+                            .table-resulte Итого 6 699р
+                        .my-order__btns
+                            .btn-more.button_pink Подробнее о заказе
+                            .btn-cancel Отменить заказ
+
+                .btn-more.button_pink Вернуться к списку заказов

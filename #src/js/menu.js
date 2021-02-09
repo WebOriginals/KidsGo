@@ -1,3 +1,7 @@
+parameters = {
+    duration: 1500,
+}
+
 $(".cmn-toggle-switch__htx").click(function () {
     $(this).toggleClass("active");
     if (this.classList.contains("active") === true) {
@@ -16,10 +20,13 @@ $(".cmn-toggle-switch__htx").click(function () {
 
 if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
     $(".second-menu").click(function () {
+
         var elem = this;
         var block = $(elem).closest('.link-menu');
         var items = $(block).find('.second-menu');
+        var ul = $(block).find('ul');
         $(block).toggleClass("open");
+        $(ul).slideToggle(parameters);
 
     });
 }

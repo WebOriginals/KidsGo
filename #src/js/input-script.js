@@ -1,5 +1,7 @@
 ( function( $ ){
-
+    parameters = {
+        duration: 2000,
+    }
     // Настройки
 
     var settings = {
