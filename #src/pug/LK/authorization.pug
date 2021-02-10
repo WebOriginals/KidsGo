@@ -1,0 +1,22 @@
+section.sec-authorization
+    .container
+        .body-authorization
+            .body-input-personal-data
+                input(placeholder="логин").wrapper-field-input
+                .password
+                    img(src="img/ic/eye.svg").password-img
+                    input(placeholder="Новый пароль" type="password").wrapper-field-input
+
+            .row-authorization
+                .checkbox-save
+                    input#categories_1(type="checkbox" name="categories" value="Запомнить меня").input-save
+                    label(for="categories_1").label-save Запомнить меня
+
+                a(href="#").forgot-password Забыли свой пароль?
+
+            .authorization__btn.button_blue Войти
+
+            p Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму.
+            a(href="#").register Зарегистрироваться
+
+

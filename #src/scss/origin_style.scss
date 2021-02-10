@@ -83,7 +83,7 @@ body {
     color: $color_2w;
   }
 
-  @include mq('desktop') {
+  @include mq('tablet') {
     width: fit-content;
   }
 }

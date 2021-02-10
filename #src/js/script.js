@@ -18,7 +18,9 @@
 @@include('good-slider.js')
 @@include('quantity.js')
 @@include('LK-payment-method.js')
+@@include('password.js')
 @@include('textarea.js')
+
 
 
 

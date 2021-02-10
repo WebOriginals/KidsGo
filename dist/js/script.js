@@ -482,6 +482,22 @@ $(".payment-method").click(function () {
     $(block).slideToggle(parameters);
     $(elem).toggleClass("open");
 });
+$(".password-img").mousedown(function () {
+    var elem = this;
+    var pas = $(elem).next('.wrapper-field-input');
+    $(pas).attr('type', 'text');
+});
+$(".password-img").mouseout(function () {
+    var elem = this;
+    var pas = $(elem).next('.wrapper-field-input');
+    $(pas).attr('type', 'password');
+});
+
+
+
+
+
+
 var textarea = document.querySelector('textarea');
 
 textarea.addEventListener('keyup', function(){
@@ -489,6 +505,7 @@ textarea.addEventListener('keyup', function(){
         this.style.height = this.scrollHeight + "px";
     }
 });
+
 
 
 

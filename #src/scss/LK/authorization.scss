@@ -1,0 +1,114 @@
+.sec-authorization{
+  padding: 0 0 50px;
+
+  @include mq('desktop') {
+    padding: 0 0 120px;
+  }
+}
+
+.body-authorization{
+  @include mq('tablet') {
+    width: 70%;
+  }
+  @include mq('desktop') {
+    width: 50%;
+  }
+}
+.body-input-personal-data{
+  @include mq('tablet') {
+    width: 70%;
+  }
+  @include mq('tablet-wide') {
+    max-width: 400px;
+  }
+}
+
+.row-authorization{
+  margin: 30px 0;
+  display: flex;
+}
+
+.checkbox-save{
+  margin-right: 40px;
+}
+
+.input-save{
+  &[type=checkbox]{
+    display: none;
+  }
+
+}
+
+.label-save{
+  @include adaptiv-font(14,14);
+  display: block;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0 0 36px;
+
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 1px;
+    border: 1px solid rgba(1, 90, 254, 0.5);
+  }
+}
+
+.input-save[type=checkbox]:checked + .label-save:after{
+  content: "";
+  @if ($link-img == '') {
+    background-image: url("./../../img/ic/check.svg");
+  } @else {
+    background-image: url($link-img + "/img/ic/check.svg");
+  }
+  background-position: 4px 0px;
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 25px;
+}
+
+.forgot-password{
+  @include adaptiv-font(14,14);
+  color: $color_4p;
+  opacity: .5;
+  text-decoration: underline;
+  &:hover{
+    color: $color_3b;
+  }
+}
+
+.authorization__btn{
+  @include mq('phablet') {
+    max-width: 165px;
+  }
+  margin-bottom: 50px;
+
+}
+
+.register{
+  @include adaptiv-font(14,14);
+  color: $color_4p;
+  font-weight: 600;
+  text-decoration: underline;
+  &:hover{
+    color: $color_3b;
+  }
+}
+
+
+
+
+
+
+
+
