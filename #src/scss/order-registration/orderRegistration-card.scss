@@ -295,7 +295,7 @@
   }
 
   @include mq('desktop') {
-    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
     grid-template-areas:
           "street  smoll1 smoll2 smoll3"
           "long long long long";
@@ -307,9 +307,13 @@
 
   .long {
     grid-area: long;
-    resize: none;
-    overflow: hidden;
+
+    .textarea{
+      resize: none;
+      overflow: hidden;
+    }
   }
+
 
   .street {
     grid-area: street;

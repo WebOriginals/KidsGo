@@ -226,12 +226,31 @@ section.my-order
                     .personal-data__block
                         .personal-data__title личные данные
                         .body-input-personal-data.grid-personal-data
-                            input(placeholder="Имя").wrapper-field-input
-                            input(placeholder="Телефон*" type="tel").wrapper-field-input
-                            input(placeholder="Фамилия").wrapper-field-input
-                            input(placeholder="E-mail*" type="email").wrapper-field-input
-                            input(placeholder="Отчество").wrapper-field-input
-                            input(placeholder="Город").wrapper-field-input
+                            .body-inpyt-animation
+                                input#personal-data1.wrapper-field-input
+                                label.input__label(for="personal-data1")
+                                    span.span-field-input Имя
+                            .body-inpyt-animation
+                                input#personal-data2.wrapper-field-input(type="tel")
+                                label.input__label(for="personal-data2")
+                                    span.span-field-input Телефон*
+                            .body-inpyt-animation
+                                input#personal-data3.wrapper-field-input
+                                label.input__label(for="personal-data3")
+                                    span.span-field-input Фамилия
+                            .body-inpyt-animation
+                                input#personal-data4.wrapper-field-input(type="email")
+                                label.input__label(for="personal-data4")
+                                    span.span-field-input E-mail*
+                            .body-inpyt-animation
+                                input#personal-data5.wrapper-field-input
+                                label.input__label(for="personal-data5")
+                                    span.span-field-input Отчество
+                            .body-inpyt-animation
+                                input#personal-data6.wrapper-field-input
+                                label.input__label(for="personal-data6")
+                                    span.span-field-input Город
+
                         .personal-data__btn
                             .button_pink Сохранить
                             .btn-cancel Отменить
@@ -239,23 +258,43 @@ section.my-order
                     .personal-data__block
                         .personal-data__title Доставка
                         .body-input-personal-data.grid-delivery
-                            input(placeholder="Город").wrapper-field-input
-                            input(placeholder="Улица*").wrapper-field-input
-                            input(placeholder="Дом*").wrapper-field-input
-                            input(placeholder="Квартира*").wrapper-field-input
-                            input(placeholder="Этаж").wrapper-field-input
+                            .body-inpyt-animation
+                                input#personal-data10.wrapper-field-input
+                                label.input__label(for="personal-data10")
+                                    span.span-field-input Город
+                            .body-inpyt-animation
+                                input#personal-data11.wrapper-field-input
+                                label.input__label(for="personal-data11")
+                                    span.span-field-input Улица*
+                            .body-inpyt-animation
+                                input#personal-data12.wrapper-field-input
+                                label.input__label(for="personal-data12")
+                                    span.span-field-input Дом*
+                            .body-inpyt-animation
+                                input#personal-data13.wrapper-field-input
+                                label.input__label(for="personal-data13")
+                                    span.span-field-input Этаж
+                            .body-inpyt-animation
+                                input#personal-data14.wrapper-field-input
+                                label.input__label(for="personal-data14")
+                                    span.span-field-input Квартира*
+
                         .personal-data__btn
                             .button_pink Сохранить
                             .btn-cancel Отменить
                     .personal-data__block
                         .personal-data__title пароль
                         .body-input-personal-data.grid-password
-                            .password
+                            .body-inpyt-animation.password
                                 img(src="img/ic/eye.svg").password-img
-                                input(placeholder="Новый пароль" type="password").wrapper-field-input
-                            .password
+                                input#personal-data20( type="password").wrapper-field-input
+                                label.input__label(for="personal-data20")
+                                    span.span-field-input Новый пароль
+                            .body-inpyt-animation.password
                                 img(src="img/ic/eye.svg").password-img
-                                input(placeholder="Подтверждение нового пароля" type="password").wrapper-field-input
+                                input#personal-data21( type="password").wrapper-field-input
+                                label.input__label(for="personal-data21")
+                                    span.span-field-input Подтверждение пароля*
                         .personal-data__btn
                             .button_pink Сохранить
                             .btn-cancel Отменить

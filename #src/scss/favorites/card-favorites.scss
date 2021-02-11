@@ -1,0 +1,7 @@
+.sec-favorites{
+  padding: 0 0 50px;
+
+  @include mq('desktop') {
+    padding: 0 0 120px;
+  }
+}

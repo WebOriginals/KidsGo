@@ -1,21 +1,49 @@
 section.sec-register
     .container
         .body-register
-            input(placeholder="Имя").wrapper-field-input
-            input(placeholder="Фамилия").wrapper-field-input
-            input(placeholder="Отчество").wrapper-field-input
-            input(placeholder="Телефон*").wrapper-field-input
-            input(placeholder="E-mail*").wrapper-field-input
-            input(placeholder="Город").wrapper-field-input
-            input(placeholder="логин (минимум 3 символа)").wrapper-field-input
-            .password
+            .body-inpyt-animation
+                input#register1.wrapper-field-input
+                label.input__label(for="register1")
+                    span.span-field-input Имя
+            .body-inpyt-animation
+                input#register2.wrapper-field-input
+                label.input__label(for="register2")
+                    span.span-field-input Фамилия
+            .body-inpyt-animation
+                input#register3.wrapper-field-input
+                label.input__label(for="register3")
+                    span.span-field-input Отчество
+            .body-inpyt-animation
+                input#register4.wrapper-field-input(type="tel")
+                label.input__label(for="register4")
+                    span.span-field-input Телефон*
+            .body-inpyt-animation
+                input#register5.wrapper-field-input(type="email")
+                label.input__label(for="register5")
+                    span.span-field-input E-mail*
+            .body-inpyt-animation
+                input#register6.wrapper-field-input
+                label.input__label(for="register6")
+                    span.span-field-input Город
+            .body-inpyt-animation
+                input#register7.wrapper-field-input
+                label.input__label(for="register7")
+                    span.span-field-input логин (минимум 3 символа)
+            .body-inpyt-animation.password
                 img(src="img/ic/eye.svg").password-img
-                input(placeholder="Пароль*" type="password").wrapper-field-input
-            .password
+                input#register8( type="password").wrapper-field-input
+                label.input__label(for="register8")
+                    span.span-field-input Пароль*
+            .body-inpyt-animation.password
                 img(src="img/ic/eye.svg").password-img
-                input(placeholder="Подтверждение пароля* " type="password").wrapper-field-input
+                input#register9( type="password").wrapper-field-input
+                label.input__label(for="register9")
+                    span.span-field-input Подтверждение пароля*
             .blockrobot
-            input(placeholder="Код с картинки*").wrapper-field-input
+            .body-inpyt-animation
+                input#register10( type="password").wrapper-field-input
+                label.input__label(for="register10")
+                    span.span-field-input Код с картинки*
 
             .register-btn.button_blue Зарегистрироваться
 

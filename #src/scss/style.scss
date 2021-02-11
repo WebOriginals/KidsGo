@@ -12,6 +12,7 @@
 @import "bread-crumbs.scss";
 @import "pagination.scss";
 @import "star.scss";
+@import "animation-input.scss";
 
 //Главная
 @import "main/sec_1-first-screen.scss";
@@ -48,6 +49,20 @@
 @import "LK/authorization.scss";
 @import "LK/register.scss";
 
+
+//Блог
+@import "blog/blog.scss";
+
+
+//Tаблица размеров
+@import "size-chart/size-chart.scss";
+
+
+//Избранное
+@import "favorites/card-favorites.scss";
+
+//Доставка оплата
+@import "shipping-payment/shipping-payment.scss";
 
 
 @import "footer.scss";

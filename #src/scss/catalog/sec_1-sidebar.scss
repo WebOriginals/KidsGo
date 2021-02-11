@@ -346,7 +346,7 @@
 
 .wr-btn-more{
   position: absolute;
-  bottom: -57px;
+  bottom: 0px;
   right: 23px;
   @include maq('desktop') {
     display: none;

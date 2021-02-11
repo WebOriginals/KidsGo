@@ -1,18 +1,19 @@
-.sec-pagination{
+.sec-pagination {
   padding: 40px 0;
 }
 
-.pagination-list{
+.pagination-list {
   width: fit-content;
   display: flex;
   flex-wrap: wrap;
 
-
-  @include mq('desktop') {
-    transform: translateX(280px);
+  &.aq {
+    @include mq('desktop') {
+      transform: translateX(280px);
+    }
   }
 
-  li{
+  li {
     display: flex;
     width: 34px;
     height: 34px;
@@ -21,27 +22,38 @@
     border-radius: 50%;
     border: 1px solid $color_2w;
 
-    a{
+    a {
       align-self: center;
-      color:  $color_1b;
+      color: $color_1b;
       @include adaptiv-font(19, 16);
       font-weight: 600;
       display: block;
       width: 100%;
       text-align: center;
+
+
     }
 
-    &.points{
+    &.points {
 
-      span{
+      span {
         align-self: flex-end;
       }
     }
 
-    &:hover:not(:nth-child(5)){
+    &:hover:not(:nth-child(5)) {
       border: 1px solid $color_3b;
 
-      a{
+      a {
+        color: $color_3b;
+        font-weight: bold;
+      }
+    }
+
+    &.active {
+      border: 1px solid $color_3b;
+
+      a {
         color: $color_3b;
         font-weight: bold;
       }

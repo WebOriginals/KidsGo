@@ -1,0 +1,31 @@
+.body-inpyt-animation {
+  position: relative;
+}
+
+.input__label {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  transition: .5s;
+}
+
+.span-field-input {
+  @include adaptiv-font(16, 14);
+  font-weight: 600;
+}
+
+.wrapper-field-input:focus + .input__label .span-field-input,
+.password-img:active ~ .input__label .span-field-input,
+.password-img:focus ~ .input__label .span-field-input,
+.input--filled .input__label .span-field-input{
+  color: $color_3b;
+  @include adaptiv-font(8, 6);
+}
+
+.wrapper-field-input:focus + .input__label,
+.password-img:active ~ .input__label,
+.password-img:focus ~ .input__label,
+.input--filled .input__label{
+  top: -10px;
+  background-color: $color_2w;
+}

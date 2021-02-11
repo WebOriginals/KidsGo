@@ -1,11 +1,18 @@
 section.sec-authorization
     .container
         .body-authorization
-            .body-input-personal-data
-                input(placeholder="логин").wrapper-field-input
-                .password
+
+            .body-input-personal-data.wr-widrh
+                .body-inpyt-animation
+                    input#authorization1.wrapper-field-input
+                    label.input__label(for="authorization1")
+                        span.span-field-input логин
+
+                .body-inpyt-animation.password
                     img(src="img/ic/eye.svg").password-img
-                    input(placeholder="Новый пароль" type="password").wrapper-field-input
+                    input#authorization2( type="password").wrapper-field-input
+                    label.input__label(for="authorization2")
+                        span.span-field-input Новый пароль
 
             .row-authorization
                 .checkbox-save
@@ -18,5 +25,11 @@ section.sec-authorization
 
             p Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму.
             a(href="#").register Зарегистрироваться
+
+
+
+
+
+
 
 

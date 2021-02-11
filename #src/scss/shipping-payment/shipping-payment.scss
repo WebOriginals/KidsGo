@@ -1,0 +1,151 @@
+.sec-shipping-payment{
+  padding: 50px 0 50px;
+
+  @include mq('desktop') {
+    padding: 100px 0 120px;
+  }
+}
+
+.body-shipping-payment{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tab-row-shipping-payment{
+  @include adaptiv-margin-bottom(150,80);
+}
+
+.tab-row-shipping-payment__title{
+  @include adaptiv-font(36,24);
+  @include adaptiv-margin-bottom(60,30);
+  font-weight: bold;
+}
+
+.tab-row-shipping-payment {
+
+  .tabs-items__link {
+    @include adaptiv-font(20, 16);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &.blue {
+    .tabs-items__link {
+      color: $color_3b;
+      opacity: .5;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+    .wrapper-tab-conten{
+
+      p{
+        font-style: italic;
+        @include adaptiv-font(16,14);
+
+      }
+      h2{
+        font-style: italic;
+        @include adaptiv-font(20,18);
+        font-weight: bold;
+      }
+      h3{
+        font-style: italic;
+        @include adaptiv-font(18,16);
+        font-weight: bold;
+      }
+      h4{
+        font-style: italic;
+        @include adaptiv-font(16,14);
+        font-weight: bold;
+      }
+
+      ul{
+
+        li{
+          @include adaptiv-font(16,14);
+          margin-bottom: 10px;
+          padding-left: 15px;
+          position: relative;
+          &:before{
+            content: '-';
+            position: absolute;
+            top: 2px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.pink {
+    .tabs-items__link {
+      color: $color_4p;
+      opacity: .5;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .tabs-shipping-payment{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:30px ;
+    @include maq('tablet-wide') {
+      flex-wrap: nowrap;
+      width: fit-content;
+    }
+
+    .tabs-items__li{
+      width: max-content;
+      margin-right: 20px;
+    }
+  }
+  .wrapper-tab-conten{
+
+    p{
+      font-style: italic;
+      @include adaptiv-font(16,14);
+
+    }
+    h2{
+      font-style: italic;
+      @include adaptiv-font(20,18);
+      font-weight: bold;
+    }
+    h3{
+      font-style: italic;
+      @include adaptiv-font(18,16);
+      font-weight: bold;
+    }
+    h4{
+      font-style: italic;
+      @include adaptiv-font(16,14);
+      font-weight: bold;
+    }
+
+    ul{
+
+      li{
+        @include adaptiv-font(16,14);
+        margin-bottom: 10px;
+        padding-left: 15px;
+        position: relative;
+        &:before{
+          content: '-';
+          position: absolute;
+          top: 2px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.block-skroll{
+  width: 100%;
+  overflow-x: auto;
+}
+

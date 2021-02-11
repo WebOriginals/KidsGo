@@ -174,10 +174,18 @@
               <div class="body-mod">
                 <div class="wr-inp">
                   <div class="wrapper-field">
-                    <div class="fio">ФИО</div>
-                    <input class="wrapper-field-input" placeholder="Иванова Ирина Ивановна">
-                    <input class="wrapper-field-input" placeholder="Телефон*">
-                    <input class="wrapper-field-input" placeholder="E-mail*">
+                    <div class="body-inpyt-animation">
+                      <input class="wrapper-field-input" id="order1">
+                      <label class="input__label" for="order1"><span class="span-field-input">ФИО</span></label>
+                    </div>
+                    <div class="body-inpyt-animation">
+                      <input class="wrapper-field-input" id="order2" type="tel">
+                      <label class="input__label" for="order2"><span class="span-field-input">Телефон*</span></label>
+                    </div>
+                    <div class="body-inpyt-animation">
+                      <input class="wrapper-field-input" id="order3" type="email">
+                      <label class="input__label" for="order3"><span class="span-field-input">E-mail*</span></label>
+                    </div>
                   </div>
                   <div class="wrapper-field-btn">
                     <div class="wrapper-field-btn__enter">Войти</div>
@@ -191,8 +199,10 @@
               <div class="orderRegistration-card-left__title"> Доставка</div>
               <div class="body-mod">
                 <div class="wrapper-field">
-                  <div class="fio">Город</div>
-                  <input class="wrapper-field-input" placeholder="Город*">
+                  <div class="body-inpyt-animation">
+                    <input class="wrapper-field-input" id="order4">
+                    <label class="input__label" for="order4"><span class="span-field-input">Город</span></label>
+                  </div>
                   <div class="wrapper-field__title">Тип доставки:</div>
                   <div class="categories-sidebar all-checkbox">
                     <input class="input-checkbox" id="categories_1" type="radio" name="categories" value="СДЭК в пункт выдачи (от 3-х дней - от 300р)" checked>
@@ -234,11 +244,26 @@
                 </div>
               </div>
               <div class="body-inputs">
-                <input class="wrapper-field-input street" placeholder="Улица*">
-                <input class="wrapper-field-input small1" placeholder="Дом*">
-                <input class="wrapper-field-input small2" placeholder="Квартира*">
-                <input class="wrapper-field-input small3" placeholder="Этаж">
-                <textarea class="wrapper-field-input long" placeholder="Комментарий к заказу" rows="1"></textarea>
+                <div class="body-inpyt-animation">
+                  <input class="wrapper-field-input" id="order5">
+                  <label class="input__label" for="order5"><span class="span-field-input">Улица*</span></label>
+                </div>
+                <div class="body-inpyt-animation">
+                  <input class="wrapper-field-input" id="order6">
+                  <label class="input__label" for="order6"><span class="span-field-input">Дом*</span></label>
+                </div>
+                <div class="body-inpyt-animation">
+                  <input class="wrapper-field-input" id="order7">
+                  <label class="input__label" for="order7"><span class="span-field-input">Этаж</span></label>
+                </div>
+                <div class="body-inpyt-animation">
+                  <input class="wrapper-field-input" id="order8">
+                  <label class="input__label" for="order8"><span class="span-field-input">Квартира*</span></label>
+                </div>
+                <div class="body-inpyt-animation long">
+                  <textarea class="wrapper-field-input textarea" id="order9" rows="1"></textarea>
+                  <label class="input__label" for="order9"><span class="span-field-input">Комментарий к заказу</span></label>
+                </div>
               </div>
             </div>
             <div class="orderRegistration-card-left__item">

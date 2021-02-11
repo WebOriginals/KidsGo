@@ -8,10 +8,6 @@
 
 .body-register{
   max-width: 400px;
-
-  .password{
-    @include adaptiv-margin-bottom(20, 10);
-  }
 }
 
 .register-btn{

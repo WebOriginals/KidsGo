@@ -35,3 +35,5 @@ if(window.screen.width>=767) {
         },
     });
 };
+
+

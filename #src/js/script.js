@@ -19,13 +19,13 @@
 @@include('quantity.js')
 @@include('LK-payment-method.js')
 @@include('password.js')
+
+@@include('classie.js')
+@@include('animation-input.js')
+
 @@include('textarea.js')
 
 
 
 
 @@include('filter-slider-price.js')
-
-
-
-

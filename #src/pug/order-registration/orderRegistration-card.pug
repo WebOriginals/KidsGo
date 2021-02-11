@@ -7,10 +7,19 @@ secrion.orderRegistration-card
                     .body-mod
                         .wr-inp
                             .wrapper-field
-                                .fio ФИО
-                                input(placeholder="Иванова Ирина Ивановна").wrapper-field-input
-                                input(placeholder="Телефон*").wrapper-field-input
-                                input(placeholder="E-mail*").wrapper-field-input
+                                .body-inpyt-animation
+                                    input#order1.wrapper-field-input
+                                    label.input__label(for="order1")
+                                        span.span-field-input ФИО
+                                .body-inpyt-animation
+                                    input#order2.wrapper-field-input(type="tel")
+                                    label.input__label(for="order2")
+                                        span.span-field-input Телефон*
+                                .body-inpyt-animation
+                                    input#order3.wrapper-field-input(type="email")
+                                    label.input__label(for="order3")
+                                        span.span-field-input E-mail*
+
                             .wrapper-field-btn
                                 .wrapper-field-btn__enter Войти
                                 .wrapper-field-btn__register Зарегистрироваться
@@ -22,8 +31,10 @@ secrion.orderRegistration-card
                     .orderRegistration-card-left__title  Доставка
                     .body-mod
                         .wrapper-field
-                            .fio Город
-                            input(placeholder="Город*").wrapper-field-input
+                            .body-inpyt-animation
+                                input#order4.wrapper-field-input
+                                label.input__label(for="order4")
+                                    span.span-field-input Город
 
                             .wrapper-field__title Тип доставки:
                             .categories-sidebar.all-checkbox
@@ -69,11 +80,27 @@ secrion.orderRegistration-card
 
 
                     .body-inputs
-                        input.wrapper-field-input.street(placeholder="Улица*")
-                        input.wrapper-field-input.small1(placeholder="Дом*")
-                        input.wrapper-field-input.small2(placeholder="Квартира*")
-                        input.wrapper-field-input.small3(placeholder="Этаж")
-                        textarea.wrapper-field-input.long(placeholder="Комментарий к заказу" rows="1")
+                        .body-inpyt-animation
+                            input#order5.wrapper-field-input
+                            label.input__label(for="order5")
+                                span.span-field-input Улица*
+                        .body-inpyt-animation
+                            input#order6.wrapper-field-input
+                            label.input__label(for="order6")
+                                span.span-field-input Дом*
+                        .body-inpyt-animation
+                            input#order7.wrapper-field-input
+                            label.input__label(for="order7")
+                                span.span-field-input Этаж
+                        .body-inpyt-animation
+                            input#order8.wrapper-field-input
+                            label.input__label(for="order8")
+                                span.span-field-input Квартира*
+                        .body-inpyt-animation.long
+                            textarea#order9.wrapper-field-input.textarea(rows="1")
+                            label.input__label(for="order9")
+                                span.span-field-input Комментарий к заказу
+
 
 
                 .orderRegistration-card-left__item

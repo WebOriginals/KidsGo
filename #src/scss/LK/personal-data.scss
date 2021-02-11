@@ -32,11 +32,10 @@
       grid-column-gap: 30px;
     }
 
-    .wrapper-field-input:first-child{
+    .body-inpyt-animation:first-child{
       grid-column: span 2;
-      margin-right: 50%;
     }
-    .wrapper-field-input:nth-child(n+2){
+    .body-inpyt-animation:nth-child(n+2){
       grid-row: 2;
     }
   }
