@@ -230,3 +230,194 @@
     }
   }
 }
+
+
+//модалка корзины
+.city-modal{
+  .kidsgo-modal-content{
+    border-radius: 21px;
+    padding: 25px;
+    @include mq('phone-midle') {
+      width: 82%;
+      margin: auto;
+    }
+    @include mq('tablet') {
+      width: 600px;
+    }
+  }
+  .formkidsgo{
+    @include mq('desktop') {
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+.kidsgo-modal-body__title-city{
+  @include adaptiv-font(30,24);
+  font-weight: bold;
+  width: 100%;
+}
+
+.wrapper-bottom{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  @include mq('tablet') {
+justify-content: space-between;
+  }
+  .wrapper-field-input{
+    width: 100%;
+    margin-bottom: 0;
+
+    @include mq('tablet') {
+      width: 60%;
+    }
+  }
+  .wrformkidsgoBtn-del{
+    width: 30%;
+    @include mq('tablet') {
+      margin-top: 0;
+      width: 30%;
+    }
+  }
+}
+
+.bottom-title{
+  @include adaptiv-font(20,18);
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.list-address{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 10px 20px;
+  padding-right: 10px;
+
+  @include mq('tablet') {
+    grid-template-rows: repeat(20, 1fr);
+    grid-gap: 10px 20px;
+    grid-auto-flow: column;
+  }
+  li{
+
+    a{
+      @include adaptiv-font(16,16);
+      color:$color_1b;
+
+    }
+  }
+}
+
+.list-address-main{
+  @include mq('tablet') {
+    width: 195px;
+  }
+  li{
+    margin-bottom: 10px;
+
+    a{
+      @include adaptiv-font(16,16);
+      color:$color_1b;
+      font-weight: 700;
+    }
+  }
+}
+
+.kidsgo-modal-dialog.city{
+
+  @include mq('tablet') {
+    max-width: 730px;
+  }
+}
+.kidsgo-modal-content.city{
+  @include maq('tablet') {
+    width: 100%;
+  }
+  @include mq('tablet') {
+    width: 100%;
+  }
+}
+
+.list-body{
+  margin: 25px 0 35px;
+
+  @include mq('tablet') {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
+  }
+}
+
+.list-skroll{
+  max-height: 200px;
+  overflow-y: auto;
+  @include mq('tablet') {
+    max-height: 370px;
+  }
+
+
+  ::-webkit-scrollbar-button {
+
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0
+  }
+
+  ::-webkit-scrollbar-track {
+
+    background-color: #e7e7e7;
+    border-radius: 50px
+  }
+
+  ::-webkit-scrollbar-thumb {
+
+    border-radius: 5px;
+    background-color: $color_5lb
+  }
+
+  ::-webkit-resizer {
+
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0
+  }
+
+  ::-webkit-scrollbar {
+    left: 55px;
+    width: 0
+  }
+
+  &::-webkit-scrollbar-button {
+    background-repeat: no-repeat;
+    width: 5px;
+    right: 5px;
+    height: 0
+  }
+
+  &::-webkit-scrollbar-track {
+    right: 5px;
+    //background-color: #e7e7e7;
+    border-radius: 50px
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    right: 5px;
+    background-color: $color_5lb
+  }
+
+  &::-webkit-resizer {
+    right: 5px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 0
+  }
+
+  &::-webkit-scrollbar {
+    right: 5px;
+    width: 5px !important
+  }
+}

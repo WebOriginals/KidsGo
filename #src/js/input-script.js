@@ -1,7 +1,5 @@
 ( function( $ ){
-    parameters = {
-        duration: 2000,
-    }
+
     // Настройки
 
     var settings = {
@@ -15,7 +13,6 @@
         class_items : 'list__itams',
         class_selector : 'js_size_selector',
         class_disabel : 'list__itams-disabel',
-
     };
 
     var hendler = {
@@ -63,6 +60,8 @@
                 $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
 
                     $( value ).text( $( this ).text() ); // Берем текст из item и сохраняем в видимое выбраное значение
+                    $( input ).val( $( this ).data( 'value' ) || $( this ).text() ); // Берем дата параметр или текст из item и сохраняем в наш input
+
                     if(window.screen.width<=1023) {
                         $(value).text(value.text().substring(0, 27)); //ограничиваем кол-во символов на строке
                         if ($(value).text().length >= 27) { // считаем сколько символов и если больше или равно 27 добавлять ...
@@ -74,8 +73,6 @@
                             $(value).append("...");
                         }
                     }
-                    $( input ).val( $( this ).data( 'value' ) || $( this ).text() ); // Берем дата параметр или текст из item и сохраняем в наш input
-
                     close_select();
                 });
 
@@ -97,5 +94,7 @@
     $( document ).ready( function(){ hendler.construct(); });
 
 })( jQuery );
+
+
 
 
