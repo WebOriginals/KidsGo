@@ -4002,6 +4002,82 @@ body {
   overflow-x: auto;
 }
 
+.sec-about-us {
+  padding: 0 0 50px;
+}
+
+.body-about-us p {
+  font-style: italic;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+}
+
+.body-about-us h2 {
+  font-style: italic;
+  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+}
+
+.body-about-us h3 {
+  font-style: italic;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  color: #015AFE;
+}
+
+.body-about-us h4 {
+  font-style: italic;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+}
+
+.body-about-us ul li {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.body-about-us ul li:before {
+  content: '-';
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.about-us-big-img {
+  padding-top: 54%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 50px;
+}
+
+.row-text-logo__img {
+  margin-bottom: 30px;
+}
+
+.row-text-logo__img img {
+  max-width: 100%;
+}
+
+.row-text-logo__text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row-text-number__title {
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.row-text-pictyre {
+  margin: 50px 0 30px;
+}
+
+.wrapper-number img {
+  max-width: 100%;
+}
+
 .footer {
   background: #C8D9F8;
   padding: 30px 0;
@@ -4703,6 +4779,21 @@ body {
     width: 70%;
   }
 
+  .row-text-pictyre {
+    margin: 80px 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .wrapper-number {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    grid-gap: 50px;
+  }
+
   .footer-top .footer-top__menu .content-mobile {
     display: none;
   }
@@ -5389,6 +5480,18 @@ body {
     padding: 100px 0 120px;
   }
 
+  .sec-about-us {
+    padding: 0 0 120px;
+  }
+
+  .wrapper-number__column:nth-child(2) {
+    text-align: center;
+  }
+
+  .wrapper-number__column:nth-child(3) {
+    text-align: right;
+  }
+
   .footer {
     padding: 60px 0;
   }
@@ -5798,6 +5901,10 @@ body {
 
   .p-grey {
     margin-top: 20px;
+  }
+
+  .wrapper-number__column {
+    margin-bottom: 50px;
   }
 }
 
