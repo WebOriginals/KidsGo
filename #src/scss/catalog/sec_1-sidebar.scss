@@ -1,5 +1,10 @@
 .sec_1-sidebar {
+  overflow: hidden;
+  padding: 0 0 50px;
 
+  @include mq('desktop') {
+    padding: 0 0 120px;
+  }
 }
 
 .body-sidebar {
@@ -59,6 +64,11 @@
     @include maq('desktop') {
       justify-content: flex-start;
     }
+  }
+  .body-good-it{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .sorting-form__title {
@@ -314,7 +324,7 @@
 
 .btn-close-sitings{
   position: absolute;
-  display: block;
+  display: none;
   right: -25px;
   top: 15px;
   z-index: 1003;
@@ -327,6 +337,7 @@
 }
 
 .btn-close-sitings-open{
+  display: block;
   animation: close-btn 0.7s linear;
   animation-delay: 1s;
   animation-fill-mode: forwards;
@@ -345,10 +356,13 @@
 }
 
 .wr-btn-more{
-  position: absolute;
-  bottom: 0px;
-  right: 23px;
-  @include maq('desktop') {
-    display: none;
+  @include mq('tablet') {
+    position: absolute;
+    bottom: 0px;
+    right: 23px;
+  }
+  @include maq('tablet') {
+    position: relative;
+
   }
 }

@@ -287,11 +287,11 @@
 
   @include mq('tablet') {
     grid-column-gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-areas:
-          "street street street"
-          "smoll1 smoll2 smoll3"
-          "long long long";
+          "street smoll1"
+          "smoll2 smoll3"
+          "long long ";
   }
 
   @include mq('desktop') {
@@ -299,10 +299,10 @@
     grid-template-areas:
           "street  smoll1 smoll2 smoll3"
           "long long long long";
+    width: 87%;
   }
   @include mq('desktop1350') {
     grid-column-gap: 30px;
-    width: 87%;
   }
 
   .long {

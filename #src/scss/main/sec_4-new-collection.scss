@@ -61,7 +61,7 @@
   top: calc(50% - 22px);
   margin: auto;
 
-  @include maq('tablet-wide') {
+  @include maq('desktop') {
     display: none;
   }
 }

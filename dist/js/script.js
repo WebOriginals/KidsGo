@@ -33,63 +33,74 @@
   (c) Bjoern Klinggaard - @bklinggaard - http://dinbror.dk/blazy
 */
   (function(q,m){"function"===typeof define&&define.amd?define(m):"object"===typeof exports?module.exports=m():q.Blazy=m()})(this,function(){function q(b){var c=b._util;c.elements=E(b.options);c.count=c.elements.length;c.destroyed&&(c.destroyed=!1,b.options.container&&l(b.options.container,function(a){n(a,"scroll",c.validateT)}),n(window,"resize",c.saveViewportOffsetT),n(window,"resize",c.validateT),n(window,"scroll",c.validateT));m(b)}function m(b){for(var c=b._util,a=0;a<c.count;a++){var d=c.elements[a],e;a:{var g=d;e=b.options;var p=g.getBoundingClientRect();if(e.container&&y&&(g=g.closest(e.containerClass))){g=g.getBoundingClientRect();e=r(g,f)?r(p,{top:g.top-e.offset,right:g.right+e.offset,bottom:g.bottom+e.offset,left:g.left-e.offset}):!1;break a}e=r(p,f)}if(e||t(d,b.options.successClass))b.load(d),c.elements.splice(a,1),c.count--,a--}0===c.count&&b.destroy()}function r(b,c){return b.right>=c.left&&b.bottom>=c.top&&b.left<=c.right&&b.top<=c.bottom}function z(b,c,a){if(!t(b,a.successClass)&&(c||a.loadInvisible||0<b.offsetWidth&&0<b.offsetHeight))if(c=b.getAttribute(u)||b.getAttribute(a.src)){c=c.split(a.separator);var d=c[A&&1<c.length?1:0],e=b.getAttribute(a.srcset),g="img"===b.nodeName.toLowerCase(),p=(c=b.parentNode)&&"picture"===c.nodeName.toLowerCase();if(g||void 0===b.src){var h=new Image,w=function(){a.error&&a.error(b,"invalid");v(b,a.errorClass);k(h,"error",w);k(h,"load",f)},f=function(){g?p||B(b,d,e):b.style.backgroundImage='url("'+d+'")';x(b,a);k(h,"load",f);k(h,"error",w)};p&&(h=b,l(c.getElementsByTagName("source"),function(b){var c=a.srcset,e=b.getAttribute(c);e&&(b.setAttribute("srcset",e),b.removeAttribute(c))}));n(h,"error",w);n(h,"load",f);B(h,d,e)}else b.src=d,x(b,a)}else"video"===b.nodeName.toLowerCase()?(l(b.getElementsByTagName("source"),function(b){var c=a.src,e=b.getAttribute(c);e&&(b.setAttribute("src",e),b.removeAttribute(c))}),b.load(),x(b,a)):(a.error&&a.error(b,"missing"),v(b,a.errorClass))}function x(b,c){v(b,c.successClass);c.success&&c.success(b);b.removeAttribute(c.src);b.removeAttribute(c.srcset);l(c.breakpoints,function(a){b.removeAttribute(a.src)})}function B(b,c,a){a&&b.setAttribute("srcset",a);b.src=c}function t(b,c){return-1!==(" "+b.className+" ").indexOf(" "+c+" ")}function v(b,c){t(b,c)||(b.className+=" "+c)}function E(b){var c=[];b=b.root.querySelectorAll(b.selector);for(var a=b.length;a--;c.unshift(b[a]));return c}function C(b){f.bottom=(window.innerHeight||document.documentElement.clientHeight)+b;f.right=(window.innerWidth||document.documentElement.clientWidth)+b}function n(b,c,a){b.attachEvent?b.attachEvent&&b.attachEvent("on"+c,a):b.addEventListener(c,a,{capture:!1,passive:!0})}function k(b,c,a){b.detachEvent?b.detachEvent&&b.detachEvent("on"+c,a):b.removeEventListener(c,a,{capture:!1,passive:!0})}function l(b,c){if(b&&c)for(var a=b.length,d=0;d<a&&!1!==c(b[d],d);d++);}function D(b,c,a){var d=0;return function(){var e=+new Date;e-d<c||(d=e,b.apply(a,arguments))}}var u,f,A,y;return function(b){if(!document.querySelectorAll){var c=document.createStyleSheet();document.querySelectorAll=function(a,b,d,h,f){f=document.all;b=[];a=a.replace(/\[for\b/gi,"[htmlFor").split(",");for(d=a.length;d--;){c.addRule(a[d],"k:v");for(h=f.length;h--;)f[h].currentStyle.k&&b.push(f[h]);c.removeRule(0)}return b}}var a=this,d=a._util={};d.elements=[];d.destroyed=!0;a.options=b||{};a.options.error=a.options.error||!1;a.options.offset=a.options.offset||100;a.options.root=a.options.root||document;a.options.success=a.options.success||!1;a.options.selector=a.options.selector||".b-lazy";a.options.separator=a.options.separator||"|";a.options.containerClass=a.options.container;a.options.container=a.options.containerClass?document.querySelectorAll(a.options.containerClass):!1;a.options.errorClass=a.options.errorClass||"b-error";a.options.breakpoints=a.options.breakpoints||!1;a.options.loadInvisible=a.options.loadInvisible||!1;a.options.successClass=a.options.successClass||"b-loaded";a.options.validateDelay=a.options.validateDelay||25;a.options.saveViewportOffsetDelay=a.options.saveViewportOffsetDelay||50;a.options.srcset=a.options.srcset||"data-srcset";a.options.src=u=a.options.src||"data-src";y=Element.prototype.closest;A=1<window.devicePixelRatio;f={};f.top=0-a.options.offset;f.left=0-a.options.offset;a.revalidate=function(){q(a)};a.load=function(a,b){var c=this.options;void 0===a.length?z(a,b,c):l(a,function(a){z(a,b,c)})};a.destroy=function(){var a=this._util;this.options.container&&l(this.options.container,function(b){k(b,"scroll",a.validateT)});k(window,"scroll",a.validateT);k(window,"resize",a.validateT);k(window,"resize",a.saveViewportOffsetT);a.count=0;a.elements.length=0;a.destroyed=!0};d.validateT=D(function(){m(a)},a.options.validateDelay,a);d.saveViewportOffsetT=D(function(){C(a.options.offset)},a.options.saveViewportOffsetDelay,a);C(a.options.offset);l(a.options.breakpoints,function(a){if(a.width>=window.screen.width)return u=a.src,!1});setTimeout(function(){q(a)})}});
-var bLazy = new Blazy({
-    breakpoints: [{
-        width: 420 // Max-width
-        , src: 'data-src-small'
-    }]
-    , success: function (element) {
-        setTimeout(function () {
-            // We want to remove the loader gif now.
-            // First we find the parent container
-            // then we remove the "loading" class which holds the loader image
-            var parent = element.parentNode;
-            parent.className = parent.className.replace(/\bloading\b/, '');
-        }, 200);
-    }
-});
-parameters = {
+
+
+$( document ).ready(function() {
+    if( $( '.b-lazy' ).length ) {
+    var bLazy = new Blazy({
+        breakpoints: [{
+            width: 420 // Max-width
+            , src: 'data-src-small'
+        }]
+        , success: function (element) {
+            setTimeout(function () {
+                // We want to remove the loader gif now.
+                // First we find the parent container
+                // then we remove the "loading" class which holds the loader image
+                var parent = element.parentNode;
+                parent.className = parent.className.replace(/\bloading\b/, '');
+            }, 200);
+        }
+    });
+}
+    parameters = {
     duration: 1500,
 }
 
-$(".cmn-toggle-switch__htx").click(function () {
-    $(this).toggleClass("active");
-    if (this.classList.contains("active") === true) {
-        $('.wrapper-menu').addClass("active");
-        $( 'body' ).addClass( 'no-scroll' );
-        $(".wrapper-gamburger").addClass('menu-hover');
-    } else {
-        $('.wrapper-menu').removeClass("active");
-        $( 'body' ).removeClass( 'no-scroll' );
-        $(".wrapper-gamburger").removeClass('menu-hover');
-        //это для ст контакты скрывает настройки при клике на гамбургер
-        $('.wrapper-sidebar').removeClass("settings-open");
-        $('.btn-settings').removeClass("active");
+if( $( '.body-header' ).length ) {
+    $(".cmn-toggle-switch__htx").click(function () {
+        $(this).toggleClass("active");
+        if (this.classList.contains("active") === true) {
+            $('.wrapper-menu').addClass("active");
+            $('body').addClass('no-scroll');
+            $(".wrapper-gamburger").addClass('menu-hover');
+        } else {
+            $('.wrapper-menu').removeClass("active");
+            $('body').removeClass('no-scroll');
+            $(".wrapper-gamburger").removeClass('menu-hover');
+            //это для ст контакты скрывает настройки при клике на гамбургер
+            $('.wrapper-sidebar').removeClass("settings-open");
+            $('.btn-settings').removeClass("active");
+        }
+    });
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        $(".second-menu").click(function () {
+
+            var elem = this;
+            var block = $(elem).closest('.link-menu');
+            var items = $(block).find('.second-menu');
+            var ul = $(block).find('ul');
+            $(block).toggleClass("open");
+            $(ul).slideToggle(parameters);
+
+        });
     }
-});
+}
 
-if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
-    $(".second-menu").click(function () {
 
+    if( $( '.popular-products__favorites' ).length ) {
+    $(".popular-products__favorites").click(function () {
         var elem = this;
-        var block = $(elem).closest('.link-menu');
-        var items = $(block).find('.second-menu');
-        var ul = $(block).find('ul');
-        $(block).toggleClass("open");
-        $(ul).slideToggle(parameters);
+        var normal = $(elem).find('.ic-favorites');
+        var active = $(elem).find('.ic-favorites-active');
 
+        $(normal).toggleClass('invis');
+        $(active).toggleClass('vis');
     });
 }
 
 
-$(".popular-products__favorites").click(function () {
-    var elem = this;
-    var normal = $( elem ).find( '.ic-favorites' );
-    var active = $( elem ).find( '.ic-favorites-active' );
-
-    $(normal).toggleClass('invis');
-    $(active).toggleClass('vis');
-});
 
 
 
@@ -98,7 +109,11 @@ $(".popular-products__favorites").click(function () {
 
 
 
-
+    if( $( '.select-value' ).length ) {
+    if (window.screen.width <= 1240) {
+        $('.select-value').html("ценa ↑");
+    }
+}
 
 ( function( $ ){
 
@@ -116,6 +131,7 @@ $(".popular-products__favorites").click(function () {
         class_selector : 'js_size_selector',
         class_disabel : 'list__itams-disabel',
     };
+
 
     var hendler = {
 
@@ -196,49 +212,50 @@ $(".popular-products__favorites").click(function () {
     $( document ).ready( function(){ hendler.construct(); });
 
 })( jQuery );
-
-
-
-
-
-$(".search-header").click(function () {
-    $(this).toggleClass("active");
-    if (this.classList.contains("active") === true) {
-        $('.body-header__bottom').addClass("body-header__bottom-open");
-    } else {
-        $('.body-header__bottom').removeClass("body-header__bottom-open");
-    }
-});
-$(".wrapper-search-header__close").click(function () {
-    $('.search-header').removeClass("active");
-    $('.body-header__bottom').removeClass("body-header__bottom-open");
-});
-
-$(".btn-settings").click(function () {
-
-    $('.wrapper-sidebar').addClass("settings-open");
-    $('.btn-close-sitings').addClass("btn-close-sitings-open");
-    $( 'body' ).addClass( 'no-scroll' );
-});
-$(".btn-close-sitings").click(function () {
-
-    $('.btn-close-sitings').removeClass("btn-close-sitings-open");
-    $('.wrapper-sidebar').removeClass("settings-open");
-    $( 'body' ).removeClass( 'no-scroll' );
-});
-if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
-    $(".available").click(function () {
-        parameters = {
-            duration: 2000,
+    if( $( '.search-header' ).length ) {
+    $(".search-header").click(function () {
+        $(this).toggleClass("active");
+        if (this.classList.contains("active") === true) {
+            $('.body-header__bottom').addClass("body-header__bottom-open");
+        } else {
+            $('.body-header__bottom').removeClass("body-header__bottom-open");
         }
-        var elem = this;
-        var block = $(elem).closest('.point-shop');
-        var items = $(block).find('.available-body');
-        $(items).slideToggle(parameters);
-        $(elem).toggleClass("open");
+    });
+    $(".wrapper-search-header__close").click(function () {
+        $('.search-header').removeClass("active");
+        $('.body-header__bottom').removeClass("body-header__bottom-open");
     });
 }
-//массив из рейтингов
+
+    if( $( '.btn-settings' ).length ) {
+    $(".btn-settings").click(function () {
+
+        $('.wrapper-sidebar').addClass("settings-open");
+        $('.btn-close-sitings').addClass("btn-close-sitings-open");
+        $('body').addClass('no-scroll');
+    });
+    $(".btn-close-sitings").click(function () {
+
+        $('.btn-close-sitings').removeClass("btn-close-sitings-open");
+        $('.wrapper-sidebar').removeClass("settings-open");
+        $('body').removeClass('no-scroll');
+    });
+}
+    if( $( '.available' ).length ) {
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        $(".available").click(function () {
+            parameters = {
+                duration: 2000,
+            }
+            var elem = this;
+            var block = $(elem).closest('.point-shop');
+            var items = $(block).find('.available-body');
+            $(items).slideToggle(parameters);
+            $(elem).toggleClass("open");
+        });
+    }
+}
+    //массив из рейтингов
 const ratings = document.querySelectorAll('.rating');
 
 if( ratings.length > 0){
@@ -278,230 +295,246 @@ function initRatings() {
 
 
 
-
-
-var swiper = new Swiper('.similar-products-container', {
-    slidesPerView: 4,
-    spaceBetween: 10,
-    preloadImages: false,
-    lazy: true,
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 1.5,
-            spaceBetween: 20
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 1.6,
-            spaceBetween: 20
-        },
-        // when window width is >= 640px
-        767: {
-            slidesPerView: 3,
-            spaceBetween: 20
-        },
-        1280: {
-            slidesPerView: 4,
-            spaceBetween: 20
-        }
-    }
-});
-var swiper = new Swiper('.new-collection-container', {
-    // Enable lazy loading
-    lazy: true,
-    navigation: {
-        nextEl: '.new-collection-button-next',
-        prevEl: '.new-collection-button-prev',
-    },
-    pagination: {
-        el: '.new-collection-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        // when window width is >= 320px
-       280: {
-            slidesPerView: 1,
-            spaceBetween: 15
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 2,
-            spaceBetween: 15
-        },
-        // when window width is >= 640px
-        990: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        2500: {
-            slidesPerView: 4,
-            spaceBetween: 30
-        }
-    }
-
-});
-var swiper = new Swiper('.article-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    preloadImages: false,
-    lazy: true,
-    pagination: {
-        el: '.article-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.article-button-next',
-        prevEl: '.article-button-prev',
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        280: {
-            slidesPerView: 1,
-            spaceBetween: 15
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 2,
-            spaceBetween: 15
-        },
-        // when window width is >= 640px
-        990: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        2500: {
-            slidesPerView: 4,
-            spaceBetween: 30
-        }
-    }
-});
-var swiper = new Swiper('.brends-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    preloadImages: false,
-    lazy: true,
-    pagination: {
-        el: '.brends-pagination',
-        clickable: true,
-    },
-
-    breakpoints: {
-        // when window width is >= 320px
-        280: {
-            slidesPerView: 2,
-            spaceBetween: 15
-        },
-        // when window width is >= 480px
-        320: {
-            slidesPerView: 3,
-            spaceBetween: 15
-        },
-        // when window width is >= 640px
-        767: {
-            slidesPerView: 6,
-            spaceBetween: 20
-        }
-    }
-});
-var swiper = new Swiper('.first-screen-container', {
-    lazy: true,
-    navigation: {
-        nextEl: '.first-screen-button-next',
-        prevEl: '.first-screen-button-prev',
-    },
-    pagination: {
-        el: '.first-screen-pagination',
-        clickable: true,
-    }
-});
-
-var sliderLlittle = new Swiper('.slider-little-container', {
-    slidesPerView: 1,
-    spaceBetween: 15,
-    loop:true,
-    slideToClickedSlide:true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-        767: {
-            direction: 'horizontal',
-            slidesPerView: 3,
-        },
-        1024: {
-            slidesPerView: 4,
-        },
-
-        1280: {
-            direction: 'vertical',
-            slidesPerView: 4,
-        },
-    }
-});
-
-if(window.screen.width>=767) {
-    var sliderLarge = new Swiper('.slider-large-container', {
-        thumbs: {
-            swiper: sliderLlittle
+    if( $( '.similar-products-container' ).length ) {
+    var similarProducts = new Swiper('.similar-products-container', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        preloadImages: false,
+        lazy: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1.5,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 1.6,
+                spaceBetween: 20
+            },
+            // when window width is >= 640px
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
         }
     });
-} else {
-    var sliderLarge = new Swiper('.slider-large-container', {
+}
+    if( $( '.new-collection-container' ).length ) {
+    var newCollection = new Swiper('.new-collection-container', {
+        // Enable lazy loading
+        lazy: true,
+        navigation: {
+            nextEl: '.new-collection-button-next',
+            prevEl: '.new-collection-button-prev',
+        },
         pagination: {
-            el: '.slider-large-pagination',
+            el: '.new-collection-pagination',
             clickable: true,
         },
+        breakpoints: {
+            // when window width is >= 320px
+            280: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            // when window width is >= 640px
+            990: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            2500: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            }
+        }
+
     });
+}
+    if( $( '.article-container' ).length ) {
+    var article = new Swiper('.article-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.article-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.article-button-next',
+            prevEl: '.article-button-prev',
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            280: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            // when window width is >= 640px
+            990: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            2500: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            }
+        }
+    });
+}
+    if( $( '.brends-container' ).length ) {
+    var brends = new Swiper('.brends-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.brends-pagination',
+            clickable: true,
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            280: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            // when window width is >= 480px
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 15
+            },
+            // when window width is >= 640px
+            767: {
+                slidesPerView: 6,
+                spaceBetween: 20
+            }
+        }
+    });
+}
+    if( $( '.first-screen-container' ).length ) {
+    var firstScreen = new Swiper('.first-screen-container', {
+        lazy: true,
+        navigation: {
+            nextEl: '.first-screen-button-next',
+            prevEl: '.first-screen-button-prev',
+        },
+        pagination: {
+            el: '.first-screen-pagination',
+            clickable: true,
+        }
+    });
+}
+
+    if( $( '.slider-little-container' ).length ) {
+    var sliderLlittle = new Swiper('.slider-little-container', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop:true,
+        slideToClickedSlide:true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            767: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+
+            1280: {
+                direction: 'vertical',
+                slidesPerView: 4,
+            },
+        }
+    });
+
+    if(window.screen.width>=767) {
+        var sliderLarge = new Swiper('.slider-large-container', {
+            thumbs: {
+                swiper: sliderLlittle
+            }
+        });
+    } else {
+        var sliderLarge = new Swiper('.slider-large-container', {
+            pagination: {
+                el: '.slider-large-pagination',
+                clickable: true,
+            },
+        });
+    }
 };
 
 
 
-function countFunc(count) {
-    var btnPlus = count.querySelector('.card-info__plus');
-    var btnMinus = count.querySelector('.card-info__minus');
-    var field = count.querySelector('.card-info__number');
-    var fieldValue = parseFloat(field.value, 10);//Прообразовываем к числу
+    if( $( '.card-info__quantity' ).length ) {
+    function countFunc(count) {
+        var btnPlus = count.querySelector('.card-info__plus');
+        var btnMinus = count.querySelector('.card-info__minus');
+        var field = count.querySelector('.card-info__number');
+        var fieldValue = parseFloat(field.value, 10);//Прообразовываем к числу
 
-    btnMinus.addEventListener('click', function() {
-        if (fieldValue > 1) {
-            fieldValue--;
+        btnMinus.addEventListener('click', function () {
+            if (fieldValue > 1) {
+                fieldValue--;
+                field.value = fieldValue;
+            } else {
+                return 1;
+            }
+        });
+        btnPlus.addEventListener('click', function () {
+            fieldValue++;
             field.value = fieldValue;
-        } else {
-            return 1;
-        }
-    });
-    btnPlus.addEventListener('click', function() {
-        fieldValue++;
-        field.value = fieldValue;
-    });
+        });
 
+    }
+
+    var counts = document.querySelectorAll('.card-info__quantity');
+    counts.forEach(countFunc);
 }
-var counts = document.querySelectorAll('.card-info__quantity');
-counts.forEach(countFunc);
-$(".payment-method").click(function () {
-    var elem = this;
-    var block = $(elem).next('.body-payment-method');
-    $(block).slideToggle(parameters);
-    $(elem).toggleClass("open");
-});
-$(".password-img").mousedown(function () {
-    var elem = this;
-    var pas = $(elem).next('.wrapper-field-input');
-    $(pas).attr('type', 'text');
-});
-$(".password-img").mouseout(function () {
-    var elem = this;
-    var pas = $(elem).next('.wrapper-field-input');
-    $(pas).attr('type', 'password');
-});
+    if( $( '.payment-method' ).length ) {
+    $(".payment-method").click(function () {
+        var elem = this;
+        var block = $(elem).next('.body-payment-method');
+        $(block).slideToggle(parameters);
+        $(elem).toggleClass("open");
+    });
+}
+    if( $( '.password-img' ).length ) {
+    $(".password-img").mousedown(function () {
+        var elem = this;
+        var pas = $(elem).next('.wrapper-field-input');
+        $(pas).attr('type', 'text');
+    });
+    $(".password-img").mouseout(function () {
+        var elem = this;
+        var pas = $(elem).next('.wrapper-field-input');
+        $(pas).attr('type', 'password');
+    });
+}
 
 
 
 
 
 
-
-/*!
+    /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
  * 
@@ -582,52 +615,51 @@ if ( typeof define === 'function' && define.amd ) {
 
 })( window );
 
-(function() {
-    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-    if (!String.prototype.trim) {
-        (function() {
-            // Make sure we trim BOM and NBSP
-            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-            String.prototype.trim = function() {
-                return this.replace(rtrim, '');
-            };
-        })();
-    }
-
-    [].slice.call( document.querySelectorAll( '.wrapper-field-input' ) ).forEach( function( inputEl ) {
-        // in case the input is already filled..
-        if( inputEl.value.trim() !== '' ) {
-            classie.add( inputEl.parentNode, 'input--filled' );
+    if( $( '.wrapper-field-input' ).length ) {
+    (function () {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+            (function () {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function () {
+                    return this.replace(rtrim, '');
+                };
+            })();
         }
 
-        // events:
-        inputEl.addEventListener( 'focus', onInputFocus );
-        inputEl.addEventListener( 'blur', onInputBlur );
-    } );
+        [].slice.call(document.querySelectorAll('.wrapper-field-input')).forEach(function (inputEl) {
+            // in case the input is already filled..
+            if (inputEl.value.trim() !== '') {
+                classie.add(inputEl.parentNode, 'input--filled');
+            }
 
-    function onInputFocus( ev ) {
-        classie.add( ev.target.parentNode, 'input--filled' );
-    }
+            // events:
+            inputEl.addEventListener('focus', onInputFocus);
+            inputEl.addEventListener('blur', onInputBlur);
+        });
 
-    function onInputBlur( ev ) {
-        if( ev.target.value.trim() === '' ) {
-            classie.remove( ev.target.parentNode, 'input--filled' );
+        function onInputFocus(ev) {
+            classie.add(ev.target.parentNode, 'input--filled');
         }
-    }
-})();
 
-var textarea = document.querySelector('textarea');
+        function onInputBlur(ev) {
+            if (ev.target.value.trim() === '') {
+                classie.remove(ev.target.parentNode, 'input--filled');
+            }
+        }
+    })();
+}
+    if( $( '.textarea' ).length ) {
+    var textarea = document.querySelector('textarea');
 
-textarea.addEventListener('keyup', function(){
-    if(this.scrollTop > 0){
-        this.style.height = this.scrollHeight + "px";
-    }
-});
-
-
-
-
-
+    textarea.addEventListener('keyup', function () {
+        if (this.scrollTop > 0) {
+            this.style.height = this.scrollHeight + "px";
+        }
+    });
+}
+    
 
 /*
 * список дата атрибутов
@@ -639,137 +671,136 @@ textarea.addEventListener('keyup', function(){
 */
 
 // получаем элементы min, max, fill и самого блока range
-const min = document.querySelector('.min-range-item');
-const max = document.querySelector('.max-range-item');
-const rangeBlock = document.querySelector('.range');
-let fill = document.querySelector('.range-fill');
-const infoBox = document.querySelector('.info');
+if( $( '.filter-slider-price' ).length ) {
+    const min = document.querySelector('.min-range-item');
+    const max = document.querySelector('.max-range-item');
+    const rangeBlock = document.querySelector('.range');
+    let fill = document.querySelector('.range-fill');
+    const infoBox = document.querySelector('.info');
 
 // блоки для вывода текущих параметров сортировки по цене (min - max)
-let minInfo = document.querySelector('.min-price');
-let maxInfo = document.querySelector('.max-price');
+    let minInfo = document.querySelector('.min-price');
+    let maxInfo = document.querySelector('.max-price');
 
 // получаем настройки из data аттрибутов
-const dataWidth = +rangeBlock.dataset.width;
-const dataType = rangeBlock.dataset.type;
-const dataUnits = rangeBlock.dataset.units;
-const dataMinVal = +min.dataset.value;
-const dataMaxVal = +max.dataset.value;
+    const dataWidth = +rangeBlock.dataset.width;
+    const dataType = rangeBlock.dataset.type;
+    const dataUnits = rangeBlock.dataset.units;
+    const dataMinVal = +min.dataset.value;
+    const dataMaxVal = +max.dataset.value;
 
 // получаем начальную точку блока range
-const startX = rangeBlock.getBoundingClientRect().x;
+    const startX = rangeBlock.getBoundingClientRect().x;
 
 // если 2 ползука берём их ширину для расчетов, чтоб не наезжали друг на друга
-let shiftMax = max.clientWidth;
-let shiftMin = min.clientWidth;
+    let shiftMax = max.clientWidth;
+    let shiftMin = min.clientWidth;
 
 // проверяем настрйки типа, если одинарный - убираем минимальный ползунок
-if (dataType === 'single') {
-    min.style.display = 'none';
-    document.querySelector('.min-box').style.display = 'none';
-    shiftMin = 0;
-}
-if (dataType === 'duble') {
-    min.style.display = 'block';
-    document.querySelector('.min-box').style.display = 'block';
-}
+    if (dataType === 'single') {
+        min.style.display = 'none';
+        document.querySelector('.min-box').style.display = 'none';
+        shiftMin = 0;
+    }
+    if (dataType === 'duble') {
+        min.style.display = 'block';
+        document.querySelector('.min-box').style.display = 'block';
+    }
 
 // параметры ползунков
-let minValue = startX;
-let maxValue  = startX + dataWidth - shiftMax;
+    let minValue = startX;
+    let maxValue = startX + dataWidth - shiftMax;
 
 // задаем стили их дата атрибутов
-rangeBlock .style.width = dataWidth + 'px';
-infoBox.style.width = dataWidth + 'px';
-minInfo.insertAdjacentHTML('beforebegin', dataUnits);
-minInfo.insertAdjacentHTML('afterbegin', dataMinVal );
-maxInfo.insertAdjacentHTML('beforebegin', dataUnits);
-maxInfo.insertAdjacentHTML('afterbegin', dataMaxVal);
+    rangeBlock.style.width = dataWidth + 'px';
+    infoBox.style.width = dataWidth + 'px';
+    minInfo.insertAdjacentHTML('beforebegin', dataUnits);
+    minInfo.insertAdjacentHTML('afterbegin', dataMinVal);
+    maxInfo.insertAdjacentHTML('beforebegin', dataUnits);
+    maxInfo.insertAdjacentHTML('afterbegin', dataMaxVal);
 
 // задаем инлайново стили, чтобы потом былм данные
-min.style.left = 0 + 'px';
-max.style.left = dataWidth - shiftMax + 'px';
+    min.style.left = 0 + 'px';
+    max.style.left = dataWidth - shiftMax + 'px';
 
-
-/**
- * запускаем функцию при нажатии кнопки мыши
- * @param event {Event} событие
- */
-const check = (event) => {
-
-    // чтобы не терять таргет - отслеживаем тот ползунок, на котором было событие mousedown
-    let targetMain = event.target;
-
-    // корректные значения допустимые для перемещения ползунка, используются дальше
-    let currentMaxValue, currentMinValue;
 
     /**
-     * отслеживаем перемещение мыши и вычисляем координаты ползунка)
+     * запускаем функцию при нажатии кнопки мыши
      * @param event {Event} событие
      */
-    const move = (event) => {
+    const check = (event) => {
 
-        // у touch события массив эвентов, сводим к одной переменой этим условием
-        let e;
-        (event.type === 'touchmove') ? e = event.touches[0] : e = event;
+        // чтобы не терять таргет - отслеживаем тот ползунок, на котором было событие mousedown
+        let targetMain = event.target;
 
-        // если таргет максимальное значение
-        if (targetMain === max) {
-            currentMaxValue = maxValue;
-            currentMinValue = parseInt(min.style.left) + shiftMin + startX;
+        // корректные значения допустимые для перемещения ползунка, используются дальше
+        let currentMaxValue, currentMinValue;
+
+        /**
+         * отслеживаем перемещение мыши и вычисляем координаты ползунка)
+         * @param event {Event} событие
+         */
+        const move = (event) => {
+
+            // у touch события массив эвентов, сводим к одной переменой этим условием
+            let e;
+            (event.type === 'touchmove') ? e = event.touches[0] : e = event;
+
+            // если таргет максимальное значение
+            if (targetMain === max) {
+                currentMaxValue = maxValue;
+                currentMinValue = parseInt(min.style.left) + shiftMin + startX;
+            }
+
+            // если таргет минимальное значение
+            if (targetMain === min) {
+                currentMinValue = minValue;
+                currentMaxValue = parseInt(max.style.left) - shiftMax + startX;
+            }
+
+            // меняем положение активного ползунка от края и до другого ползунка
+            if (e.clientX - (shiftMin / 2) > currentMinValue && e.clientX - (shiftMax / 2) < currentMaxValue) {
+                targetMain.style.left = e.clientX - startX - (shiftMax / 2) + 'px';
+            } else if (e.clientX < currentMinValue && targetMain === min) {
+                targetMain.style.left = 0 + 'px';
+            } else if (e.clientX > currentMaxValue && targetMain === max) {
+                targetMain.style.left = dataWidth - shiftMax + 'px';
+            } else if (e.clientX < currentMinValue && targetMain === max && shiftMin === 0) {
+                targetMain.style.left = 0 + 'px';
+            }
+
+            // изменяем зарисовку между ползунками
+            fill.style.left = min.style.left;
+            fill.style.width = parseInt(max.style.left) - parseInt(min.style.left) + shiftMax + 'px';
+
+            // выводим информацию о выбранном диапазоне цен
+            let targetPrice;
+            (targetMain === max) ? targetPrice = maxInfo : targetPrice = minInfo;
+
+            targetPrice.textContent = Math.floor(parseInt(targetMain.style.left) * (dataMaxVal - dataMinVal) / (dataWidth - shiftMax) + dataMinVal + '');
+
         }
 
-        // если таргет минимальное значение
-        if (targetMain === min) {
-            currentMinValue = minValue;
-            currentMaxValue = parseInt(max.style.left) - shiftMax + startX;
+
+        // вешаем слушатель на движение мыши по всему документу
+        document.addEventListener('mousemove', move);
+        document.addEventListener('touchmove', move);
+
+        /**
+         * если отпустили кнопку - удаляем слушатели на перемещение мыши
+         */
+        let mouseUpFn = () => {
+            document.removeEventListener('mousemove', move);
+            document.removeEventListener('touchmove', move);
         }
 
-        // меняем положение активного ползунка от края и до другого ползунка
-        if (e.clientX - (shiftMin / 2) > currentMinValue && e.clientX - (shiftMax / 2) < currentMaxValue) {
-            targetMain.style.left = e.clientX - startX - (shiftMax / 2) + 'px';
-        } else if (e.clientX < currentMinValue && targetMain === min) {
-            targetMain.style.left = 0 + 'px';
-        } else if (e.clientX > currentMaxValue && targetMain === max) {
-            targetMain.style.left = dataWidth - shiftMax + 'px';
-        } else if (e.clientX < currentMinValue && targetMain === max && shiftMin === 0) {
-            targetMain.style.left = 0 + 'px';
-        }
-
-        // изменяем зарисовку между ползунками
-        fill.style.left = min.style.left;
-        fill.style.width = parseInt(max.style.left) - parseInt(min.style.left) + shiftMax + 'px';
-
-        // выводим информацию о выбранном диапазоне цен
-        let targetPrice;
-        (targetMain === max) ? targetPrice = maxInfo : targetPrice = minInfo;
-
-        targetPrice.textContent = Math.floor( parseInt(targetMain.style.left) * (dataMaxVal - dataMinVal ) / (dataWidth - shiftMax) + dataMinVal + '');
-
+        // ждем отпускания лкм чтобы убить слушатель движения мыши
+        document.addEventListener('mouseup', mouseUpFn);
+        document.addEventListener('touchend', mouseUpFn);
     }
 
 
-    // вешаем слушатель на движение мыши по всему документу
-    document.addEventListener('mousemove', move);
-    document.addEventListener('touchmove', move);
-
-    /**
-     * если отпустили кнопку - удаляем слушатели на перемещение мыши
-     */
-    let mouseUpFn = () => {
-        document.removeEventListener('mousemove', move);
-        document.removeEventListener('touchmove', move);
-    }
-
-    // ждем отпускания лкм чтобы убить слушатель движения мыши
-    document.addEventListener('mouseup', mouseUpFn);
-    document.addEventListener('touchend', mouseUpFn);
+    rangeBlock.addEventListener('mousedown', check);
+    rangeBlock.addEventListener('touchstart', check);
 }
-
-
-rangeBlock.addEventListener('mousedown', check);
-rangeBlock.addEventListener('touchstart', check);
-
-
-
-
+})

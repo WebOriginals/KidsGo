@@ -1,3 +1,6 @@
+"use strict"
+
+$( document ).ready(function() {
 @@include('lazy/closest.js')
 @@include('lazy/blazy.min.js')
 @@include('blazy.js')
@@ -26,6 +29,6 @@
 @@include('textarea.js')
 
 
-
-
 @@include('filter-slider-price.js')
+
+}

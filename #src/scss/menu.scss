@@ -178,7 +178,7 @@
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
-  z-index: 900;
+  z-index: 1000;
 
 
   @include mq('tablet') {
@@ -191,7 +191,7 @@
     -moz-box-shadow: 6px 9px 11px 1px rgba(0, 0, 0, 0.2);
   }
   @include mq('tablet-wide') {
-    top: 140px;
+    top: 95px;
   }
   @include mq('desktop') {
     display: none;

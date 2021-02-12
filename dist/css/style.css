@@ -285,13 +285,14 @@ body {
   background: #fff;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -12px;
   left: 0;
   -webkit-transform: translateY(65px);
       -ms-transform: translateY(65px);
           transform: translateY(65px);
   -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  z-index: 9;
 }
 
 .body-header__bottom .wrapper-search-header {
@@ -420,7 +421,7 @@ body {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
-  z-index: 900;
+  z-index: 1000;
 }
 
 .wrapper-menu.active {
@@ -696,6 +697,10 @@ body {
 .pagination-list li.active a {
   color: #015AFE;
   font-weight: bold;
+}
+
+.wrapper-googs .pagination-list {
+  width: 100%;
 }
 
 .rating {
@@ -2080,6 +2085,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.sec_1-sidebar {
+  overflow: hidden;
+  padding: 0 0 50px;
+}
+
 .body-sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2116,6 +2126,15 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-bottom: 45px;
+}
+
+.wrapper-googs .body-good-it {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .wrapper-googs .sorting-form__title {
@@ -2325,13 +2344,14 @@ body {
 
 .btn-close-sitings {
   position: absolute;
-  display: block;
+  display: none;
   right: -25px;
   top: 15px;
   z-index: 1003;
 }
 
 .btn-close-sitings-open {
+  display: block;
   -webkit-animation: close-btn 0.7s linear;
           animation: close-btn 0.7s linear;
   -webkit-animation-delay: 1s;
@@ -2386,12 +2406,6 @@ body {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
   }
-}
-
-.wr-btn-more {
-  position: absolute;
-  bottom: 0px;
-  right: 23px;
 }
 
 .range {
@@ -4783,6 +4797,12 @@ body {
     width: 50%;
   }
 
+  .wr-btn-more {
+    position: absolute;
+    bottom: 0px;
+    right: 23px;
+  }
+
   .wrapper-list {
     width: 270px;
   }
@@ -4821,8 +4841,8 @@ body {
 
   .body-inputs {
     grid-column-gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "street street street" "smoll1 smoll2 smoll3" "long long long";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "street smoll1" "smoll2 smoll3" "long long ";
   }
 
   .orderRegistration-card-left__btn.desctop {
@@ -5092,7 +5112,7 @@ body {
   }
 
   .wrapper-menu {
-    top: 140px;
+    top: 95px;
   }
 
   .body-first-screen .wrapper-nav {
@@ -5460,6 +5480,10 @@ body {
     margin-right: auto;
   }
 
+  .sec_1-sidebar {
+    padding: 0 0 120px;
+  }
+
   .body-sidebar {
     position: relative;
   }
@@ -5568,6 +5592,7 @@ body {
   .body-inputs {
     grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
     grid-template-areas: "street  smoll1 smoll2 smoll3" "long long long long";
+    width: 87%;
   }
 
   .orderRegistration-card-left__btn {
@@ -5795,7 +5820,6 @@ body {
 
   .body-inputs {
     grid-column-gap: 30px;
-    width: 87%;
   }
 
   .card-good-order__descriptin {
@@ -6046,6 +6070,10 @@ body {
     width: 35px;
   }
 
+  .wrapper-nav {
+    display: none;
+  }
+
   .reviews__item .reviews-item__title {
     margin-bottom: 10px;
   }
@@ -6061,10 +6089,6 @@ body {
   }
 
   .wrapper-googs .sorting-form__title {
-    display: none;
-  }
-
-  .wr-btn-more {
     display: none;
   }
 
@@ -6090,10 +6114,6 @@ body {
 }
 
 @media only screen and (max-width: 1023px) {
-  .wrapper-nav {
-    display: none;
-  }
-
   .similar-products-slide .dd {
     display: none;
   }
@@ -6257,6 +6277,10 @@ body {
   .about-product-conten {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .wr-btn-more {
+    position: relative;
   }
 
   .basket-card-body-right {

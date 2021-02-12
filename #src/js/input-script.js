@@ -1,3 +1,9 @@
+if( $( '.select-value' ).length ) {
+    if (window.screen.width <= 1240) {
+        $('.select-value').html("ценa ↑");
+    }
+}
+
 ( function( $ ){
 
     // Настройки
@@ -14,6 +20,7 @@
         class_selector : 'js_size_selector',
         class_disabel : 'list__itams-disabel',
     };
+
 
     var hendler = {
 
@@ -94,7 +101,3 @@
     $( document ).ready( function(){ hendler.construct(); });
 
 })( jQuery );
-
-
-
-
