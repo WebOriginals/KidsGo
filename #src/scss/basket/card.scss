@@ -1,5 +1,8 @@
 .basket-card{
-
+  padding: 0 0 50px;
+  @include mq('desktop') {
+    padding: 0 0 120px;
+  }
 }
 
 .basket-card-body{
@@ -61,6 +64,9 @@
 .basket-card-item__text{
   flex: 1 1 auto;
 
+  @include maq('phone-midle') {
+    padding: 15px 15px 15px 5px;
+  }
   @include maq('desktop') {
     padding: 15px;
   }
@@ -161,9 +167,13 @@
   border-top: 1px solid $color_6g;
   justify-content: space-between;
   padding: 5px 15px;
+  @include adaptiv-font(14,12);
 
   @include mq('desktop') {
     display: none;
+  }
+  @media only screen and (max-width: 340px){
+    font-size: 10px;
   }
 }
 
@@ -396,6 +406,7 @@
     position: sticky;
     float: left;
     top: 15px;
+    padding-bottom: 15px;
   }
 }
 

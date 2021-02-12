@@ -24,4 +24,5 @@ $( document ).ready(function() {
     @@include('animation-input.js')
     @@include('textarea.js')
     @@include('filter-slider-price.js')
+    @@include('map.js')
 })
