@@ -63,6 +63,22 @@
   position: absolute;
   top: 15px;
   left: -25px;
+
+  .wrapper-products__sale{
+    position: relative;
+  }
+  span{
+    position: absolute;
+    z-index: 10;
+    transform: rotate(-90deg);
+    top: 43px;
+    left: 38px;
+    @include adaptiv-font(11,10);
+    font-weight: bold;
+    @include mq('2K') {
+      left: 36px;
+    }
+  }
 }
 .popular-products__favorites{
   position: absolute;

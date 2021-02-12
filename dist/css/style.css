@@ -1103,6 +1103,22 @@ body {
   left: -25px;
 }
 
+.popular-products__sale .wrapper-products__sale {
+  position: relative;
+}
+
+.popular-products__sale span {
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  top: 43px;
+  left: 38px;
+  font-size: calc(10px + 1 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+}
+
 .popular-products__favorites {
   position: absolute;
   top: 15px;
@@ -5886,6 +5902,10 @@ body {
 
   .content-first-screen {
     width: 57%;
+  }
+
+  .popular-products__sale span {
+    left: 36px;
   }
 
   .wrapper-googs {
