@@ -604,7 +604,7 @@ body {
 }
 
 .sec-title {
-  padding: 30px 0 10px;
+  padding: 20px 0 10px;
 }
 
 .title-text {
@@ -864,7 +864,8 @@ body {
 .password-img:focus ~ .input__label .span-field-input,
 .input--filled .input__label .span-field-input {
   color: #015AFE;
-  font-size: calc(6px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(8px + 2 * ((100vw - 320px) / 1600));
+  text-transform: uppercase;
 }
 
 .wrapper-field-input:focus + .input__label,
@@ -1168,6 +1169,7 @@ body {
 .popular-products__size .popular-products-size__item {
   font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
   font-weight: 600;
+  color: #222;
 }
 
 .popular-products__size .popular-products-size__item:hover {
@@ -1639,7 +1641,8 @@ body {
   margin-bottom: 10px;
 }
 
-.description__color .description__colorImgs .description__imgs-item.active {
+.description__color .description__colorImgs .description__imgs-item.active,
+.description__color .description__colorImgs .description__imgs-item:hover {
   border: 1px solid #015AFE !important;
 }
 
@@ -2124,7 +2127,6 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .wrapper-googs .popular-products__items {
@@ -2534,7 +2536,7 @@ body {
 .wrapper-list {
   position: absolute;
   top: 35px;
-  left: -5px;
+  right: 0;
   padding: .8rem;
   height: auto;
   width: 183px;
@@ -3315,7 +3317,7 @@ body {
 .title-payment-delivery {
   font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .my-order__text {
@@ -3712,6 +3714,8 @@ body {
   color: #F81157;
   opacity: .5;
   text-decoration: underline;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .forgot-password:hover {
@@ -3845,6 +3849,7 @@ body {
   font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
   font-weight: bold;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .table-s-ch__item {
@@ -4129,6 +4134,11 @@ body {
 .select-city {
   width: 100%;
   margin-bottom: calc(30px + 30 * ((100vw - 320px) / 1600));
+  color: #015AFE;
+}
+
+.select-city .wrapper-list {
+  left: 0;
 }
 
 .wrapper-shops-map {
@@ -4356,12 +4366,17 @@ body {
 .footer-top .footer-top__menu ul.footer-top-menu_item li {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .footer-top .footer-top__menu ul.footer-top-menu_item li.title {
   font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
   font-weight: 800;
   margin-bottom: 20px;
+}
+
+.footer-top .footer-top__menu ul.footer-top-menu_item li:hover {
+  color: #F81157;
 }
 
 .footer-top .footer-top__soc {
@@ -4416,6 +4431,7 @@ body {
   width: 45%;
   -ms-flex-item-align: center;
       align-self: center;
+  z-index: 9;
 }
 
 .footer-middle .footer-middle__form .footer-form__input {
@@ -5582,7 +5598,7 @@ body {
   }
 
   .sec-title {
-    padding: 60px 0;
+    padding: 10px 0;
   }
 
   .pagination-list.aq {

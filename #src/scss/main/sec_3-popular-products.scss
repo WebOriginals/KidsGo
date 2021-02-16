@@ -134,6 +134,7 @@
   .popular-products-size__item{
     @include adaptiv-font(18,16);
     font-weight: 600;
+    color: $color_1b;
 
     &:hover{
       color: $color_3b;

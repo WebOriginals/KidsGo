@@ -67,22 +67,21 @@ section.sec_1-slider
                     .description__header
                         .description__colorTitle  Цвет
                         .description__colorItem черный
-                        .description__colorItem  серый
-                        .description__colorItem  красный
-                        .description__colorItem  желтый
+
                     .description__colorImgs
                         .description__colorImgs-scroll
-                            .description__imgs-item
+                            .description__imgs-item(data-color="черный" )
                                 img(src="img/good_color.png")
-                            .description__imgs-item.active
+                            .description__imgs-item.active(data-color="серый")
                                 img(src="img/good_color.png")
-                            .description__imgs-item
+                            .description__imgs-item(data-color="красный")
                                 img(src="img/good_color.png")
-                            .description__imgs-item
+                            .description__imgs-item(data-color="желтый")
+                                img(src="img/good_color.png")
+                            .description__imgs-item(data-color="синий")
                                 img(src="img/good_color.png")
 
-                            .description__imgs-item
-                                img(src="img/good_color.png")
+
 
 
                 .description__size
@@ -106,4 +105,5 @@ section.sec_1-slider
                         .button_blue Добавить в корзину
                     .wrapper-brnPink
                         .button_pink Купить в 1 клик
+
 

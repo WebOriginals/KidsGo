@@ -57,9 +57,12 @@
           font-weight: 800;
           margin-bottom: 20px;
         }
-
+        &:hover{
+          color: $color_4p;
+        }
         @include adaptiv-font(16, 14);
         margin-bottom: 15px;
+        cursor: pointer;
       }
     }
     @include maq('tablet') {
@@ -157,6 +160,7 @@
   .footer-middle__form {
     width: 45%;
     align-self: center;
+    z-index: 9;
 
 
     .footer-form__input{

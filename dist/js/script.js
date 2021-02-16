@@ -89,16 +89,7 @@ if( $( '.body-header' ).length ) {
 }
 
 
-    if( $( '.popular-products__favorites' ).length ) {
-    $(".popular-products__favorites").click(function () {
-        var elem = this;
-        var normal = $(elem).find('.ic-favorites');
-        var active = $(elem).find('.ic-favorites-active');
-
-        $(normal).toggleClass('invis');
-        $(active).toggleClass('vis');
-    });
-}
+    
 
 
 
@@ -519,13 +510,26 @@ function initRatings() {
     if( $( '.password-img' ).length ) {
     $(".password-img").mousedown(function () {
         var elem = this;
-        var pas = $(elem).next('.wrapper-field-input');
-        $(pas).attr('type', 'text');
+        var body = $(elem).closest('.password');
+        var img = $( body).find('.password-img');
+        var input = $( body).find('.wrapper-field-input');
+        var imgOpen = $( body).find('.password-img-open');
+
+        $(img).css("display", "none");
+        $(imgOpen).css("display", "block");
+        $(input).attr('type', 'text');
+
     });
-    $(".password-img").mouseout(function () {
+    $(".password-img-open").mouseout(function () {
         var elem = this;
-        var pas = $(elem).next('.wrapper-field-input');
-        $(pas).attr('type', 'password');
+        var body = $(elem).closest('.password');
+        var img = $( body).find('.password-img');
+        var input = $( body).find('.wrapper-field-input');
+        var imgOpen = $( body).find('.password-img-open');
+
+        $(img).css("display", "block");
+        $(imgOpen).css("display", "none");
+        $(input).attr('type', 'password');
     });
 }
 
@@ -835,4 +839,18 @@ function init () {
 //Отключить изменение маштаба колесом и косанием
     myMap.behaviors.disable(['scrollZoom' , 'multiTouch' , 'drag']);
 }
+    if( $( '.description__color' ).length ) {
+    $('.description__imgs-item').click(function(evet) {
+        var elem = this;
+        var body = $(elem).closest('.description__color');
+        var text_raplase = $(body).find('.description__colorItem');
+
+        event.preventDefault();
+        var dataColor = $(this).attr('data-color');
+        $(text_raplase).html(dataColor);
+    });
+}
+
+
+
 })

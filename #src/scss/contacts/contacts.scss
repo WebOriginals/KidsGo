@@ -24,6 +24,11 @@ padding: 0 0 50px;
   @include mq('tablet') {
     width: fit-content;
   }
+  color: $color_3b;
+
+  .wrapper-list{
+    left: 0;
+  }
 }
 
 .wrapper-shops-map {

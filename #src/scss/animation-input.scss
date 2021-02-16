@@ -19,7 +19,8 @@
 .password-img:focus ~ .input__label .span-field-input,
 .input--filled .input__label .span-field-input{
   color: $color_3b;
-  @include adaptiv-font(8, 6);
+  @include adaptiv-font(10, 8);
+  text-transform: uppercase;
 }
 
 .wrapper-field-input:focus + .input__label,
