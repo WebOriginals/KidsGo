@@ -24,5 +24,5 @@ $( document ).ready(function() {
     @@include('textarea.js')
     @@include('filter-slider-price.js')
 
-    @@include('card-replase-text.js')
+
 })
