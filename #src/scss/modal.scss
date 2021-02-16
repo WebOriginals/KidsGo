@@ -124,6 +124,7 @@
     }
   }
 }
+
 .wrformkidsgoBtn{
   @include maq('tablet-wide') {
     width: 100%;
@@ -132,9 +133,6 @@
     }
   }
 }
-
-
-
 
 //модалка корзины
 .basket-modal{
@@ -230,7 +228,6 @@
     }
   }
 }
-
 
 //модалка корзины
 .city-modal{
@@ -332,6 +329,7 @@ justify-content: space-between;
     max-width: 730px;
   }
 }
+
 .kidsgo-modal-content.city{
   @include maq('tablet') {
     width: 100%;
@@ -421,3 +419,5 @@ justify-content: space-between;
     width: 5px !important
   }
 }
+
+

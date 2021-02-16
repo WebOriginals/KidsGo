@@ -5,7 +5,6 @@
 $( document ).ready(function() {
     @@include('blazy.js')
     @@include('menu.js')
-    @@include('favarits.js')
     @@include('input-script.js')
     @@include('header-search.js')
     @@include('btn-settings-mobil.js')
@@ -24,8 +23,6 @@ $( document ).ready(function() {
     @@include('animation-input.js')
     @@include('textarea.js')
     @@include('filter-slider-price.js')
-    @@include('map.js')
+
     @@include('card-replase-text.js')
-
-
 })
