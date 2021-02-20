@@ -67,7 +67,7 @@ if( $( '.price-text' ).length ) {
                 $( items ).unbind( 'click.' + settings.action ).bind( 'click.' + settings.action, function(){
 
                     $( value ).text( $( this ).text() ); // Берем текст из item и сохраняем в видимое выбраное значение
-                    $( input ).val( $( this ).data( 'value' ) || $( this ).text() ); // Берем дата параметр или текст из item и сохраняем в наш input
+                    $( input ).val( $( this ).data( 'value' ) || $( this ).text()).trigger("change"); // Берем дата параметр или текст из item и сохраняем в наш input
 
                     if(window.screen.width<=1023) {
                         $(value).text(value.text().substring(0, 27)); //ограничиваем кол-во символов на строке
