@@ -167,3 +167,18 @@
 .body-header__bottom-open{
   display: block;
 }
+
+.header-red{
+
+}
+.ic-header {
+  position: relative;
+
+  .colnum {
+    position: absolute;
+    color: $color_2w;
+    bottom: -9px;
+    left: 25px;
+    @include adaptiv-font(9,9);
+  }
+}

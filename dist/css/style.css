@@ -374,6 +374,18 @@ body {
   display: block;
 }
 
+.ic-header {
+  position: relative;
+}
+
+.ic-header .colnum {
+  position: absolute;
+  color: #fff;
+  bottom: -9px;
+  left: 25px;
+  font-size: calc(9px + 0 * ((100vw - 320px) / 1600));
+}
+
 /*конец кнопки*/
 
 .link-menu {
@@ -3904,6 +3916,23 @@ body {
   padding: 0 0 50px;
 }
 
+.favoritesnotgoods {
+  margin-top: 50px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.favorites__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.body-favorites {
+  min-height: 30vh;
+}
+
 .sec-shipping-payment {
   padding: 50px 0 50px;
 }
@@ -4309,6 +4338,42 @@ body {
   top: 0;
 }
 
+.sec-404 {
+  padding: 50px 0 50px;
+}
+
+.body-404 {
+  display: grid;
+}
+
+.content-404__img {
+  margin-bottom: 30px;
+}
+
+.content-404__img img {
+  max-width: 100%;
+}
+
+.content-404__one img {
+  max-width: 100%;
+}
+
+.content-404__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #F81157;
+  font-size: calc(24px + 12 * ((100vw - 320px) / 1600));
+  margin-bottom: 10px;
+}
+
+.content-404__desr {
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+}
+
+.content-404__btn {
+  margin: 30px auto 0;
+}
+
 .footer {
   background: #C8D9F8;
   padding: 30px 0;
@@ -4525,7 +4590,7 @@ body {
 
 .kidsgo-modal-content {
   padding: 50px 35px;
-  background: #F4F4F4;
+  background: #FFF;
   border-radius: 0;
 }
 
@@ -4795,6 +4860,124 @@ body {
 .list-skroll::-webkit-scrollbar {
   right: 5px;
   width: 5px !important;
+}
+
+.wrapper-input-form {
+  width: 100%;
+}
+
+.wrapper-input-form {
+  margin-bottom: 30px;
+}
+
+.price-num-name {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.price-num {
+  font-size: calc(24px + 8 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-form-one-click {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 50px auto 0;
+}
+
+.title-one-click {
+  font-size: calc(24px + 6 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.bottom-text .input-save[type=checkbox]:checked + .label-save:after {
+  background-size: 19px;
+}
+
+.bottom-text .label-save:before {
+  top: 2px;
+}
+
+.kidsgo-modal-one_click .kidsgo-modal-content {
+  border-radius: 21px;
+  border: 1px solid #F81157;
+}
+
+.star-reviews .star-reviews__title {
+  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.star-reviews .reviews-item__rating-stars {
+  margin-bottom: 40px;
+}
+
+.star-reviews .simple-rating:before {
+  width: 216px;
+  height: 38px;
+  background-size: 43px;
+}
+
+.star-reviews .form__item__label:before {
+  width: 100%;
+  background-size: 43px;
+}
+
+.star-reviews .form__item__label {
+  width: 43px;
+}
+
+.sec-cooky {
+  position: fixed;
+  bottom: 15px;
+  right: 0;
+  width: 100%;
+  z-index: 15;
+}
+
+.body-cooky {
+  background: #C8D9F8;
+  position: relative;
+  padding: 20px;
+  border-radius: 21px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.wrapper-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cooky-img {
+  width: 30%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.cooky-img img {
+  max-width: 100%;
+}
+
+.cooky-text {
+  width: 70%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-left: 30px;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 320px) {
@@ -5277,6 +5460,26 @@ body {
   .list-skroll {
     max-height: 370px;
   }
+
+  .form-one-click {
+    padding: 50px 50px 20px;
+  }
+
+  .kidsgo-modal-one_click .kidsgo-modal-dialog {
+    max-width: 670px;
+  }
+
+  .body-cooky {
+    padding: 40px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .btn-close {
+    top: 25px;
+    right: 25px;
+  }
 }
 
 @media (min-width: 990px) {
@@ -5548,6 +5751,30 @@ body {
 
   .body-map {
     width: 60%;
+  }
+
+  .sec-404 {
+    padding: 100px 0 0;
+  }
+
+  .body-404 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-404__img {
+    margin-bottom: 50px;
+  }
+
+  .content-404__one {
+    display: none;
+  }
+
+  .content-404__btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .polit {
@@ -6422,6 +6649,14 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .content-404__one {
+    margin-bottom: 30px;
+  }
+
+  .wrapper-404-img {
+    display: none;
   }
 
   .wrformkidsgoBtn {

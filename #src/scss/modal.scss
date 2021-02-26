@@ -21,7 +21,7 @@
 
 .kidsgo-modal-content {
   padding: 50px 35px;
-  background: #F4F4F4;
+  background: #FFF;
   border-radius: 0;
   //border: 1px solid $color3;
   //box-shadow: 0px 4px 50px 22px rgba(245, 223, 77, 0.15);
@@ -421,3 +421,137 @@ justify-content: space-between;
 }
 
 
+//1 click
+.wrapper-input-form{
+  width: 100%;
+}
+.form-one-click{
+
+  @include mq('tablet') {
+    padding: 50px 50px 20px;
+  }
+}
+
+.wrapper-input-form{
+  margin-bottom: 30px;
+}
+
+.price-num-name{
+  @include adaptiv-font(16,14);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.price-num{
+  @include adaptiv-font(32,24);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-form-one-click{
+  width: fit-content;
+  margin: 50px auto 0;
+}
+
+.title-one-click{
+  @include adaptiv-font(30,24);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+.bottom-text{
+  .input-save[type=checkbox]:checked+.label-save:after{
+    background-size: 19px;
+  }
+  .label-save:before{
+    top: 2px;
+  }
+}
+
+.kidsgo-modal-one_click{
+  .kidsgo-modal-dialog {
+    @include mq('tablet') {
+      max-width: 670px;
+    }
+  }
+
+  .kidsgo-modal-content{
+    border-radius: 21px;
+    border:1px solid $color_4p;
+  }
+}
+
+.star-reviews{
+  .star-reviews__title{
+    @include adaptiv-font(20,18);
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .reviews-item__rating-stars{
+    margin-bottom: 40px;
+  }
+  .simple-rating:before{
+    width: 216px;
+    height: 38px;
+    background-size: 43px;
+  }
+  .form__item__label:before {
+    width: 100%;
+    background-size: 43px;
+  }
+  .form__item__label {
+    width: 43px;
+  }
+}
+
+//cooky
+.sec-cooky{
+  position: fixed;
+  bottom: 15px;
+  right: 0;
+  width: 100%;
+  z-index: 15;
+}
+.body-cooky{
+  background: #C8D9F8;
+  position: relative;
+  padding: 20px;
+  border-radius: 21px;
+  @include mq('tablet') {
+    padding: 40px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+}
+
+.btn-close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  @include mq('tablet') {
+    top: 25px;
+    right: 25px;
+  }
+}
+
+.wrapper-content{
+  display: flex;
+
+}
+
+.cooky-img{
+  width: 30%;
+  align-self: center;
+  img{
+    max-width: 100%;
+  }
+}
+
+.cooky-text{
+  width: 70%;
+  align-self: center;
+  padding-left: 30px;
+  @include adaptiv-font(18,16);
+  font-weight: bold;
+}

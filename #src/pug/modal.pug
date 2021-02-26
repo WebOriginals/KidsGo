@@ -3,32 +3,8 @@ button.btn.btn-primary(type="button" data-toggle="modal" data-target="#basket-de
 button.btn.btn-primary(type="button" data-toggle="modal" data-target="#numder-modal") колличество товара
 button.btn.btn-primary(type="button" data-toggle="modal" data-target="#city_1") город1
 button.btn.btn-primary(type="button" data-toggle="modal" data-target="#city_2") город2
-button.btn.btn-primary(type="button" data-toggle="modal" data-target="#fav-modal-message") Брик
-
-.modal.kidsgo-modal.fade#kidsgo-modal
-    .modal-dialog.kidsgo-modal-dialog
-        .modal-content.kidsgo-modal-content
-            button.close.Closekidsgo(type="button" data-dismiss="modal" aria-label="Close")
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 2L24.5 24.5" stroke="#F5DF4D" stroke-width="3"/>
-                <path d="M24.5 2L2 24.5" stroke="#F5DF4D" stroke-width="3"/>
-                </svg>
-            .modal-body.kidsgo-modal-body
-                .kidsgo-modal-body__title.title-block Получить консультацию
-                form.formkidsgo
-                    .bodyFr
-                        .wrformkidsgo
-                            input.inputkidsgo(placeholder="Имя*")
-                        .wrformkidsgo
-                            input.inputkidsgo(placeholder="Телефон*")
-                        .wrformkidsgo
-                            input.inputkidsgo(placeholder="Е-mail")
-                        .wrformkidsgo
-                            input.inputkidsgo(placeholder="Ваш комментарий")
-                    .polit
-                        p  Нажав на кнопку, я даю согласие на <a>обработку персональных данных</a>
-                    .wrformkidsgoBtn
-                        .form-btn.button.btn-modal отправить
+button.btn.btn-primary(type="button" data-toggle="modal" data-target="#one_click") 1 clock
+button.btn.btn-primary(type="button" data-toggle="modal" data-target="#comment") comment
 
 
 .modal.kidsgo-modal-del.basket-modal.fade#basket-del
@@ -40,8 +16,6 @@ button.btn.btn-primary(type="button" data-toggle="modal" data-target="#fav-modal
                     .wrformkidsgoBtn-del
                         .form-btn-yes.del-btn  ДА
                         .form-btn-no.del-btn Нет
-
-
 
 .modal.kidsgo-modal-number.basket-modal.fade#numder-modal
     .modal-dialog.kidsgo-modal-dialog
@@ -58,8 +32,6 @@ button.btn.btn-primary(type="button" data-toggle="modal" data-target="#fav-modal
                         li 4
                         li 5
 
-
-
 .modal.kidsgo-modal-del.city-modal.fade#city_1
     .modal-dialog.kidsgo-modal-dialog
         .modal-content.kidsgo-modal-content
@@ -71,7 +43,6 @@ button.btn.btn-primary(type="button" data-toggle="modal" data-target="#fav-modal
                     .wrformkidsgoBtn-del
                         .form-btn-yes.del-btn  ДА
                         .form-btn-no.del-btn Нет
-
 
 .modal.kidsgo-modal-del.city-modal.fade#city_2
     .modal-dialog.kidsgo-modal-dialog.city
@@ -173,5 +144,78 @@ button.btn.btn-primary(type="button" data-toggle="modal" data-target="#fav-modal
                         .wrformkidsgoBtn-del
                             .form-btn-yes.del-btn  Выбрать
 
+.modal.kidsgo-modal-one_click.fade#one_click
+    .modal-dialog.kidsgo-modal-dialog
+        .modal-content.kidsgo-modal-content
+            button.close.Closekidsgo(type="button" data-dismiss="modal" aria-label="Close")
+                img(src="img/ic/close.svg")
+            .modal-body.kidsgo-modal-body
+                .title-one-click Купить в 1 клик
+                form.form-one-click
+                    .wrapper-input-form
+                        .body-inpyt-animation
+                            input#order1.wrapper-field-input
+                            label.input__label(for="order1")
+                                span.span-field-input ФИО
+                        .body-inpyt-animation
+                            input#order2.wrapper-field-input
+                            label.input__label(for="order2")
+                                span.span-field-input Телефон*
+                        .body-inpyt-animation
+                            input#order3.wrapper-field-input
+                            label.input__label(for="order3")
+                                span.span-field-input Почта*
+
+                    .bottom-text
+                        .price-num-name Стоимость без учета доставки
+                        .price-num 6 699р
+                        .checkbox-save
+                            input#categories_1(type="checkbox" name="categories" value="Запомнить меня").input-save
+                            label(for="categories_1").label-save Я согласен на обработку персональных данных
+                        .btn-form-one-click.button_blue Отправить
+
+.modal.kidsgo-modal-one_click.fade#comment
+    .modal-dialog.kidsgo-modal-dialog
+        .modal-content.kidsgo-modal-content
+            button.close.Closekidsgo(type="button" data-dismiss="modal" aria-label="Close")
+                img(src="img/ic/close.svg")
+            .modal-body.kidsgo-modal-body
+                .title-one-click Оставить отзыв
+                form.form-one-click
+                    .wrapper-input-form
+                        .star-reviews
+                            .star-reviews__title Оцените товар
+                            .reviews-item__rating-stars
+                                .simple-rating
+                                    .simple-rating__items
+                                        input(type="radio" value="5" name="star1").form__item__input#form__item__input-50
+                                        label(for="form__item__input-50").form__item__label
+                                        input(type="radio" value="4" name="star1").form__item__input#form__item__input-40
+                                        label(for="form__item__input-40").form__item__label
+                                        input(type="radio" value="3" name="star1").form__item__input#form__item__input-30
+                                        label(for="form__item__input-30").form__item__label
+                                        input(type="radio" value="2" name="star1").form__item__input#form__item__input-20
+                                        label(for="form__item__input-20").form__item__label
+                                        input(type="radio" value="1" name="star1").form__item__input#form__item__input-10
+                                        label(for="form__item__input-10").form__item__label
+
+                        .body-inpyt-animation.long
+                            textarea#order9.wrapper-field-input.textarea(rows="1")
+                            label.input__label(for="order9")
+                                span.span-field-input Комментарий
+
+                    .bottom-text
+                        .btn-form-one-click.button_blue Отправить
 
 
+
+
+
+section.sec-cooky
+    .body-cooky
+        .btn-close
+            img(src="img/ic/close.svg")
+        .wrapper-content
+            .cooky-img
+                img.b-lazy(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ic/cooky.png" data-src-small="img/ic/cooky.png")
+            .cooky-text Этот сайт использует cookie и что-то про сбор информации, надеюсь все согласны.

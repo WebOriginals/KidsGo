@@ -5,3 +5,16 @@
     padding: 0 0 120px;
   }
 }
+.favoritesnotgoods{
+  margin-top: 50px;
+  @include adaptiv-font(16,14);
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.favorites__btn{
+  width: fit-content;
+}
+.body-favorites{
+  min-height: 30vh;
+}
