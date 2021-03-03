@@ -22,7 +22,4 @@ $( document ).ready(function() {
     @@include('classie.js')
     @@include('animation-input.js')
     @@include('textarea.js')
-    @@include('filter-slider-price.js')
-
-
-})
+    })

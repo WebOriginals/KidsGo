@@ -132,7 +132,7 @@
   @if( $link-img == ''){
     background-image: url("./../../img/ic/favorites-active.svg");
   } @else {
-    background-image: url( $link-img + "./../../img/ic/favorites-active.svg");
+    background-image: url( $link-img + "/img/ic/favorites-active.svg");
   }
   background-position: top left;
   background-repeat: no-repeat;
