@@ -333,17 +333,12 @@ body {
   right: 5px;
   width: 12px;
   height: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .ic-header .colnum-fav span {
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .ic-header .colnum-bas {
@@ -353,17 +348,12 @@ body {
   right: 4px;
   width: 12px;
   height: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .ic-header .colnum-bas span {
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 /*конец кнопки*/
