@@ -132,7 +132,7 @@
   @if ($link-img == '') {
     background-image: url("./../img/ic/arrow-blue.svg");
   } @else {
-    background-image: url($link-img + "./../img/ic/arrow-blue.svg");
+    background-image: url($link-img + "/img/ic/arrow-blue.svg");
   }
   background-position:  right 3px;
   background-repeat: no-repeat;
@@ -464,11 +464,9 @@
   @if ($link-img == '') {
     background-image: url("./../img/ic/arrow-pink.svg") !important;
   } @else {
-    background-image: url($link-img + "./../img/ic/arrow-pink.svg") !important;
+    background-image: url($link-img + "/img/ic/arrow-pink.svg") !important;
   }
   background-position:  right 3px;
   background-repeat: no-repeat;
-  //ul{
-  //
-  //}
+
 }
