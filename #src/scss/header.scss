@@ -174,11 +174,86 @@
 .ic-header {
   position: relative;
 
-  .colnum {
+  .colnum-fav {
     position: absolute;
     color: $color_2w;
-    bottom: -9px;
-    left: 25px;
-    @include adaptiv-font(9,9);
+    bottom: -7px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+
+    span{
+
+      align-self: center;
+    }
+    @include mq('tablet') {
+      bottom: -5px;
+      right: 4px;
+      span{
+        font-size: 6px;
+      }
+    }
+
+    @include mq('desktop') {
+      bottom: -7px;
+      right: 5px;
+      width: 12px;
+      height: 12px;
+      span{
+        font-size: 7px;
+      }
+    }
+    @include mq('desktop-wide') {
+      width: 17px;
+      height: 17px;
+      bottom: -12px;
+      right: 5px;
+      span{
+        font-size: 8px;
+      }
+    }
+
+  }
+  .colnum-bas {
+    position: absolute;
+    color: $color_2w;
+    bottom: -6px;
+    right: 4px;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+
+    span{
+
+      align-self: center;
+    }
+    @include mq('tablet') {
+      bottom: -4px;
+      right: 3px;
+      span{
+        font-size: 6px;
+      }
+    }
+    @include mq('desktop') {
+      bottom: -6px;
+      right: 4px;
+      width: 12px;
+      height: 12px;
+      span{
+        font-size: 7px;
+      }
+    }
+    @include mq('desktop-wide') {
+      width: 17px;
+      height: 17px;
+      bottom: -11px;
+      right: 4px;
+      span{
+        font-size: 8px;
+      }
+    }
   }
 }
